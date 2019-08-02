@@ -4,26 +4,29 @@
 
 ## Add Some Slide Candy
 
-```javascript
-class Animal {
-}
-
-class Dog extends Animal {
-
-}
-```
-
-![](assets/img/presentation.png)
-
 ---?color=linear-gradient(180deg, white 75%, black 25%)
 @title[Customize Slide Layout]
 
+
+```javascript
+class Animal {
+    constructor(legs) {
+        this.legs = legs;
+    }
+}
+
+class Dog extends Animal {
+    constructor() {
+        super(4);
+    }
+    
+    bark(volume) {
+    }
+}
+```
+
 @snap[west span-50]
 ## Customize the Layout
-@snapend
-
-@snap[east span-50]
-![](assets/img/presentation.png)
 @snapend
 
 @snap[south span-100 text-white]
