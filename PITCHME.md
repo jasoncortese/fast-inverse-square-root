@@ -1,4 +1,4 @@
-# Aggregation over Inheritance
+## Aggregation over Inheritance
 
 ---
 
