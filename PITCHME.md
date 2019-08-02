@@ -4,6 +4,15 @@
 
 ## Add Some Slide Candy
 
+```javascript
+class Animal {
+}
+
+class Dog extends Animal {
+
+}
+```
+
 ![](assets/img/presentation.png)
 
 ---?color=linear-gradient(180deg, white 75%, black 25%)
