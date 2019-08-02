@@ -1,10 +1,9 @@
 ## Aggregation over Inheritance
 
----
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-## Add Some Slide Candy
+## Prototypal Inheritance
 
----?color=linear-gradient(180deg, white 75%, black 25%)
 @title[Customize Slide Layout]
 
 
@@ -26,10 +25,11 @@ class Dog extends Animal {
 ```
 
 @snap[south span-100 text-08]
-@[1,2](You can present code inlined within your slide markdown too.)
-@[9-17](Displayed using code-syntax highlighting just like your IDE.)
-@[19-20](Again, all of this without ever leaving your slideshow.)
+@[1,5](Animal class)
+@[10-14](Dog sub-class)
 @snapend
+
+---
 
 @snap[west span-50]
 ## Customize the Layout
