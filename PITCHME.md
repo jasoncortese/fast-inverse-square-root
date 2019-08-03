@@ -26,7 +26,7 @@ class Dog extends Animal {
 
 @snap[south span-100 text-08]
 @[1,5](Animal class)
-@[10-14](Dog sub-class)
+@[7-14](Dog sub-class)
 @snapend
 
 ---
