@@ -2,12 +2,14 @@
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
+@snap[west span-65]
 #### Prototypal Inheritance
+@snapend
 
 @title[Customize Slide Layout]
 
 
-```javascript zoom-20
+```javascript
 class Animal {
     constructor(legs) {
         this.legs = legs;
@@ -30,7 +32,7 @@ class Dog extends Animal {
 }
 ```
 
-@snap[south span-100 text-08]
+@snap[south span-65 text-08]
 @[1-9, zoom-25](Animal class)
 @[11-20, zoom-25](Dog sub-class)
 @snapend
