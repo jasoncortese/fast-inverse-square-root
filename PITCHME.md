@@ -7,7 +7,7 @@
 @title[Customize Slide Layout]
 
 
-```javascript
+```javascript zoom-20
 class Animal {
     constructor(legs) {
         this.legs = legs;
