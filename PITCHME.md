@@ -2,7 +2,7 @@
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-## Prototypal Inheritance
+#### Prototypal Inheritance
 
 @title[Customize Slide Layout]
 
@@ -12,21 +12,27 @@ class Animal {
     constructor(legs) {
         this.legs = legs;
     }
+    
+    says(sound, volume) {
+        external.play(sound);
+    }
 }
 
 class Dog extends Animal {
-    constructor() {
-        super(4);
+    constructor(legs = 4, volume = 5) {
+        super(legs);
+        this.volume = volume;
     }
     
-    bark(volume) {
+    says() {
+        super.says('bark', this.volume);
     }
 }
 ```
 
 @snap[south span-100 text-08]
-@[1,5](Animal class)
-@[7-14](Dog sub-class)
+@[1-5, zoom-25](Animal class)
+@[7-14, zoom-25](Dog sub-class)
 @snapend
 
 ---
