@@ -2,7 +2,7 @@
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@snap[north span-65]
+@snap[north-east span-65]
 #### Prototypal Inheritance
 @snapend
 
@@ -14,20 +14,22 @@ class Animal {
     constructor(legs) {
         this.legs = legs;
     }
-    
-    says(sound, volume) {
-        external.play(sound);
-    }
 }
 
 class Dog extends Animal {
-    constructor(legs = 4, volume = 5) {
+    constructor(legs = 4) {
+        super(legs);
+    }
+}
+
+class LoudDog extends Dog {
+    constructor(legs, volume = 10) {
         super(legs);
         this.volume = volume;
     }
     
-    says() {
-        super.says('bark', this.volume);
+    barks() {
+        sound.play('bark', this.volume);
     }
 }
 ```
