@@ -10,15 +10,15 @@
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@[0-8]
+@[0-9]
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@[10-19]
+@[10-20]
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@[22-30]
+@[21-30]
 
 ---
 
