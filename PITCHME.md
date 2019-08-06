@@ -2,7 +2,7 @@
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@snap[north-east span-65]
+@snap[north-west span-65]
 #### Prototypal Inheritance
 @snapend
 
@@ -10,31 +10,39 @@
 
 
 ```javascript
-class Animal {
-    constructor(legs) {
+class Pet {
+    constructor(legs = 0) {
         this.legs = legs;
+    }
+    
+    says(sound = '') {
+        external.play(sound);
     }
 }
 
-class Dog extends Animal {
+class Dog extends Pet {
     constructor(legs = 4) {
         super(legs);
+    }
+    
+    says(sound = 'bark') {
+        super.says(sound);
     }
 }
 
 class LoudDog extends Dog {
-    constructor(legs, volume = 10) {
+    constructor(legs) {
         super(legs);
-        this.volume = volume;
     }
     
-    barks() {
-        sound.play('bark', this.volume);
+    says(sound, volume = 10) {
+        external.valume = volume;
+        super.says(sound);
     }
 }
 ```
 
-@snap[south span-65 text-08]
+@snap[south-west span-65 text-08]
 @[1-9, zoom-25](Animal class)
 @[11-20, zoom-25](Dog sub-class)
 @snapend
