@@ -1,17 +1,12 @@
 ## Aggregation over Inheritance
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?code=inheritance.js&lang=javascriptcolor=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@title[Prototypal Inheritance]
 
 @snap[north-west span-65]
 #### Prototypal Inheritance
 @snapend
-
-@title[Prototypal Inheritance]
-
----?code=inheritance.js&lang=javascript
-
-```Javascript
-dsfdas```
 
 @snap[south-west span-65 text-03]
 @[1-9, zoom-25](Animal class)
