@@ -12,13 +12,25 @@
 
 @[0-9]
 
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @[10-20]
 
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @[21-30]
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
 
 ---
 
