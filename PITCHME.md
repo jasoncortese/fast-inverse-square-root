@@ -10,9 +10,7 @@
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@code[javascript zoom-21](inheritance.js)
-
-@[0-9]
+@[0-9, zoom-25]
 
 @snap[north-west span-65]
 #### Prototypal Inheritance
@@ -20,7 +18,7 @@
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@[10-20]
+@[10-20, zoom-25]
 
 @snap[north-west span-65]
 #### Prototypal Inheritance
@@ -28,7 +26,7 @@
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@[21-30]
+@[21-30, zoom-25]
 
 @snap[north-west span-65]
 #### Prototypal Inheritance
