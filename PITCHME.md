@@ -1,6 +1,8 @@
 ## Aggregation over Inheritance
 
----?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@code[javascript zoom-21](inheritance.js)
 
 @snap[north-west span-65]
 #### Prototypal Inheritance
