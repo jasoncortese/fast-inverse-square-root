@@ -6,9 +6,12 @@
 #### Prototypal Inheritance
 @snapend
 
-@title[Customize Slide Layout]
+@title[Prototypal Inheritance]
 
----?code=./inheritance.js&lang=javascript
+---?code=inheritance.js&lang=javascript
+
+```Javascript
+dsfdas```
 
 @snap[south-west span-65 text-03]
 @[1-9, zoom-25](Animal class)
