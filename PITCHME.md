@@ -8,6 +8,7 @@
 
 @title[Prototypal Inheritance]
 
++++
 @[1-9]
 @[11-20]
 @[22-30]
