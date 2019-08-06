@@ -2,11 +2,11 @@
 
 ---?code=inheritance.js&lang=javascriptcolor=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@title[Prototypal Inheritance]
-
 @snap[north-west span-65]
 #### Prototypal Inheritance
 @snapend
+
+@title[Prototypal Inheritance]
 
 @snap[south-west span-65 text-03]
 @[1-9, zoom-25](Animal class)
