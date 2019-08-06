@@ -42,7 +42,7 @@ class LoudDog extends Dog {
 }
 ```
 
-@snap[south-west span-65 text-08]
+@snap[south-west span-65 text-03]
 @[1-9, zoom-25](Animal class)
 @[11-20, zoom-25](Dog sub-class)
 @snapend
