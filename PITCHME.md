@@ -8,8 +8,7 @@
 
 @title[Customize Slide Layout]
 
-
----?gist=inheritance.js&lang=Javascript&title=
+---?code=inheritance.js&lang=javascript
 
 @snap[south-west span-65 text-03]
 @[1-9, zoom-25](Animal class)
