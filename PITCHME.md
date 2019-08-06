@@ -8,15 +8,17 @@
 
 @title[Prototypal Inheritance]
 
-+++
-@[1-9]
-@[11-20]
-@[22-30]
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@snap[south-west span-65 text-03]
-@[1-9, zoom-25](Animal class)
-@[11-20, zoom-25](Dog sub-class)
-@snapend
+@[1-9]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@[11-20]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@[22-30]
 
 ---
 
