@@ -2,10 +2,11 @@
 
 ---?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@snap[north-west span-65]
+@snap[north-west span-70]
 #### Inheritance
 @snapend
 
+@snap[south-west span-70]
 @[1-6](Boat)
 @[8-16](Sail Boat adds #sail method)
 @[18-27](Long Sail Boat extends #constructor)
@@ -22,6 +23,8 @@
 @[123-132]
 @[134-144]
 @[146-155]
+@snapend
+
 
 ---
 
