@@ -180,3 +180,20 @@
 @[41-51](LockableState subclass aggregates Lockable)
 @[54-59](UndoableLockableState subclass aggregates Undoable & Lockable)
 @snapend
+
+---?code=aggregate.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%)
+
+@snap[north-west span-85 text-white]
+#### Implementation
+@snapend
+
+@snap[south span-50 text-07]
+@[1-2](WeakMaps hold references to the target objects)
+@[4-28]()
+@[4-8](Store prototypes for the target and source "this" objects)
+@[4-14](Create a record of the target objects property descriptors)
+@[4-20](Create a record of the source objects property descriptors)
+@[4-22](Create an aggregate object to use as the new prototype)
+@[4-25](Copy the target and source properties to the new prototype)
+@[4-28](Set the new prototype of the target object)
+@snapend
