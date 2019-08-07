@@ -46,7 +46,7 @@ class LockableState extends State {
 
 class Lockable extends Aggregate {
     lock() {}
-    
+   
     unlock() {}
 }
 
