@@ -86,17 +86,17 @@
 @snapend
 
 @snap[west span-40]
-@box[bg-orange text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming a collection of subobjects, which retain their own reference identity.)
+@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming a collection of subobjects, which retain their own reference identity.)
 @snapend
 
 @snap[east span-40]
-@box[bg-orange text-white rounded box-padding fragment](... This can be accomplished through delegation to a subobject, or concatenation of the subobjects members.)
+@box[bg-green text-white rounded box-padding fragment](... This can be accomplished through delegation to the subobject, or concatenation of the subobject's members.)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### What do we mean?
+#### Aggregation
 @snapend
 
 @snap[west span-40]
