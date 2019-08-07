@@ -44,10 +44,10 @@
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85]
-#### IS-A vs HAS-A
+#### IS-A or HAS-A
 @snapend
 
-@snap[north-east span-35]
+@snap[]
 @box[bg-orange text-white rounded box-padding](Inheritance is for "IS A" relationships)
 @box[bg-blue text-white rounded box-padding](Aggregation is for "HAS A" relationships)
 @snapend
