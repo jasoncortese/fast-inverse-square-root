@@ -81,15 +81,16 @@
 @snapend
 
 @snap[south span-30 text-07]
-@[1-6](Boat class)
-@[8-16](Sail Boat with #sail method)
-@[18-23](Long Boat with #length property)
-@[25-33](Motor Boat with #motor method)
-@[35-40](Speed Boat with #speed property)
-@[39-47](Fast Motor Boat extends Motor Boat & Speed Boat)
-@[49-57](Fast Sail Boat extends Sail Boat & Speed Boat)
-@[134-144](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
-@[146-155](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
+@[1-5](Boat class with enumeration)
+@[7-12](Boat class with delegation)
+@[14-22](Sail Boat with #sail method)
+@[24-29](Long Boat with #length property)
+@[31-39](Motor Boat with #motor method)
+@[41-46](Speed Boat with #speed property)
+@[45-53](Fast Motor Boat extends Motor Boat & Speed Boat)
+@[55-63](Fast Sail Boat extends Sail Boat & Speed Boat)
+@[140-150](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
+@[152-161](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
 @snapend
 
 ---?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
