@@ -81,16 +81,15 @@
 @snapend
 
 @snap[south span-30 text-07]
-@[1-5](Boat class with enumeration)
-@[7-12](Boat class with delegation)
-@[14-22](Sail Boat with #sail method)
-@[24-29](Long Boat with #length property)
-@[31-39](Motor Boat with #motor method)
-@[41-46](Speed Boat with #speed property)
-@[45-53](Fast Motor Boat extends Motor Boat & Speed Boat)
-@[55-63](Fast Sail Boat extends Sail Boat & Speed Boat)
-@[140-150](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
-@[152-161](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
+@[1-6](Boat class)
+@[8-16](Sail Boat with #sail method)
+@[18-23](Long Boat with #length property)
+@[25-33](Motor Boat with #motor method)
+@[35-40](Speed Boat with #speed property)
+@[39-47](Fast Motor Boat extends Motor Boat & Speed Boat)
+@[49-57](Fast Sail Boat extends Sail Boat & Speed Boat)
+@[134-144](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
+@[146-155](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
 @snapend
 
 ---?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -100,15 +99,16 @@
 @snapend
 
 @snap[south span-30 text-07]
-@[1-6](Aggregate class)
-@[8-13](Frame with #length property)
-@[15-20](Long Frame extends Frame)
-@[22-30](Sail with #sail method)
-@[32-41](Motor with #motor method)
-@[43-48](Fast Motor extends Motor)
-@[50-55](Faster Motor extends Motor)
-@[57-62](Fuel with #fuel property)
-@[64-69](Diesel Fuel extends Fuel)
+@[1-5](Aggregate class)
+@[7-12](Aggregate class with concatenation)
+@[14-19](Frame with #length property)
+@[21-26](Long Frame extends Frame)
+@[28-36](Sail with #sail method)
+@[38-47](Motor with #motor method)
+@[49-54](Fast Motor extends Motor)
+@[56-61](Faster Motor extends Motor)
+@[63-68](Fuel with #fuel property)
+@[70-75](Diesel Fuel extends Fuel)
 @snapend
 
 ---?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
