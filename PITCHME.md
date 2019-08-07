@@ -55,6 +55,40 @@
 @box[bg-green text-white rounded box-padding fragment](Aggregation is for "HAS A" relationships)
 @snapend
 
+---?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-85 text-white]
+#### Aggregation
+@snapend
+
+@snap[south span-30 text-07]
+@[1-6](Aggregate class)
+@[8-13](Frame with #length property)
+@[15-20](Long Frame extends Frame)
+@[22-30](Sail with #sail method)
+@[32-41](Motor with #motor method)
+@[39-48](Fast Motor extends Motor)
+@[50-55](Faster Motor extends Motor)
+@[57-62](Fuel with #fuel property)
+@[64-69](Diesel Fuel extends Fuel)
+@snapend
+
+---?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-85 text-white]
+#### Aggregation
+@snapend
+
+@snap[south span-30 text-07]
+@[71-76](Boat class)
+@[78-83](Sail Boat extends Boat, adds Sail)
+@[85-91](Long Sail Boat extends Boat, adds Sail & Long Frame)
+@[93-98](Motor Boat extends Boat, adds Motor)
+@[100-105](Fast Motor Boat extends Boat, adds Fast Motor)
+@[103-113](Faster Motor Boat with Sail extends Boat, adds Faster Motor & Sail)
+@[115-123](Long Faster Diesel Motor Boat With Sail extends Boat, adds Long Frame & Faster Motor & Diesel Fuel & Sail)
+@snapend
+
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85]
