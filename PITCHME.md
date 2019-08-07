@@ -44,6 +44,16 @@
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85]
+#### Has-A vs Is-A
+@snapend
+
+@box[text-orange span-80 fragment](Inheritance is an "IS A" relationship)
+
+@quote[text-orange span-80 fragment](Aggregation is an "HAS A" relationship)
+
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-85]
 #### Object Composition
 @snapend
 
@@ -53,6 +63,6 @@
 - Fewer classes
 - Better encapsulation
 - More flexibility
-(JS doesn't support multiple inheritance anyway)
+- JS doesn't support multiple inheritance anyway
 @ulend
 @snapend
