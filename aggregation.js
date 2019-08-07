@@ -33,7 +33,7 @@ class FasterMotor extends Motor {
     }
 }
 
-class Frame extends {
+class Frame {
     constructor(target) {
         this.target = target;
         this.target.length |= 0;
