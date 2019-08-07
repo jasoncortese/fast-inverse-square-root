@@ -16,13 +16,13 @@
 @[59-65](Add a #speed attribute...)
 @[67-76](Improved Motor Boat)
 @[78-83](Improved Fast Motor Boat)
-@[85-90](Fast Sail Boat)
-@[91-101](Diesel Motor Boat)
+@[85-90](Fast Sail Boat ?)
+@[91-101](Diesel Motor Boat ?)
 @[103-110](Add a #fuel attribute...)
 @[112-121](Fast Diesel Motor Boat extends Fast Boat)
-@[123-132](or Fast Diesel Motor Boat extends Diesel Motor Boat)
-@[133-144](Long Fast Diesel Motor Boat With Sail extends Long Sail Boat)
-@[146-155](or Long Fast Diesel Motor Boat With Sail extends Fast Diesel Motor Boat)
+@[123-132](Fast Diesel Motor Boat extends Diesel Motor Boat)
+@[133-144](Long Fast Diesel Motor Boat With Sail extends ?)
+@[146-155](Long Fast Diesel Motor Boat With Sail extends ??)
 @snapend
 
 ---
