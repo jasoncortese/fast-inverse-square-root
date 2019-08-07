@@ -101,6 +101,6 @@
 - Fewer classes
 - Better encapsulation
 - More flexibility
-- No multiple inheritance
+- No need for multiple inheritance
 @ulend
 @snapend
