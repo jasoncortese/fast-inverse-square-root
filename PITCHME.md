@@ -70,15 +70,15 @@
 @snapend
 
 @snap[south span-50 text-07]
-@[1-6](Boat class)
-@[8-16](Sail Boat with #sail method)
-@[18-23](Long Boat with #length property)
-@[25-33](Motor Boat with #motor method)
-@[35-40](Speed Boat with #speed property)
-@[42-51](Fast Motor Boat extends Motor Boat & Speed Boat)
-@[53-62](Fast Sail Boat extends Sail Boat & Speed Boat)
-@[64-77](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
-@[79-95](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
+@[1-8](Boat class)
+@[10-18](Sail Boat with #sail method)
+@[20-25](Long Boat with #length property)
+@[27-35](Motor Boat with #motor method)
+@[37-42](Speed Boat with #speed property)
+@[44-53](Fast Motor Boat extends Motor Boat & Speed Boat)
+@[55-64](Fast Sail Boat extends Sail Boat & Speed Boat)
+@[66-79](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
+@[81-97](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
