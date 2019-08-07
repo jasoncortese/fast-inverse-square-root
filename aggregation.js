@@ -5,6 +5,20 @@ class Aggregate {
     }
 }
 
+class Frame extends Aggregate {
+    constructor(target) {
+        super();
+        this.target.length |= 0;
+    }
+}
+
+class LongFrame extends Frame {
+    constructor(target) {
+        super();
+        this.target.length *= 2;
+    }
+}
+
 class Sail extends Aggregate {
     constructor(target) {
         super(target);
@@ -12,13 +26,6 @@ class Sail extends Aggregate {
     
     sail() {
         this.target.distance += this.target.length;
-    }
-}
-
-class LongFrame extends Aggregate {
-    constructor(target) {
-        super();
-        this.target.length *= 2;
     }
 }
 
