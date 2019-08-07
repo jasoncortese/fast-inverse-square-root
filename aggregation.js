@@ -1,13 +1,6 @@
-class Aggregate { //enumeration
+class Aggregate {
     constructor(target = {}) {
         this.target = target;
-    }
-}
-
-class Aggregate { //concatenation
-    constructor(target = {}) {
-        this.target = target;
-        Object.assign(target, this);
     }
 }
 
