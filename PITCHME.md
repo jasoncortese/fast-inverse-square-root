@@ -2,11 +2,13 @@
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@snap[midpoint span-50]
+@snap[north-west span-85 text-white]
 #### What do we mean?
 @snapend
 
+@snap[midpoint span-50]
 @quote[Favor object composition over class inheritance.](Gang of Four, Design Patterns.)
+@snapend
 
 ---?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
