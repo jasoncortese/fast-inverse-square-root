@@ -82,6 +82,13 @@ class FastMotorBoat extends MotorBoat {
     }
 }
 
+class FasterMotorBoat extends MotorBoat {
+    constructor() {
+        super();
+        this.speed = 7;
+    }
+}
+
 class FastSailBoat extends SailBoat {
     constructor() {
         super();
