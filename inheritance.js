@@ -130,3 +130,14 @@ class FastDieselMotorBoat extends DieselMotorBoat {
         super.motor();
     }
 }
+
+class FastDieselSailBoat extends DieselMotorBoat {
+    constructor() {
+        super();
+        this.speed = 5;
+    }
+    
+    sail() {
+        super.sail();
+    }
+}
