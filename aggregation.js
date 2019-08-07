@@ -1,7 +1,13 @@
-class Aggregate {
-    constructor(target = {}, self = this) {
+class Aggregate { //enumeration
+    constructor(target = {}) {
         this.target = target;
-        Object.assign(target, self);
+    }
+}
+
+class Aggregate { //concatenation
+    constructor(target = {}) {
+        this.target = target;
+        Object.assign(target, this);
     }
 }
 
@@ -78,46 +84,46 @@ class Boat {
 class SailBoat extends Boat {
     constructor() {
         super();
-        new Sail(this);
+        this.sail = new Sail(this);
     }
 }
 
 class LongSailBoat extends Boat {
     constructor(length) {
         super(length);
-        new Sail(this);
-        new LongFrame(this);
+        this.sail = new Sail(this);
+        this.frame = new LongFrame(this);
     }
 }
 
 class MotorBoat extends Boat {
     constructor() {
         super();
-        new Motor(this);
+        this.motor = new Motor(this);
     }
 }
 
 class FastMotorBoat extends Boat {
     constructor() {
         super();
-        new FastMotor(this);
+        this.motor = new FastMotor(this);
     }
 }
 
 class FasterMotorBoatWithSail extends Boat {
     constructor() {
         super();
-        new FasterMotor(this);
-        new Sail(this);
+        this.motor = new FasterMotor(this);
+        this.sail = new Sail(this);
     }
 }
 
 class LongFasterDieselMotorBoatWithSail extends Boat {
     constructor() {
         super();
-        new LongFrame(this);
-        new FasterMotor(this);
-        new DieselFuel(this);
-        new Sail(this);
+        this.frame = new LongFrame(this);
+        this.motor = new FasterMotor(this);
+        this.fuel = new DieselFuel(this);
+        this.sail = new Sail(this);
     }
 }
