@@ -6,7 +6,7 @@
 #### Inheritance
 @snapend
 
-@snap[south-west span-85 text-07]
+@snap[south span-85 text-07]
 @[1-6](Boat)
 @[8-16](Sail Boat adds #sail method)
 @[18-27](Long Sail Boat can extend Sail Boat)
