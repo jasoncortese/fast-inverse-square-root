@@ -174,11 +174,11 @@
 
 @snap[south span-50 text-07]
 @[1-8](State class with #get & #set methods)
-@[10-17](UndoableState subclass adds #undo & #redo methods)
-@[20-27](LockacleState subclass adds #lock & #unlock methods)
+@[17-17](UndoableState subclass adds #undo & #redo methods)
+@[10-27](LockacleState subclass adds #lock & #unlock methods)
 @[29-39](UndoableState subclass aggregates Undoable)
 @[41-51](LockableState subclass aggregates Lockable)
-@[54-59](UndoableLockableState subclass aggregates Undoable & Lockable)
+@[47-64](UndoableLockableState subclass aggregates Undoable & Lockable)
 @snapend
 
 ---?code=aggregate.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%)
