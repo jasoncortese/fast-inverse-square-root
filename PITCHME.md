@@ -86,10 +86,10 @@
 @[18-23](Long Boat with #length property)
 @[25-33](Motor Boat with #motor method)
 @[35-40](Speed Boat with #speed property)
-@[39-47](Fast Motor Boat extends Motor Boat & Speed Boat)
-@[49-57](Fast Sail Boat extends Sail Boat & Speed Boat)
-@[134-144](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
-@[146-155](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
+@[42-51](Fast Motor Boat extends Motor Boat & Speed Boat)
+@[53-62](Fast Sail Boat extends Sail Boat & Speed Boat)
+@[64-77](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
+@[79-95](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
 @snapend
 
 ---?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
