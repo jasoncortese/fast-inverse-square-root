@@ -47,10 +47,12 @@
 #### IS-A or HAS-A
 @snapend
 
-@snap[]
-@css[text-blue fragment]
-@box[bg-orange text-white rounded box-padding](Inheritance is for "IS A" relationships)
-@box[bg-blue text-white rounded box-padding](Aggregation is for "HAS A" relationships)
+@snap[west span-40]
+@box[bg-orange text-white rounded box-padding fragment](Inheritance is for "IS A" relationships)
+@snapend
+
+@snap[east span-40]
+@box[bg-green text-white rounded box-padding fragment](Aggregation is for "HAS A" relationships)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
