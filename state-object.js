@@ -32,7 +32,7 @@ class UndoableState extends State {
     }
 }
 
-class Undoable extends Aggregate {
+class Undoable {
     undo() {}
     
     redo() {}
@@ -44,13 +44,13 @@ class LockableState extends State {
     }
 }
 
-class Lockable extends Aggregate {
+class Lockable {
     lock() {}
    
     unlock() {}
 }
 
-class Undoable extends Aggregate {
+class Undoable {
     undo() {}
     
     redo() {}
