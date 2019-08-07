@@ -1,18 +1,6 @@
 ## Aggregation over Inheritance
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
-
-@code[javascript zoom-21](inheritance.js)
-
-@snap[north-west span-65]
-#### Prototypal Inheritance
-@snapend
-
-@title[Prototypal Inheritance]
-
-+++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
-
-@[0-9, zoom-25]
+---?code=inheritance.js&lang=javascriptcolor=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-65]
 #### Prototypal Inheritance
@@ -20,21 +8,126 @@
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@[10-20, zoom-25]
-
 @snap[north-west span-65]
 #### Prototypal Inheritance
 @snapend
+
+@[1-6]
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@[21-30, zoom-25]
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[8-16]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-65]
 #### Prototypal Inheritance
 @snapend
 
----
+@[18-27]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[29-37]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[39-47]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[49-57]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[59-65]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[67-76]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[78-83]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[85-90]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[91-101]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[103-110]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[112-120]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[122-132]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[134-143]
+
+
+--
 
 
 @snap[west span-55]
