@@ -6,7 +6,7 @@
 #### What do we mean?
 @snapend
 
-@snap[midpoint span-50]
+@snap[midpoint span-60]
 @quote[Favor object composition over class inheritance.](Gang of Four, Design Patterns.)
 @snapend
 
