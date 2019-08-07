@@ -64,7 +64,7 @@ class Fuel extends Aggregate {
 class DieselFuel extends Fuel {
     constructor(target) {
         super();
-        this.fuel = 'diesel;
+        this.fuel = 'diesel';
     }
 }
 
