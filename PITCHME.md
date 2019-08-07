@@ -49,10 +49,10 @@
 
 @snap[west span-55]
 @ul[spaced text-white]
-- ###### Less coupling
-- ###### Fewer classes
-- ###### Better encapsulation
-- ###### More flexibility
-- (JS doesn't support multiple inheritance anyway)
+- Less coupling
+- Fewer classes
+- Better encapsulation
+- More flexibility
+(JS doesn't support multiple inheritance anyway)
 @ulend
 @snapend
