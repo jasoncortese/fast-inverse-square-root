@@ -23,6 +23,9 @@
 @[123-132](Alternative Fast Diesel Motor Boat)
 @snapend
 
+@snap[east span-45]
+@img[shadow]()
+@snapend
 
 ---?code=multiple-inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
@@ -34,25 +37,30 @@
 @[1-6](Boat class)
 @[8-16](Sail Boat with #sail method)
 @[18-23](Long Boat with #length property)
-@[25-35](Motor Boat with #motor method)
+@[25-33](Motor Boat with #motor method)
 @[35-40](Speed Boat with #speed property)
 @[39-47](Fast Motor Boat extends Motor Boat & Speed Boat)
 @[49-57](Fast Sail Boat extends Sail Boat & Speed Boat)
-@[134-144](Faster Sail Boat With Motor extends SailBoat, MotorBoat, SpeedBoat)
-@[146-155](Alternative Long Fast Diesel Motor Boat With Sail extends DieselBoat, MotorBoat, SpeedBoat, LongBoat, SailBoat)
-@snapend
-
-
-
-@snap[west span-55]
-@ul[spaced text-white]
-- You will be amazed
-- What you can achieve
-- *With a little imagination...*
-- And **GitPitch Markdown**
-@ulend
+@[134-144](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
+@[146-155](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
 @snapend
 
 @snap[east span-45]
-@img[shadow](assets/img/conference.png)
+@img[shadow]()
+@snapend
+
+---
+
+@snap[north-west span-85]
+#### Object Composition
+@snapend
+
+@snap[west span-55]
+@ul[spaced text-white]
+- ###### Less coupling
+- ###### Fewer classes
+- ###### Better encapsulation
+- ###### More flexibility
+- (JS doesn't support multiple inheritance anyway)
+@ulend
 @snapend
