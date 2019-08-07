@@ -6,7 +6,7 @@
 #### Inheritance
 @snapend
 
-@snap[south span-50 text-07]
+@snap[south span-35 text-07]
 @[1-6](Boat)
 @[8-16](Sail Boat with #sail method)
 @[18-27](Long Sail Boat extends Sail Boat)
@@ -21,7 +21,7 @@
 @[103-110](Add a #fuel attribute...)
 @[112-121](Fast Diesel Motor Boat extends Fast Boat)
 @[123-132](or Fast Diesel Motor Boat extends Diesel Motor Boat)
-@[134-144](Long Fast Diesel Motor Boat With Sail extends Long Sail Boat)
+@[133-144](Long Fast Diesel Motor Boat With Sail extends Long Sail Boat)
 @[146-155](or Long Fast Diesel Motor Boat With Sail extends Fast Diesel Motor Boat)
 @snapend
 
