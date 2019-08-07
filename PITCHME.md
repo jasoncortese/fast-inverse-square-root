@@ -2,11 +2,11 @@
 
 ---?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@snap[north-west span-85]
+@snap[north-west span-85 text-white]
 #### Inheritance
 @snapend
 
-@snap[south span-30 text-07]
+@snap[south span-30 text-07 text-white]
 @[1-6](Boat class)
 @[8-16](Sail Boat with #sail method)
 @[18-27](Long Sail Boat extends Sail Boat)
@@ -25,7 +25,7 @@
 
 ---?code=multiple-inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@snap[north-west span-85]
+@snap[north-west span-85 text-white]
 #### Multiple Inheritance
 @snapend
 
@@ -43,11 +43,12 @@
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-@snap[north-west span-85]
+@snap[north-west span-85 text-white]
 #### IS-A or HAS-A
 @snapend
 
 @snap[]
+@css[text-blue fragment]
 @box[bg-orange text-white rounded box-padding](Inheritance is for "IS A" relationships)
 @box[bg-blue text-white rounded box-padding](Aggregation is for "HAS A" relationships)
 @snapend
