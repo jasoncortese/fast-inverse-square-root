@@ -16,8 +16,8 @@ class SailBoat extends Boat {
 }
 
 class LongSailBoat extends SailBoat {
-    constructor(length) {
-        super(length);
+    constructor() {
+        super();
         this.length *= 2;
     }
     
