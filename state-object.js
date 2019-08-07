@@ -50,10 +50,15 @@ class Lockable extends Aggregate {
     unlock() {}
 }
 
+class Undoable extends Aggregate {
+    undo() {}
+    
+    redo() {}
+}
 
-class UndoableLockableState extends State {
+class LockableUndoableState extends State {
     constructor() {
-        new Undoable(this);
         new Lockable(this);
+        new Undoable(this);
     }
 }
