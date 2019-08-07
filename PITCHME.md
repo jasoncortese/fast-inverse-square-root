@@ -92,7 +92,7 @@
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85]
-#### Object Composition
+#### Aggregation
 @snapend
 
 @snap[west span-55]
@@ -101,6 +101,6 @@
 - Fewer classes
 - Better encapsulation
 - More flexibility
-- JS doesn't support multiple inheritance anyway
+- No multiple inheritance
 @ulend
 @snapend
