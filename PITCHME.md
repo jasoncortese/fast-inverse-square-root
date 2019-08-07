@@ -6,7 +6,7 @@
 #### What do we mean?
 @snapend
 
-@snap[midpoint span-40]
+@snap[midpoint span-50]
 @quote[Favor object composition over class inheritance.](Gang of Four, Design Patterns.)
 @snapend
 
@@ -71,7 +71,7 @@
 @snapend
 
 @snap[east span-40]
-@box[bg-orange text-white rounded box-padding fragment](Note: JavaScript does not support multiple inheritance.)
+@box[bg-orange text-white rounded box-padding fragment](... JavaScript does not support multiple inheritance.)
 @snapend
 
 ---?code=multiple-inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
