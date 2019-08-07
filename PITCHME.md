@@ -1,6 +1,6 @@
 ## Aggregation over Inheritance
 
----?color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### What do we mean?
@@ -10,7 +10,7 @@
 @quote[Favor object composition over class inheritance.](Gang of Four, Design Patterns.)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### What do we mean?
@@ -47,7 +47,7 @@
 @[123-132](Alternative Fast Diesel Motor Boat)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### Multiple Inheritance
@@ -79,7 +79,7 @@
 @[79-95](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### Aggregation
@@ -93,7 +93,7 @@
 @box[bg-green text-white rounded box-padding fragment](... This can be accomplished through delegation to the subobject, or concatenation of the subobject's members.)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### Aggregation
@@ -107,7 +107,7 @@
 @box[bg-green text-white rounded box-padding fragment](Aggregation is for "HAS A" relationships)
 @snapend
 
----?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?code=aggregation.js&lang=javascript
 
 @snap[north-west span-85 text-white]
 #### Aggregation
@@ -132,7 +132,7 @@
 @[114-122](Long Faster Diesel Motor Boat With Sail extends Boat...)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85]
 #### Aggregation
@@ -148,7 +148,7 @@
 @ulend
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north span-30]
 #### Questions?
@@ -166,7 +166,7 @@
 #### Concerns?
 @snapend
 
----?code=state-object.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?code=state-object.js&lang=javascript
 
 @snap[north-west span-85 text-white]
 #### Practical Example
@@ -181,7 +181,7 @@
 @[47-64](UndoableLockableState subclass aggregates Undoable & Lockable)
 @snapend
 
----?code=aggregate.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?code=aggregate.js&lang=javascript
 
 @snap[north-west span-85 text-white]
 #### Implementation
