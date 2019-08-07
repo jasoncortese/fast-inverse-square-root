@@ -21,7 +21,7 @@
 @snapend
 
 @snap[east span-40]
-@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming a collection of subobjects, which retain their own reference identity.)
+@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming a collection of subobjects, which encapsulate their own identity.)
 @snapendc
 
 ---?code=inheritance.js&lang=javascript
