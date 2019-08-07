@@ -114,22 +114,21 @@
 @snapend
 
 @snap[south span-50 text-07]
-@[1-5](Aggregate class)
-@[7-12](Frame with #length property)
-@[14-19](Long Frame extends Frame)
-@[21-29](Sail with #sail method)
-@[31-40](Motor with #motor method)
-@[42-47](Fast Motor extends Motor)
-@[49-54](Faster Motor extends Motor)
-@[56-61](Fuel with #fuel property)
-@[63-68](Diesel Fuel extends Fuel)
-@[70-75](Boat class)
-@[77-82](Sail Boat extends Boat, adds Sail)
-@[84-90](Long Sail Boat extends Boat, adds Sail & Long Frame)
-@[92-97](Motor Boat extends Boat, adds Motor)
-@[99-104](Fast Motor Boat extends Boat, adds Fast Motor)
-@[106-112](Faster Motor Boat with Sail extends Boat, adds Faster Motor & Sail)
-@[114-122](Long Faster Diesel Motor Boat With Sail extends Boat...)
+@[1-9](Sail with #sail method)
+@[11-20](Motor with #motor method)
+@[22-27](Fast Motor extends Motor)
+@[29-34](Faster Motor extends Motor)
+@[36-41](Frame with #length property)
+@[43-48](Long Frame extends Frame)
+@[50-55](Fuel with #fuel property)
+@[57-62](Diesel Fuel extends Fuel)
+@[64-69](Boat class)
+@[71-76](Sail Boat extends Boat, adds Sail)
+@[78-84](Long Sail Boat extends Boat, adds Sail & Long Frame)
+@[86-91](Motor Boat extends Boat, adds Motor)
+@[93-98](Fast Motor Boat extends Boat, adds Fast Motor)
+@[100-106](Faster Motor Boat with Sail extends Boat, adds Faster Motor & Sail)
+@[108-116](Long Faster Diesel Motor Boat With Sail extends Boat...)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -169,7 +168,7 @@
 ---?code=state-object.js&lang=javascript
 
 @snap[north-west span-85 text-white]
-#### Practical Example
+#### A Practical Example
 @snapend
 
 @snap[south span-50 text-07]
@@ -184,7 +183,7 @@
 ---?code=aggregate.js&lang=javascript
 
 @snap[north-west span-85 text-white]
-#### Implementation
+#### My Implementation
 @snapend
 
 @snap[south span-50 text-07]
