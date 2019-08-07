@@ -1,17 +1,3 @@
-class Frame extends {
-    constructor(target) {
-        this.target = target;
-        this.target.length |= 0;
-    }
-}
-
-class LongFrame extends Frame {
-    constructor(target) {
-        super();
-        this.target.length *= 2;
-    }
-}
-
 class Sail {
     constructor(target) {
         this.target = target;
@@ -44,6 +30,20 @@ class FasterMotor extends Motor {
     constructor(target) {
         super(target);
         this.speed *= 5;
+    }
+}
+
+class Frame extends {
+    constructor(target) {
+        this.target = target;
+        this.target.length |= 0;
+    }
+}
+
+class LongFrame extends Frame {
+    constructor(target) {
+        super();
+        this.target.length *= 2;
     }
 }
 
