@@ -16,14 +16,27 @@
 #### What do we mean?
 @snapend
 
-@snap[west span-50]
+@snap[west span-40]
 @box[bg-orange text-white rounded box-padding fragment](Class inheritance accomplishes reuse by abstracting a common interface away into a base class that subclasses can inherit from.)
 @snapend
 
-@snap[east span-50]
+@snap[east span-40]
 @box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming an enumerable collection of subobjects, which retain thir own reference identity.)
 @snapendc
 
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-85 text-white]
+#### What do we mean?
+@snapend
+
+@snap[west span-40]
+@box[bg-orange text-white rounded box-padding fragment](&nbsp; Inheritance is for &nbsp; "IS A" relationships)
+@snapend
+
+@snap[east span-40]
+@box[bg-green text-white rounded box-padding fragment](Aggregation is for "HAS A" relationships)
+@snapend
 
 ---?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
@@ -64,20 +77,6 @@
 @[49-57](Fast Sail Boat extends Sail Boat & Speed Boat)
 @[134-144](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
 @[146-155](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
-
-@snap[north-west span-85 text-white]
-#### The problem?
-@snapend
-
-@snap[west span-40]
-@box[bg-orange text-white rounded box-padding fragment](&nbsp; Inheritance is for &nbsp; "IS A" relationships)
-@snapend
-
-@snap[east span-40]
-@box[bg-green text-white rounded box-padding fragment](Aggregation is for "HAS A" relationships)
 @snapend
 
 ---?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
