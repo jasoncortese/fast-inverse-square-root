@@ -174,7 +174,7 @@
 
 @snap[south span-50 text-07]
 @[1-8](State class with #get & #set methods)
-@[17-17](UndoableState subclass adds #undo & #redo methods)
+@[1-17](UndoableState subclass adds #undo & #redo methods)
 @[10-27](LockacleState subclass adds #lock & #unlock methods)
 @[29-39](UndoableState subclass aggregates Undoable)
 @[41-51](LockableState subclass aggregates Lockable)
