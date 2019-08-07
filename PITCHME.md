@@ -7,9 +7,9 @@
 @snapend
 
 @snap[south span-30 text-07]
-@[1-6](Boat)
+@[1-6](Boat class)
 @[8-16](Sail Boat with #sail method)
-@[18-27](Long Sail Boat extends Sail Boat)
+@[18-27](Long Sail Boat )
 @[29-37](Motor Boat with #motor method)
 @[39-47](Fast Motor Boat with faster #motor method)
 @[49-57](Faster Motor Boat with even faster #motor method)
@@ -19,10 +19,10 @@
 @[85-90](Fast Sail Boat ?)
 @[91-101](Diesel Motor Boat ?)
 @[103-110](Add a #fuel attribute...)
-@[112-121](Fast Diesel Motor Boat extends Fast Boat)
-@[123-132](Fast Diesel Motor Boat extends Diesel Motor Boat)
-@[133-144](Long Fast Diesel Motor Boat With Sail extends ?)
-@[146-155](Long Fast Diesel Motor Boat With Sail extends ??)
+@[112-121](Fast Diesel Motor Boat)
+@[123-132](Alternative Fast Diesel Motor Boat)
+@[134-144](Long Fast Diesel Motor Boat With Sail)
+@[146-155](Alternative Long Fast Diesel Motor Boat With Sail)
 @snapend
 
 ---
