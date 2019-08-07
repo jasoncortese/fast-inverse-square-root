@@ -115,30 +115,21 @@
 
 @snap[south span-30 text-07]
 @[1-5](Aggregate class)
-@[8-11](Frame with #length property)
-@[15-20](Long Frame extends Frame)
-@[22-30](Sail with #sail method)
-@[32-41](Motor with #motor method)
-@[43-48](Fast Motor extends Motor)
-@[50-55](Faster Motor extends Motor)
-@[57-62](Fuel with #fuel property)
-@[64-69](Diesel Fuel extends Fuel)
-@snapend
-
----?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
-
-@snap[north-west span-85 text-white]
-#### Aggregation
-@snapend
-
-@snap[south span-30 text-07]
-@[71-76](Boat class)
-@[78-83](Sail Boat extends Boat, adds Sail)
-@[85-91](Long Sail Boat extends Boat, adds Sail & Long Frame)
-@[93-98](Motor Boat extends Boat, adds Motor)
-@[100-105](Fast Motor Boat extends Boat, adds Fast Motor)
-@[103-113](Faster Motor Boat with Sail extends Boat, adds Faster Motor & Sail)
-@[115-123](Long Faster Diesel Motor Boat With Sail extends Boat, adds Long Frame & Faster Motor & Diesel Fuel & Sail)
+@[7-10](Frame with #length property)
+@[14-19](Long Frame extends Frame)
+@[21-29](Sail with #sail method)
+@[31-40](Motor with #motor method)
+@[42-47](Fast Motor extends Motor)
+@[49-54](Faster Motor extends Motor)
+@[56-61](Fuel with #fuel property)
+@[63-68](Diesel Fuel extends Fuel)
+@[70-75](Boat class)
+@[77-82](Sail Boat extends Boat, adds Sail)
+@[84-90](Long Sail Boat extends Boat, adds Sail & Long Frame)
+@[92-97](Motor Boat extends Boat, adds Motor)
+@[99-104](Fast Motor Boat extends Boat, adds Fast Motor)
+@[102-112](Faster Motor Boat with Sail extends Boat, adds Faster Motor & Sail)
+@[114-122](Long Faster Diesel Motor Boat With Sail extends Boat, adds Long Frame & Faster Motor & Diesel Fuel & Sail)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
