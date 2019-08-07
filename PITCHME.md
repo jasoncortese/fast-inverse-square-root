@@ -21,7 +21,7 @@
 @snapend
 
 @snap[east span-40]
-@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming an collection of subobjects, which retain thir own reference identity.)
+@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming a collection of subobjects, which retain their own reference identity.)
 @snapendc
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -59,6 +59,19 @@
 @[103-110](Add a #fuel property...)
 @[112-121](Fast Diesel Motor Boat)
 @[123-132](Alternative Fast Diesel Motor Boat)
+@snapend
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-85 text-white]
+#### Multiple Inheritance
+@snapend
+
+@snap[west span-40]
+@box[bg-orange text-white rounded box-padding fragment](Multiple inheritance is when a sub-class can inherit from more than one parent class.)
+@snapend
+
+@snap[east span-40]
+@box[bg-orange text-white rounded box-padding fragment](Note: JavaScript does not support multiple inheritance.)
 @snapend
 
 ---?code=multiple-inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
