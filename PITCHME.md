@@ -6,8 +6,7 @@
 #### What do we mean?
 @snapend
 
-@quote[north-west span-85 text-white](“Favor object composition over class inheritance.” ~ Gang of Four, Design Patterns.)
-
+@quote[Favor object composition over class inheritance.](~ Gang of Four, Design Patterns.)
 
 ---?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
