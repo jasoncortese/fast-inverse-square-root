@@ -2,6 +2,8 @@ class Boat {
     constructor() {
         this.length = 10;
         this.distance = 0;
+        this.speed = 1;
+        this.fuel = '';
     }
 }
 
