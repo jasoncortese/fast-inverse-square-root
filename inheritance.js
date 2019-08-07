@@ -36,7 +36,7 @@ class MotorBoat extends Boat {
     }
 }
 
-class FastMotorBoat extends Boat {
+class FastMotorBoat extends MotorBoat {
     constructor() {
         super();
     }
@@ -46,7 +46,7 @@ class FastMotorBoat extends Boat {
     }
 }
 
-class FasterMotorBoat extends Boat {
+class FasterMotorBoat extends MotorBoat {
     constructor() {
         super();
     }
