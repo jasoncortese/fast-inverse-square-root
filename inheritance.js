@@ -30,7 +30,7 @@ class MotorBoat extends Boat {
     constructor() {
         super();
     }
-    
+   
     motor() {
         this.distance += this.length * 3;
     }
