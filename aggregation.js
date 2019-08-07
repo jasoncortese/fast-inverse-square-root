@@ -1,12 +1,6 @@
-class Aggregate {
-    constructor(target = {}) {
-        this.target = target;
-    }
-}
-
-class Frame extends Aggregate {
+class Frame extends {
     constructor(target) {
-        super();
+        this.target = target;
         this.target.length |= 0;
     }
 }
@@ -18,9 +12,9 @@ class LongFrame extends Frame {
     }
 }
 
-class Sail extends Aggregate {
+class Sail {
     constructor(target) {
-        super(target);
+        this.target = target;
     }
     
     sail() {
@@ -28,9 +22,9 @@ class Sail extends Aggregate {
     }
 }
 
-class Motor extends Aggregate {
+class Motor {
     constructor(target) {
-        super(target);
+        this.target = target;
         this.speed = 1;
     }
     
@@ -41,28 +35,28 @@ class Motor extends Aggregate {
 
 class FastMotor extends Motor {
     constructor(target) {
-        super();
+        super(target);
         this.speed *= 3;
     }
 }
 
 class FasterMotor extends Motor {
     constructor(target) {
-        super();
+        super(target);
         this.speed *= 5;
     }
 }
 
-class Fuel extends Aggregate {
+class Fuel {
     constructor(target) {
-        super();
+        this.target = target;
         this.fuel = '';
     }
 }
 
 class DieselFuel extends Fuel {
     constructor(target) {
-        super();
+        super(target);
         this.fuel = 'diesel';
     }
 }
@@ -82,8 +76,8 @@ class SailBoat extends Boat {
 }
 
 class LongSailBoat extends Boat {
-    constructor(length) {
-        super(length);
+    constructor() {
+        super();
         this.sail = new Sail(this);
         this.frame = new LongFrame(this);
     }
