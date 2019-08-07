@@ -194,5 +194,6 @@
 @[4-20](Create a record of the source objects property descriptors)
 @[4-22](Create an aggregate object to use as the new prototype)
 @[9-25](Copy the target and source properties to the new prototype)
-@[9-28](Set the new prototype of the target object)
+@[9-25,28](Set the new prototype of the target object)
+@[9-28]()
 @snapend
