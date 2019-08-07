@@ -21,7 +21,7 @@
 @snapend
 
 @snap[east span-40]
-@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming an enumerable collection of subobjects, which retain thir own reference identity.)
+@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming an collection of subobjects, which retain thir own reference identity.)
 @snapendc
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
