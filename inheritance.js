@@ -109,13 +109,25 @@ class Boat {
     }
 }
 
-class FastDieselMotorBoat extends SailBoat {
+class FastDieselMotorBoat extends FastBoat {
     constructor() {
         super();
+        this.fuel = 'diesel';
     }
     
     motor() {
-        this.distance += this.length * 5;
+        super.motor();
+    }
+}
+
+class FastDieselMotorBoat extends DieselMotorBoat {
+    constructor() {
+        super();
+        this.speed = 5;
+    }
+    
+    motor() {
+        super.motor();
     }
 }
 
