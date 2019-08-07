@@ -6,9 +6,28 @@
 #### What do we mean?
 @snapend
 
-@snap[midpoint span-50]
+@snap[west span-40]
 @quote[Favor object composition over class inheritance.](Gang of Four, Design Patterns.)
 @snapend
+
+@snap[east span-50]
+@box[bg-green text-white rounded box-padding fragment](Class inheritance accomplishes reuse by abstracting a common interface away into a base class that subclasses can inherit from, add to, and override.)
+@snapend
+
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-85 text-white]
+#### What do we mean?
+@snapend
+
+@snap[west span-40]
+@quote[Favor object composition over class inheritance.](Gang of Four, Design Patterns.)
+@snapend
+
+@snap[east span-50]
+@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming an enumerable collection of subobjects, which retain thir own reference identity.)
+@snapendc
+
 
 ---?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
