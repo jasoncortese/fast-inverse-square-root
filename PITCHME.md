@@ -1,6 +1,6 @@
 ## Aggregation over Inheritance
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north-west span-85 text-white]
 #### What do we mean?
@@ -10,7 +10,7 @@
 @quote[Favor object composition over class inheritance.](Gang of Four, Design Patterns.)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north-west span-85 text-white]
 #### What do we mean?
@@ -24,13 +24,13 @@
 @box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming a collection of subobjects, which retain their own reference identity.)
 @snapendc
 
----?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%%)
 
 @snap[north-west span-85 text-white]
 #### Inheritance
 @snapend
 
-@snap[south span-30 text-07 text-white]
+@snap[south span-50 text-07 text-white]
 @[1-6](Boat class)
 @[8-16](Sail Boat with #sail method)
 @[18-27](Long Sail Boat extends Sail Boat)
@@ -47,7 +47,7 @@
 @[123-132](Alternative Fast Diesel Motor Boat)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north-west span-85 text-white]
 #### Multiple Inheritance
@@ -61,13 +61,13 @@
 @box[bg-orange text-white rounded box-padding fragment](... JavaScript does not support multiple inheritance.)
 @snapend
 
----?code=multiple-inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?code=multiple-inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north-west span-85 text-white]
 #### Multiple Inheritance
 @snapend
 
-@snap[south span-30 text-07]
+@snap[south span-50 text-07]
 @[1-6](Boat class)
 @[8-16](Sail Boat with #sail method)
 @[18-23](Long Boat with #length property)
@@ -79,7 +79,7 @@
 @[79-95](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north-west span-85 text-white]
 #### Aggregation
@@ -93,7 +93,7 @@
 @box[bg-green text-white rounded box-padding fragment](... This can be accomplished through delegation to the subobject, or concatenation of the subobject's members.)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north-west span-85 text-white]
 #### Aggregation
@@ -107,13 +107,13 @@
 @box[bg-green text-white rounded box-padding fragment](Aggregation is for "HAS A" relationships)
 @snapend
 
----?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?code=aggregation.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north-west span-85 text-white]
 #### Aggregation
 @snapend
 
-@snap[south span-30 text-07]
+@snap[south span-50 text-07]
 @[1-5](Aggregate class)
 @[7-12](Frame with #length property)
 @[14-19](Long Frame extends Frame)
@@ -132,7 +132,7 @@
 @[114-122](Long Faster Diesel Motor Boat With Sail extends Boat...)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north-west span-85]
 #### Aggregation
@@ -148,7 +148,7 @@
 @ulend
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north span-30]
 #### Questions?
@@ -166,16 +166,16 @@
 #### Concerns?
 @snapend
 
----?code=state-object.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?code=state-object.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%)
 
 @snap[north-west span-85 text-white]
 #### Practical Example
 @snapend
 
-@snap[south span-30 text-07]
+@snap[south span-50 text-07]
 @[1-8](State class with #get & #set methods)
-@[10-17](UndoableState subclass with #undo & #redo methods)
-@[20-27](LockacleState subclass with #lock & #unlock methods)
+@[10-17](UndoableState subclass adds #undo & #redo methods)
+@[20-27](LockacleState subclass adds #lock & #unlock methods)
 @[29-39](UndoableState subclass aggregates Undoable)
 @[41-51](LockableState subclass aggregates Lockable)
 @[54-59](UndoableLockableState subclass aggregates Undoable & Lockable)
