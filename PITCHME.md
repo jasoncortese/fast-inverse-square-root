@@ -102,7 +102,7 @@
 #### Prototypal Inheritance
 @snapend
 
-@[112-120]
+@[112-121]
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
@@ -110,7 +110,7 @@
 #### Prototypal Inheritance
 @snapend
 
-@[122-132]
+@[123-132]
 
 +++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
@@ -118,7 +118,15 @@
 #### Prototypal Inheritance
 @snapend
 
-@[134-143]
+@[134-144]
+
++++?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-65]
+#### Prototypal Inheritance
+@snapend
+
+@[146-155]
 
 
 --
