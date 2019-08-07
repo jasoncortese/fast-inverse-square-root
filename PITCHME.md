@@ -23,10 +23,6 @@
 @[123-132](Alternative Fast Diesel Motor Boat)
 @snapend
 
-@snap[east span-45]
-@img[shadow]()
-@snapend
-
 ---?code=multiple-inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85]
@@ -45,11 +41,7 @@
 @[146-155](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
 @snapend
 
-@snap[east span-45]
-@img[shadow]()
-@snapend
-
----
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85]
 #### Object Composition
