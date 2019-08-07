@@ -138,7 +138,7 @@
 #### Aggregation
 @snapend
 
-@snap[west span-55]
+@snap[west span-60]
 @ul[spaced text-white]
 - Less coupling
 - Fewer classes
@@ -146,4 +146,37 @@
 - More flexibility
 - No need for multiple inheritance
 @ulend
+@snapend
+
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north span-30]
+#### Questions?
+@snapend
+
+@snap[west span-30]
+#### Comments?
+@snapend
+
+@snap[east span-30]
+#### Suggestions?
+@snapend
+
+@snap[south span-30]
+#### Concerns?
+@snapend
+
+---?code=state-object.js&lang=javascript&color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-85 text-white]
+#### Practical Example
+@snapend
+
+@snap[south span-30 text-07]
+@[1-8](State class with #get & #set methods)
+@[10-17](UndoableState subclass with #undo & #redo methods)
+@[20-27](LockacleState subclass with #lock & #unlock methods)
+@[29-39](UndoableState subclass aggregates Undoable)
+@[41-51](LockableState subclass aggregates Lockable)
+@[54-59](UndoableLockableState subclass aggregates Undoable & Lockable)
 @snapend
