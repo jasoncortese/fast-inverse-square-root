@@ -16,11 +16,11 @@
 #### What do we mean?
 @snapend
 
-@snap[north span-50]
-@box[bg-orange text-white rounded box-padding fragment](Class inheritance accomplishes reuse by abstracting a common interface away into a base class that subclasses can inherit from, add to, and override.)
+@snap[west span-50]
+@box[bg-orange text-white rounded box-padding fragment](Class inheritance accomplishes reuse by abstracting a common interface away into a base class that subclasses can inherit from.)
 @snapend
 
-@snap[south span-50]
+@snap[east span-50]
 @box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming an enumerable collection of subobjects, which retain thir own reference identity.)
 @snapendc
 
