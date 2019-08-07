@@ -24,7 +24,7 @@
 @box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming a collection of subobjects, which retain their own reference identity.)
 @snapendc
 
----?code=inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%%)
+---?code=inheritance.js&lang=javascript
 
 @snap[north-west span-85 text-white]
 #### Inheritance
@@ -61,7 +61,7 @@
 @box[bg-orange text-white rounded box-padding fragment](... JavaScript does not support multiple inheritance.)
 @snapend
 
----?code=multiple-inheritance.js&lang=javascript&color=linear-gradient(90deg, #5384AD 85%, white 15%)
+---?code=multiple-inheritance.js&lang=javascript
 
 @snap[north-west span-85 text-white]
 #### Multiple Inheritance
