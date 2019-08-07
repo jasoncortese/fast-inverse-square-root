@@ -6,12 +6,12 @@
 #### Inheritance
 @snapend
 
-@[1-6]
-@[8-16]
-@[18-27]
-@[29-37]
-@[39-47]
-@[49-57]
+@[1-6](Boat)
+@[8-16](Sail Boat adds #sail method)
+@[18-27](Long Sail Boat extends #constructor)
+@[29-37](Motor Boat with #motor method)
+@[39-47](Fast Motor Boat with "faster" #motor method)
+@[49-57](Faster Motor Boat with "even faster" #motor method)
 @[59-65]
 @[67-76]
 @[78-83]
@@ -23,7 +23,7 @@
 @[134-144]
 @[146-155]
 
---
+---
 
 
 @snap[west span-55]
