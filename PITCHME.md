@@ -48,7 +48,7 @@
 @snapend
 
 @snap[west span-40]
-@box[bg-orange text-white rounded box-padding fragment](Inheritance is for &nbsp; "IS A" relationships)
+@box[bg-orange text-white rounded box-padding fragment](&nbsp; Inheritance is for &nbsp; "IS A" relationships)
 @snapend
 
 @snap[east span-40]
