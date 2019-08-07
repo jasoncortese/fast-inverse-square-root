@@ -45,6 +45,7 @@
 @[103-110](Add a #fuel property...)
 @[112-121](Fast Diesel Motor Boat)
 @[123-132](Alternative Fast Diesel Motor Boat)
+@[134-143](Alternative Fast Diesel Motor Boat)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
