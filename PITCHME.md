@@ -21,8 +21,6 @@
 @[103-110](Add a #fuel property...)
 @[112-121](Fast Diesel Motor Boat)
 @[123-132](Alternative Fast Diesel Motor Boat)
-@[134-144](Long Fast Diesel Motor Boat With Sail)
-@[146-155](Alternative Long Fast Diesel Motor Boat With Sail)
 @snapend
 
 
