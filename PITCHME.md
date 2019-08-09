@@ -112,8 +112,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left">The bits of a single-precision floating point number look like this, where s is the sign bit, e are the 8 bits of the exponent E, and m are the 23 significant bits of the mantissa M.</div><br/>
-<span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
+<div style="margin-top: 100px; text-align: left">Substituting our float representations in the inverse square root equation, we end up with logarithms that, for values between 0 and 1, can be closely approximated. </div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -121,9 +120,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-65 text-05]
-`\[m = {\frac{M}{L}}\]
-\[e = E - B\]
-\[\]
-\[float = () => (1+m) 2^e\]
-\[int = () => M + L E\]`
+`\[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
+\[\log_2 (1 + m_y) + e_y = -{\small\frac{1}{2}} {\log_2 (1 + m_x) + e_x}\]
+\[\log_2 (1 + v) \approxeq v + \sigma`
 @snapend
