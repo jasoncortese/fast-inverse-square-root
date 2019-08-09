@@ -106,7 +106,7 @@ function invsqrt(x) {
 \[{\large{I}} \rightarrow M + L E\]`
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;">IEEE-yai-yai</div>
@@ -129,7 +129,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
+<div style="margin-top: 25px; margin-right: 0px;">@img[fragment](ln.png)</div>
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 75%, white 25%)
