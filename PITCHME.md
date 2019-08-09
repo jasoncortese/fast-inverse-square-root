@@ -56,12 +56,13 @@ const buffer = new ArrayBuffer(8); // (x,y)
 const fbuf = new Float32Array(buffer);
 const ibuf = new Uint32Array(buffer);
 
-function invsqrt(number) {
-    fbuf[0] = x;                 // store as float
-    ibuf[0] >>= 1;               // shift right as integer
-    ibuf[0] *= -1;               // negate as integer
-    ibuf[0] += 0x5F3759DF;       // add magic number
-    return fbuf[0];              // return as float
+function invsqrt(x) {
+    fbuf[0] = x;                            // store as float
+    ibuf[0] >>= 1;                          // shift right as integer
+    ibuf[0] *= -1;                          // negate as integer
+    ibuf[0] += 0x5F3759DF;                  // add magic number
+    fbuf[0] *= 1.5 - (x \* fbuf[0] ** 2);   // newtons method
+    return fbuf[0];                         // return as float
 }
 ```
 @snapend
@@ -69,11 +70,11 @@ function invsqrt(number) {
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Math is hard, mkay?</div>
+#### <div style="padding-left: 20px;">Math is hard, m'kay?</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left">Let's convert this to JavaScript so we play around with it and figure out what is going on...</div>
+<div style="margin-top: 100px; text-align: left">In 3D graphics you do a lot of normalizing vectors, and that involves a lot of inverses and square roots, both of which are expensive operations (back then, quadruply so).</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -82,7 +83,6 @@ function invsqrt(number) {
 
 @snap[midpoint span-65 text-05]
 `\[
-\left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
- \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+{1 \over \sqrt{x}
 \]`
 @snapend
