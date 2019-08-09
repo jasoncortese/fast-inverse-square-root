@@ -97,6 +97,7 @@ y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left">The bits of a single-precision floating point number look like this.</div>
+<span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -104,7 +105,6 @@ y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 @snapend
 
 @snap[midpoint span-65 text-05]
-s e e e e e e e e m m m m m m m m m m m m m m m m m m m m m m m
 `\[
 y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 \]\[
