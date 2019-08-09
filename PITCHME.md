@@ -173,5 +173,5 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-65 text-05]
-`[{\large{I}_y} \approx {1-p} L(B - \sigma) + {p}{\large{I}_x}\]]`
+`[{\large{I}_y} \approx {1-p} L(B - \sigma) + {p}{\large{I}_x}\]`
 @snapend
