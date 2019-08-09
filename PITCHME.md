@@ -102,6 +102,7 @@ function invsqrt(x) {
 \[e = E - B\]
 \[\]
 \[{\large{F}} \rightarrow (1+m) 2^e\]
+\[\]
 \[{\large{I}} \rightarrow M + L E\]`
 @snapend
 
