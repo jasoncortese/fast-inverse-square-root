@@ -21,7 +21,7 @@ float Q_rsqrt( float number )
 {
     float x2 = number \* 0.5F;
     float y  = number;
-    long i  = \* ( long \* ) &y;                       // evil floating point bit level hacking
+    long i  = \* ( long \* ) &y;                  // evil floating point bit level hacking
     i  = 0x5f3759df - ( i >> 1 );               // what the fuck? 
     y  = \* ( float \* ) &i;
     y  = y \* ( threehalfs - ( x2 \* y \* y ) );   // 1st iteration
@@ -129,7 +129,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 0px;">@img[fragment](ln.png)</div>
+<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
@@ -161,11 +161,11 @@ function invsqrt(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">What's next?</div>
+#### <div style="padding-left: 20px; color: white;">Prosthaphaeresis</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">How about now? We're looking for a constant K that we can subtract one half of the integer from to approximate the square root of the float.</div>
+<div style="margin-top: 100px; text-align: left;">We're going to call this operation, `prosthaphaeresis`, an old-timey term for approximating multiplication/division with logarithmic addition/subtraction. </div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -173,6 +173,19 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]
-\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]`
+`\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]`
+```
+const buffer = new ArrayBuffer(8); // (x,y)
+const fbuf = new Float32Array(buffer);
+const ibuf = new Uint32Array(buffer);
+
+function invsqrt(x) {
+    fbuf[0] = x;                             // float
+    ibuf[0] >>= 1;                           // shift right as integer
+    ibuf[0] \*= -1;                           // negate as integer
+    ibuf[0] += 0x5F3759DF;                   // add magic number
+    fbuf[0] \*= 1.5 - (x \* fbuf[0] \*\* 2);     // apply newtons method
+    return fbuf[0];                          // return as float
+}
+```
 @snapend
