@@ -129,7 +129,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-40 text-05]
-@img[fragment](ln.png)
+<div style="margin-left: -25%">@img[fragment](ln.png)</div>
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -155,7 +155,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-40 text-05]
-@img[fragment](0.5.png)
+<div style="margin-left: -25%">@img[fragment](0.5.png)</div>
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
