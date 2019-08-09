@@ -101,8 +101,8 @@ function invsqrt(x) {
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
 \[\]
-\[float = () => (1+m) 2^e\]
-\[int = () => M + L E\]`
+\[\large\boldF = (1+m) 2^e\]
+\[\large\boldI => M + L E\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -112,7 +112,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left">Substituting our float representations in the inverse square root equation, we end up with logarithms that, for values between 0 and 1, can be closely approximated. </div>
+<div style="margin-top: 100px; text-align: left">Substituting our float representations in the inverse square root equation, we end up with logarithms that, for values between 0 and 1, can be linearly approximated. </div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
