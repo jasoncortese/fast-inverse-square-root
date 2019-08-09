@@ -96,18 +96,22 @@ y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left">The bits of a single-precision floating point number look like this.</div>
+<div style="margin-top: 100px; text-align: left">The bits of a single-precision floating point number look like this, where s is the sign bit, e are the 8 bits of the exponent E, and m are the 23 significant bits of the mantissa M.</div>
 <span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left">Recall that dividing a logarithm by 2 (or bitwise shifting right) would equate to taking the square root, and multiplying by negative 1 would equate to inverting.</div>
+<div style="margin-bottom: 100px; text-align: left">Both the exponent and the mantissa can be read as integers, say E and M. And as their floating point counterparts, say e and m.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
 `\[
-y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
+m = {\frac{M}{L}}
 \]\[
-\log_2 y = -{\small\frac{1}{2}} {\log_2 x}
+e = E - B
+\]\[
+float => (1+m)2^e
+\]\[
+int => M + L E
 \]`
 @snapend
