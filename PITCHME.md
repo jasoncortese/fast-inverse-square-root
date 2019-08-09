@@ -84,7 +84,7 @@ function invsqrt(x) {
 @snap[midpoint span-65 text-05]
 `\[
 y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
-\log_2(y) = {-\frac{1}{2}} \log_2(x)
+\log{2}(y) = {-\frac{1}{2}} \log_2(x)
 
 \]`
 @snapend
