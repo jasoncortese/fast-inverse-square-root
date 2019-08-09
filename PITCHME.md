@@ -136,7 +136,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Substituting our float representations into the inverse square root equation, we end up with logarithms that, for values between 0 and 1, can be linearly approximated. </div>
+<div style="margin-top: 100px; text-align: left;">How about now? We're looking for a constant K that we can subtract one half of the integer from to approximate the square root. Choosing an appropriate sigma (0.0450465) yields our magic number.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -147,6 +147,5 @@ function invsqrt(x) {
 `\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[K = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} 2^{23} (127 - \sigma)\]
 \[\]
-\[K = 1597463007 = 0x5f3759df\]
-\[(\sigma = 0.0450465)\]`
+\[K = 1597463007 = 0x5f3759df\]`
 @snapend
