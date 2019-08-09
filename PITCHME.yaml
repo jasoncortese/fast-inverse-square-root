@@ -1,4 +1,4 @@
-# GitPitch In-60-Seconds - A Very Short Tutorial.
+# GitPitch The Fast Inverse Square Root Algorithm
 #
 
 #
@@ -42,6 +42,9 @@ published : true
 # Twitter Card Settings [Pro Only]
 # Doc: https://gitpitch.com/docs/settings/twitter-card
 #
-title : "Aggregation over Inheritance"
-description : "A short presentation on the principal of favoring aggregation over inheritance for object composition."
+title : "The Fast Inverse Square Root Algorithm"
+description : "(or, evil floating point bit level hacking)"
 #thumbnail : https://gitpitch.com/gpimg/tutorial-thumb.png
+
+# mathjax
+mathjax : TeX-MML-AM_HTMLorMML-full
