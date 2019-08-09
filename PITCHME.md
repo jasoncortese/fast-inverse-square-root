@@ -19,13 +19,9 @@
 ```
 float Q_rsqrt( float number )
 {
-    long i;
-    float x2, y;
-    const float threehalfs = 1.5F;
-
-    x2 = number \* 0.5F;
-    y  = number;
-    i  = \* ( long \* ) &y;                       // evil floating point bit level hacking
+    float x2 = number \* 0.5F;
+    float y  = number;
+    long i  = \* ( long \* ) &y;                       // evil floating point bit level hacking
     i  = 0x5f3759df - ( i >> 1 );               // what the fuck? 
     y  = \* ( float \* ) &i;
     y  = y \* ( threehalfs - ( x2 \* y \* y ) );   // 1st iteration
@@ -82,11 +78,8 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-65 text-05]
-`\[
-y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
-\]\[
-\log_2 y = -{\small\frac{1}{2}} {\log_2 x}
-\]`
+`\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
+\[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -105,11 +98,8 @@ y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 @snapend
 
 @snap[midpoint span-65 text-05]
-`\[
-m = {\frac{M}{L}}
-\]\[
-e = E - B
-\]`
-as a float `\[(1+m)2^e\]`
-as an int `\[M + L E\]`
+`\[m = {\frac{M}{L}}\]
+\[e = E - B\]
+\[(1+m) 2^e\]
+\[M + L E\]`
 @snapend
