@@ -136,11 +136,11 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: center;">How about now? </div>
+<div style="margin-top: 100px; text-align: left;">How about now? We're looking for a constant K that we can subtract one half of the integer from to approximate the square root.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're looking for a constant K that we can subtract one half of the integer from to approximate the square root. Choosing an appropriate sigma (0.0450465) yields our magic number.</div>
+<div style="margin-bottom: 100px; text-align: left;">Choosing an appropriate sigma (0.0450465) yields our magic number!</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
