@@ -4,7 +4,7 @@
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### Origins...
+#### <div style="padding-left: 20px;">Origins...</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
