@@ -8,7 +8,7 @@
 @snapend
 
 @snap[midpoint span-60 text-05]
-```
+```c
 float Q_rsqrt( float number )
 {
 	long i;
