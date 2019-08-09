@@ -12,7 +12,7 @@
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left">This was credited to John Carmack who was lead programmer on the Quake software, but can be traced back through Gary Tarolli of SGI, and ultimately to the mid-80s and Greg Walsh and Cleve Moler working for Ardent Computers.</div>
+<div style="margin-bottom: 100px; text-align: left">This was credited to John Carmack who was lead programmer on the Quake software, but can be traced back past the 90s with Gary Tarolli of SGI, and ultimately to the mid-80s with Greg Walsh drawing inspiration from Cleve Moler while working at Ardent Computers.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -39,16 +39,33 @@ float Q_rsqrt( float number )
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### What do we mean?
+#### What the f*ck?
 @snapend
 
-@snap[west span-40]
-@box[bg-orange text-white rounded box-padding fragment](Class inheritance accomplishes reuse by abstracting away a common interface into a base class that subclasses can inherit from.)
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left">Let's convert this to JavaScript so we play around with it and figure out what is going on...</div>
 @snapend
 
-@snap[east span-40]
-@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming a collection of subobjects, which encapsulate their own identity.)
-@snapendc
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left">It turns out the most interesting thing here isn't the magic number itself, but the idea that: treating a floating point number as an integer approximates a logarithmic operation!</div>
+@snapend
+
+@snap[midpoint span-65 text-05]
+```
+const buffer = new ArrayBuffer(8); // (x,y)
+const fbuf = new Float32Array(buffer);
+const ibuf = new Uint32Array(buffer);
+
+function invsqrt(number) {
+    fbuf[0] = x;                 // store as float
+    ibuf[0] >>= 1;               // shift right as integer
+    ibuf[0] *= -1;               // negate as integer
+    ibuf[0] += 0x5F3759DF;       // add magic number
+    return fbuf[0];              // return as float
+    return y;
+}
+```
+@snapend
 
 ---?code=inheritance.js&lang=javascript
 
