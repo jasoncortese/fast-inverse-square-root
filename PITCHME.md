@@ -11,6 +11,10 @@
 <div style="margin-top: 100px; text-align: left">Around the turn of the century on a Usenet public forum, someone posted this method found in the 1999 source code of Quake III Arena...</div>
 @snapend
 
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left">This implementation is credited to John Carmack who was lead programmer on the Quake software, but the origins can be traced back to the mid-80s and Greg Walsh working for Ardent Computer Corp.</div>
+@snapend
+
 @snap[midpoint span-65 text-05]
 ```
 float Q_rsqrt( float number )
