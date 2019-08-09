@@ -117,7 +117,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: center;">Look familiar? &nbsp; &nbsp; <span style="font-size: 15px;">```i  = 0x5f3759df - ( i >> 1 );```</span></div>
+<div style="margin-bottom: 100px; text-align: center;">Look familiar?</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -127,4 +127,23 @@ function invsqrt(x) {
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
 \[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]
 \[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]`
+@snapend
+
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">The Magic Number</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Substituting our float representations into the inverse square root equation, we end up with logarithms that, for values between 0 and 1, can be linearly approximated. </div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: center;">Look familiar?</div>
+@snapend
+
+@snap[midpoint span-65 text-05]
+`\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
+\[K = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} 2^23 (127 - \sigma) = 0x5f3759df\]`
 @snapend
