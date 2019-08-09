@@ -101,8 +101,8 @@ function invsqrt(x) {
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
 \[\]
-\[\large{F} \rightarrow (1+m) 2^e\]
-\[\large{I} \rightarrow M + L E\]`
+\[{\large{F}} \rightarrow (1+m) 2^e\]
+\[{\large{I}} \rightarrow M + L E\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
