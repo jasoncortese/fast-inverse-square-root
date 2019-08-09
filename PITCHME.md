@@ -94,13 +94,13 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left">Both the exponent and the mantissa can be read as integers, say E and M. And as their floating point counterparts, say e and m.</div>
+<div style="margin-bottom: 100px; text-align: left">For 32-bit floating point numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
 \[\]
-\[float = (1+m) 2^e\]
-\[int = M + L E\]`
+\[float = () => (1+m) 2^e\]
+\[int = () => M + L E\]`
 @snapend
