@@ -100,6 +100,7 @@ function invsqrt(x) {
 @snap[midpoint span-65 text-05]
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
-\[(1+m) 2^e\]
-\[M + L E\]`
+\[\]
+float = \[(1+m) 2^e\]
+int = \[M + L E\]`
 @snapend
