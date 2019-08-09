@@ -117,7 +117,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: center;">Look familiar? ```i  = 0x5f3759df - ( i >> 1 );```</div>
+<div style="margin-bottom: 100px; text-align: center;">Look familiar? <span style="font-size: 12px; padding-right: 20px;">```i  = 0x5f3759df - ( i >> 1 );```</span></div>
 @snapend
 
 @snap[midpoint span-65 text-05]
