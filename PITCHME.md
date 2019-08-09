@@ -1,4 +1,4 @@
-## Aggregation over Inheritance
+## Fast Inverse Square Algorithm (####or, What the F*ck)
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
