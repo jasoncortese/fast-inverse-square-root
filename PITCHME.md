@@ -109,9 +109,7 @@ y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 m = {\frac{M}{L}}
 \]\[
 e = E - B
-\]\[
-float => (1+m)2^e
-\]\[
-int => M + L E
 \]`
+as a float `\[(1+m)2^e\]`
+as an int `\[M + L E\]`
 @snapend
