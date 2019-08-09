@@ -12,7 +12,7 @@
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left">This was credited to John Carmack who was lead programmer on the Quake software, but can be traced back past Gary Tarolli of SGI, and ultimately to the mid-80s with Greg Walsh and Cleve Moler working at Ardent Computers.</div>
+<div style="margin-bottom: 100px; text-align: left">This was credited to John Carmack who was lead programmer on the Quake software, but can be traced back thru Gary Tarolli of SGI, and ultimately to the mid-80s with Greg Walsh and Cleve Moler working at Ardent Computers.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -70,7 +70,7 @@ function invsqrt(x) {
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Math is hard, m'kay?</div>
+#### <div style="padding-left: 20px; color: white;">Math is hard, m'kay?</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -78,7 +78,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left">It turns out the most interesting thing here isn't the magic number itself, but the idea: treating a Float as an Integer approximates a logarithmic operation!</div>
+<div style="margin-bottom: 100px; text-align: left">Recall that dividing a logarithm by 2 would equate to taking the square root, and multiplying by negative 1 would equate to inverting.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -87,5 +87,7 @@ y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 \]
 \[
 \log_2 y = {-\small\frac{1}{2}} \log_2 x
+\][
+\log_2 y = {{\log_2 x} >> 1} * -1
 \]`
 @snapend
