@@ -144,7 +144,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-65 text-05]
-`\[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]
-\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
-\[K = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} 2^23 (127 - \sigma) = 0x5f3759df\]`
+`\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
+\[K = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} 2^{23} (127 - \sigma)\]
+\[(\sigma = 0.0450465), K = 1597463007 = 0x5f3759df`
 @snapend
