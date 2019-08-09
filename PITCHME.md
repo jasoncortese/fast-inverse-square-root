@@ -7,7 +7,9 @@
 #### Origins...
 @snapend
 
-@snap[north span-100]
+@snap[north span-85 text-05 text-black]
+\
+\
 Sometime around the turn of the century on a Usenet public forum, someone posted this piece of code found in the 1999 source code of Quake III Arena...
 @snapend
 
