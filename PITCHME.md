@@ -47,7 +47,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left">It turns out the most interesting thing here isn't the magic number itself, but the idea: treating a floating point number as an integer approximates a logarithmic operation!</div>
+<div style="margin-bottom: 100px; text-align: left">It turns out the most interesting thing here isn't the magic number itself, but the idea: treating a Float as an Integer approximates a logarithmic operation!</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -61,7 +61,7 @@ function invsqrt(x) {
     ibuf[0] >>= 1;                           // shift right as integer
     ibuf[0] \*= -1;                           // negate as integer
     ibuf[0] += 0x5F3759DF;                   // add magic number
-    fbuf[0] \*= 1.5 - (x \* fbuf[0] \*\* 2);     // newtons method
+    fbuf[0] \*= 1.5 - (x \* fbuf[0] \*\* 2);     // apply newtons method
     return fbuf[0];                          // return as float
 }
 ```
@@ -78,11 +78,11 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left">It turns out the most interesting thing here isn't the magic number itself, but the idea: treating a floating point number as an integer approximates a logarithmic operation!</div>
+<div style="margin-bottom: 100px; text-align: left">It turns out the most interesting thing here isn't the magic number itself, but the idea: treating a Float as an Integer approximates a logarithmic operation!</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
 `\[
-1 \over \sqrt{x}
+y = 1 \over \sqrt{x} = x^\frac{1}{2}
 \]`
 @snapend
