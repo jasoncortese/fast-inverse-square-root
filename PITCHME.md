@@ -85,6 +85,6 @@ function invsqrt(x) {
 `\[
 y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 \]\[
-\log_2 y = -{\frac{\log_2 x}{2}}
+\log_2 y = -{\frac{1}{2}} {\log_2 x}
 \]`
 @snapend
