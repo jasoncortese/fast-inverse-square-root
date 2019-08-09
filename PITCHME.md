@@ -117,7 +117,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: center;">Look familiar?</div>
+<div style="margin-bottom: 100px; text-align: center;">Look familiar yet?</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -126,8 +126,7 @@ function invsqrt(x) {
 \[m_y + e_y + \sigma \approx -{\small\frac{1}{2}} (m_x + e_x + \sigma)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
 \[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]
-\[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]
-\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]`
+\[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -145,6 +144,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-65 text-05]
-`\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
+`\[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]
+\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[K = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} 2^23 (127 - \sigma) = 0x5f3759df\]`
 @snapend
