@@ -57,12 +57,12 @@ const fbuf = new Float32Array(buffer);
 const ibuf = new Uint32Array(buffer);
 
 function invsqrt(x) {
-    fbuf[0] = x;                            // store as float
-    ibuf[0] >>= 1;                          // shift right as integer
-    ibuf[0] *= -1;                          // negate as integer
-    ibuf[0] += 0x5F3759DF;                  // add magic number
-    fbuf[0] *= 1.5 - (x \* fbuf[0] ** 2);   // newtons method
-    return fbuf[0];                         // return as float
+    fbuf[0] = x;                             // store as float
+    ibuf[0] >>= 1;                           // shift right as integer
+    ibuf[0] \*= -1;                           // negate as integer
+    ibuf[0] += 0x5F3759DF;                   // add magic number
+    fbuf[0] \*= 1.5 - (x \* fbuf[0] \*\* 2);     // newtons method
+    return fbuf[0];                          // return as float
 }
 ```
 @snapend
@@ -83,6 +83,6 @@ function invsqrt(x) {
 
 @snap[midpoint span-65 text-05]
 `\[
-{1 \over \sqrt{x}
+1 \over \sqrt{x}
 \]`
 @snapend
