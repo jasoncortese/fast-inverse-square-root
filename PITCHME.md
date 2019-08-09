@@ -7,7 +7,7 @@
 #### Origins...
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```
 float Q_rsqrt( float number )
 {
