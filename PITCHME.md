@@ -122,5 +122,5 @@ function invsqrt(x) {
 @snap[midpoint span-65 text-05]
 `\[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 (1 + m_y) + e_y = -{\small\frac{1}{2}} {\log_2 (1 + m_x) + e_x}\]
-\[\log_2 (1 + v) \approxeq v + \sigma`
+\[\log_2 (1 + v) \approxeq v + \sigma\]`
 @snapend
