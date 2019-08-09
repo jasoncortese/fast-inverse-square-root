@@ -12,7 +12,7 @@
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left">This was credited to John Carmack who was lead programmer on the Quake software, but can be traced back past the 90s with Gary Tarolli of SGI, and ultimately to the mid-80s with Greg Walsh drawing inspiration from Cleve Moler while working at Ardent Computers.</div>
+<div style="margin-bottom: 100px; text-align: left">This was credited to John Carmack who was lead programmer on the Quake software, but can be traced back past Gary Tarolli of SGI, and ultimately to the mid-80s with Greg Walsh and Cleve Moler working at Ardent Computers.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -39,7 +39,7 @@ float Q_rsqrt( float number )
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### What the f*ck?
+#### <div style="padding-left: 20px;">What the f*ck?</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -47,7 +47,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left">It turns out the most interesting thing here isn't the magic number itself, but the idea that: treating a floating point number as an integer approximates a logarithmic operation!</div>
+<div style="margin-bottom: 100px; text-align: left">It turns out the most interesting thing here isn't the magic number itself, but the idea: treating a floating point number as an integer approximates a logarithmic operation!</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -62,182 +62,27 @@ function invsqrt(number) {
     ibuf[0] *= -1;               // negate as integer
     ibuf[0] += 0x5F3759DF;       // add magic number
     return fbuf[0];              // return as float
-    return y;
 }
 ```
 @snapend
 
----?code=inheritance.js&lang=javascript
-
-@snap[north-west span-85 text-white]
-#### Inheritance
-@snapend
-
-@snap[south span-50 text-07 text-white]
-@[1-6](Boat class)
-@[8-16](Sail Boat with #sail method)
-@[18-27](Long Sail Boat extends Sail Boat)
-@[29-37](Motor Boat with #motor method)
-@[39-47](Fast Motor Boat with faster #motor method)
-@[49-57](Faster Motor Boat with even faster #motor method)
-@[59-65](Add a #speed property...)
-@[67-76](Improved Motor Boat)
-@[78-83](Improved Fast Motor Boat)
-@[85-90](Improved Faster Motor Boat)
-@[92-97](Fast Sail Boat ?)
-@[98-108](Diesel Motor Boat ?)
-@[110-117](Add a #fuel property...)
-@[119-128](Fast Diesel Motor Boat)
-@[130-139](Alternative Fast Diesel Motor Boat)
-@[141-150](Alternative Fast Diesel Motor Boat)
-@snapend
-
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### Multiple Inheritance
+#### <div style="padding-left: 20px;">Math is hard, mkay?</div>
 @snapend
 
-@snap[west span-40]
-@box[bg-orange text-white rounded box-padding fragment](Multiple inheritance is when a sub-class can inherit from more than one parent class.)
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left">Let's convert this to JavaScript so we play around with it and figure out what is going on...</div>
 @snapend
 
-@snap[east span-40]
-@box[bg-orange text-white rounded box-padding fragment](... JavaScript does not support multiple inheritance.)
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left">It turns out the most interesting thing here isn't the magic number itself, but the idea: treating a floating point number as an integer approximates a logarithmic operation!</div>
 @snapend
 
----?code=multiple-inheritance.js&lang=javascript
-
-@snap[north-west span-85 text-white]
-#### Multiple Inheritance
-@snapend
-
-@snap[south span-50 text-07]
-@[1-8](Boat class)
-@[10-18](Sail Boat with #sail method)
-@[20-25](Long Boat with #length property)
-@[27-35](Motor Boat with #motor method)
-@[37-42](Speed Boat with #speed property)
-@[44-53](Fast Motor Boat extends Motor Boat & Speed Boat)
-@[55-64](Fast Sail Boat extends Sail Boat & Speed Boat)
-@[66-79](Faster Sail Boat With Motor extends Sail Boat, Motor Boat, Speed Boat)
-@[81-97](Long Fast Diesel Motor Boat With Sail extends Diesel Boat, Motor Boat, Speed Boat, Long Boat, Sail Boat)
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
-
-@snap[north-west span-85 text-white]
-#### Aggregation
-@snapend
-
-@snap[west span-40]
-@box[bg-green text-white rounded box-padding fragment](Aggregation accomplishes reuse by forming a collection of subobjects, which retain their own reference identity.)
-@snapend
-
-@snap[east span-40]
-@box[bg-green text-white rounded box-padding fragment](... This can be accomplished through delegation to the subobject, or concatenation of the subobject's members.)
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
-
-@snap[north-west span-85 text-white]
-#### Aggregation
-@snapend
-
-@snap[west span-40]
-@box[bg-orange text-white rounded box-padding fragment](&nbsp; Inheritance is for &nbsp; "IS A" relationships)
-@snapend
-
-@snap[east span-40]
-@box[bg-green text-white rounded box-padding fragment](Aggregation is for "HAS A" relationships)
-@snapend
-
----?code=aggregation.js&lang=javascript
-
-@snap[north-west span-85 text-white]
-#### Aggregation
-@snapend
-
-@snap[south span-50 text-07]
-@[1-9](Sail with #sail method)
-@[11-20](Motor with #motor method)
-@[22-27](Fast Motor extends Motor)
-@[29-34](Faster Motor extends Motor)
-@[36-41](Frame with #length property)
-@[43-48](Long Frame extends Frame)
-@[50-55](Fuel with #fuel property)
-@[57-62](Diesel Fuel extends Fuel)
-@[64-69](Boat class)
-@[71-76](Sail Boat extends Boat, adds Sail)
-@[78-84](Long Sail Boat extends Boat, adds Sail & Long Frame)
-@[86-91](Motor Boat extends Boat, adds Motor)
-@[93-98](Fast Motor Boat extends Boat, adds Fast Motor)
-@[100-106](Faster Motor Boat with Sail extends Boat, adds Faster Motor & Sail)
-@[108-116](Long Faster Diesel Motor Boat With Sail extends Boat...)
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
-
-@snap[north-west span-85]
-#### Aggregation
-@snapend
-
-@snap[west span-60]
-@ul[spaced text-white]
-- Less coupling
-- Fewer classes
-- Better encapsulation
-- More flexibility
-- No need for multiple inheritance
-@ulend
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
-
-@snap[north span-30]
-#### Questions?
-@snapend
-
-@snap[west span-30]
-#### Comments?
-@snapend
-
-@snap[east span-30]
-#### Suggestions?
-@snapend
-
-@snap[south span-30]
-#### Concerns?
-@snapend
-
----?code=state-object.js&lang=javascript
-
-@snap[north-west span-85 text-white]
-#### A Practical Example
-@snapend
-
-@snap[south span-50 text-07]
-@[1-8](State class with #get & #set methods)
-@[1-17](UndoableState subclass adds #undo & #redo methods)
-@[10-27](LockacleState subclass adds #lock & #unlock methods)
-@[29-39](UndoableState subclass aggregates Undoable)
-@[41-51](LockableState subclass aggregates Lockable)
-@[47-64](UndoableLockableState subclass aggregates Undoable & Lockable)
-@snapend
-
----?code=aggregate.js&lang=javascript
-
-@snap[north-west span-85 text-white]
-#### My Implementation
-@snapend
-
-@snap[south span-50 text-07]
-@[1-2](WeakMaps hold references to the target objects)
-@[4-8](Store prototypes for the target and source "this" objects)
-@[4-14](Create a record of the target objects property descriptors)
-@[4-20](Create a record of the source objects property descriptors)
-@[4-22](Create an aggregate object to use as the new prototype)
-@[9-25](Copy the target and source properties to the new prototype)
-@[9-23,26](Set the new prototype of the target object)
-@[9-28]()
+@snap[midpoint span-65 text-05]
+`\[
+\left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
+ \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+\]`
 @snapend
