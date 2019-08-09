@@ -87,7 +87,8 @@ y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 \]
 \[
 \log_2 y = {-\small\frac{1}{2}} \log_2 x
-\][
-\log_2 y = {{\log_2 x} \>\> 1} \* -1
+\]
+\[
+\log_2 y = -1 * {\log_2 x} \>\> 1}
 \]`
 @snapend
