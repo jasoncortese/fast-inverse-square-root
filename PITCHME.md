@@ -1,7 +1,7 @@
 ## Fast Inverse Square Root Algorithm 
 #### (or, evil floating point bit level hacking)
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 75%, white 25%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px;">Origins...</div>
@@ -32,7 +32,7 @@ float Q_rsqrt( float number )
 ```
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 75%, white 25%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px;">What the f*ck?</div>
@@ -63,7 +63,7 @@ function invsqrt(x) {
 ```
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 75%, white 25%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;">Math is hard, m'kay?</div>
@@ -82,7 +82,7 @@ function invsqrt(x) {
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]`
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 75%, white 25%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;">IEEE-yai-yai</div>
@@ -106,7 +106,7 @@ function invsqrt(x) {
 \[{\large{I}} \rightarrow M + L E\]`
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 75%, white 25%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;">IEEE-yai-yai</div>
@@ -132,7 +132,7 @@ function invsqrt(x) {
 <div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 75%, white 25%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;">The Magic Number</div>
@@ -158,7 +158,7 @@ function invsqrt(x) {
 <div style="margin-top: 25px; margin-right: 25px;">@img[fragment](0.5.png)
 @snapend
 
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+---?color=linear-gradient(90deg, #5384AD 75%, white 25%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;">What's next?</div>
