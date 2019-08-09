@@ -1,5 +1,5 @@
-## Fast Inverse Square Algorithm 
-#### (or, What the F*ck)
+## Fast Inverse Square Root Algorithm 
+#### (or, evil floating point bit level hacking)
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
