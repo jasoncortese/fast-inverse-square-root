@@ -128,7 +128,7 @@ function invsqrt(x) {
 \[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
 @snapend
 
-@snap[east span-35 text-05]
+@snap[east span-30 text-05]
 <div style="margin-top: 25px;">@img[fragment](ln.png)</div>
 @snapend
 
@@ -154,7 +154,7 @@ function invsqrt(x) {
 \[K = 1597463007 = 0x5f3759df\]`
 @snapend
 
-@snap[east span-35 text-05]
+@snap[east span-30 text-05]
 <div style="margin-top: 25px;">@img[fragment](0.5.png)
 @snapend
 
