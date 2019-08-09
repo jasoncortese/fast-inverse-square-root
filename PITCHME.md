@@ -7,8 +7,9 @@
 #### Origins...
 @snapend
 
-@snap[midpoint span-60]
-```float Q_rsqrt( float number )
+@snap[midpoint span-60 text-05]
+```
+float Q_rsqrt( float number )
 {
 	long i;
 	float x2, y;
@@ -23,7 +24,8 @@
 //	y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
 
 	return y;
-}```
+}
+```
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
