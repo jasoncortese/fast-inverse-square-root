@@ -101,6 +101,6 @@ function invsqrt(x) {
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
 \[\]
-float = \[(1+m) 2^e\]
-int = \[M + L E\]`
+\[float = (1+m) 2^e\]
+\[int = M + L E\]`
 @snapend
