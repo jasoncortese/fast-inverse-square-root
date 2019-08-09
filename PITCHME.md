@@ -123,6 +123,6 @@ function invsqrt(x) {
 `\[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 (1 + m_y) + e_y = -{\small\frac{1}{2}} {\log_2 (1 + m_x) + e_x}\]
 \[m_y + e_y + \sigma \approx -{\small\frac{1}{2}} (m_x + e_x + \sigma)\]
-\[{\frac{M_y}{L} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L} + E_x + \sigma)\]
+\[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L} + E_x + \sigma)\]
 \[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]`
 @snapend
