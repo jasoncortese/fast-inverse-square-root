@@ -129,7 +129,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[east span-35 text-05]
-<div style="margin-top: 25px; margin-right: 50px;">@img[fragment](ln.png)</div>
+<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -155,7 +155,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[east span-35 text-05]
-<div style="margin-top: 25px; margin-right: 50px;">@img[fragment](0.5.png)
+<div style="margin-top: 25px; margin-right: 0px;">@img[fragment](0.5.png)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -173,5 +173,6 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-65 text-05]
-`\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]`
+`\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]
+\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]`
 @snapend
