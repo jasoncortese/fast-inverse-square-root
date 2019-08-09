@@ -113,7 +113,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left">Substituting our float representations in the inverse square root equation, we end up with logarithms that, for values between 0 and 1, can be linearly approximated. </div>
+<div style="margin-top: 100px; text-align: left">Substituting our float representations into the inverse square root equation, we end up with logarithms that, for values between 0 and 1, can be linearly approximated. </div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -125,5 +125,6 @@ function invsqrt(x) {
 \[\log_2 (1 + m_y) + e_y = -{\small\frac{1}{2}} {\log_2 (1 + m_x) + e_x}\]
 \[m_y + e_y + \sigma \approx -{\small\frac{1}{2}} (m_x + e_x + \sigma)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
-\[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]`
+\[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]
+\[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
 @snapend
