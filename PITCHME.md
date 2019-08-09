@@ -120,16 +120,16 @@ function invsqrt(x) {
 <div style="margin-bottom: 100px; text-align: left;">Look familiar yet?</div>
 @snapend
 
-@snap[midpoint span-65 text-05]
+@snap[midpoint span-65 text-05]<div style="margin-left: -50px">
 `\[\log_2 (1 + m_y) + e_y = -{\small\frac{1}{2}} {\log_2 (1 + m_x) + e_x}\]
 \[m_y + e_y + \sigma \approx -{\small\frac{1}{2}} (m_x + e_x + \sigma)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
 \[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]
 \[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
-@snapend
+</div>@snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 20px;">@img[fragment](ln.png)</div>
+<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -146,16 +146,16 @@ function invsqrt(x) {
 <div style="margin-bottom: 100px; text-align: left;">Choosing an appropriate sigma yields our magic number!</div>
 @snapend
 
-@snap[midpoint span-65 text-05]
+<div style="margin-left: -50px">@snap[midpoint span-65 text-05]
 `\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[K = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} 2^{23} (127 - \sigma)\]
 \[(\sigma = 0.0450465)\]
 \[\]
 \[K = 1597463007 = 0x5f3759df\]`
-@snapend
+@snapend</div>
 
 @snap[east span-35 text-05]
-<div style="margin-top: 25px;">@img[fragment](0.5.png)
+<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](0.5.png)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
