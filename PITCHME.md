@@ -128,8 +128,8 @@ function invsqrt(x) {
 \[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
 @snapend
 
-@snap[west span-65 text-05]
-<div style="margin-left: 75px; margin-top: 50px;">@img[fragment](ln.png)</div>
+@snap[east span-30 text-05]
+<div style="margin-left: 0; margin-top: 50px;">@img[fragment](ln.png)</div>
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -154,14 +154,14 @@ function invsqrt(x) {
 \[K = 1597463007 = 0x5f3759df\]`
 @snapend
 
-@snap[west span-65 text-05]
-<div style="margin-left: 75px; margin-top: 50px;">@img[fragment](0.5.png)
+@snap[east span-35 text-05]
+<div style="margin-left: 0; margin-top: 50px;">@img[fragment](0.5.png)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">The Magic Number</div>
+#### <div style="padding-left: 20px; color: white;">What's next?</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -173,9 +173,5 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-65 text-05]
-`\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
-\[K = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} 2^{23} (127 - \sigma)\]
-\[(\sigma = 0.0450465)\]
-\[\]
-\[K = 1597463007 = 0x5f3759df\]`
+`[{\large{I}_y} \approx {1-p} L(B - \sigma) + {p}{\large{I}_x}\]]`
 @snapend
