@@ -83,6 +83,6 @@ function invsqrt(x) {
 
 @snap[midpoint span-65 text-05]
 `\[
-y = 1 \over \sqrt{x} = x^\frac{1}{2}
+y = {1 \over \sqrt{x}} = x^\frac{1}{2}
 \]`
 @snapend
