@@ -87,6 +87,6 @@ y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 \]\[
 \log_2 y = -{\small\frac{1}{2}} {\log_2 x}
 \]\[
-\exp_2{\log_2 y} = \exp_2{({\log_2 x}) * -1 / 2}
+\exp_2{\log_2 y} = \exp_2{(-1/2)({\log_2 x})}
 \]`
 @snapend
