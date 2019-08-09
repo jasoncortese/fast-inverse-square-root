@@ -147,11 +147,11 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
-\[K = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} 2^{23} (127 - \sigma)\]
+`\[{\large{I}_y} \approx {\small\frac{3}{2}}K -{\small\frac{1}{2}}{\large{I}_x}\]
+\[{\small\frac{3}{2}} K = L(B - \sigma) = {\small\frac{3}{2}} 2^{23} (127 - \sigma)\]
 \[(\sigma = 0.0450465)\]
 \[\]
-\[K = 1597463007 = 0x5f3759df\]`
+\[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
 
 @snap[east span-30 text-05]
@@ -165,7 +165,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We're going to call this operation, `prosthaphaeresis`, an old-timey term for approximating multiplication/division with logarithmic addition/subtraction. </div>
+<div style="margin-top: 100px; text-align: left;">We're going to call this operation, `prosthaphaeresis`, an old-timey term for approximating logarithms before logarithms were invented. </div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
