@@ -88,3 +88,26 @@ y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 \log_2 y = -{\small\frac{1}{2}} {\log_2 x}
 \]`
 @snapend
+
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">IEEE-yai-yai</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left">The bits of a single-precision floating point number look like this.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left">Recall that dividing a logarithm by 2 (or bitwise shifting right) would equate to taking the square root, and multiplying by negative 1 would equate to inverting.</div>
+@snapend
+
+@snap[midpoint span-65 text-05]
+s e e e e e e e e m m m m m m m m m m m m m m m m m m m m m m m
+`\[
+y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
+\]\[
+\log_2 y = -{\small\frac{1}{2}} {\log_2 x}
+\]`
+@snapend
