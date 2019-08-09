@@ -83,16 +83,12 @@ function invsqrt(x) {
 
 @snap[midpoint span-65 text-05]
 `\[
-y = {1 \over \sqrt{x}}
-\]\[
-y = x^{-\frac{1}{2}}
+y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}
 \]\[
 \log_2 y = -{\small\frac{1}{2}} {\log_2 x}
 \]\[
 \exp_2{\log_2 y} = \exp_2{(-1/2)({\log_2 x})}
 \]\[
 y = x^{-\frac{1}{2}}
-\]\[
-y = {1 \over \sqrt{x}}
 \]`
 @snapend
