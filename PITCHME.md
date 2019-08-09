@@ -128,8 +128,8 @@ function invsqrt(x) {
 \[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
 @snapend
 
-@snap[west span-60 text-05]
-<div style="margin-left: 100px;">@img[fragment](ln.png)</div>
+@snap[west span-65 text-05]
+<div style="margin-left: 120px; margin-top: 50px;">@img[fragment](ln.png)</div>
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -154,8 +154,8 @@ function invsqrt(x) {
 \[K = 1597463007 = 0x5f3759df\]`
 @snapend
 
-@snap[west span-70 text-05]
-<div style="margin-left: 120px;">@img[fragment](0.5.png)
+@snap[west span-65 text-05]
+<div style="margin-left: 120px; margin-top: 20px;">@img[fragment](0.5.png)
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
