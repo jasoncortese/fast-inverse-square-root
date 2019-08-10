@@ -174,10 +174,10 @@ function invsqrt(x) {
 
 @snap[midpoint span-60 text-05]
 `\[y \approx {\sqrt{x}}\]
-\[y' = {{\frac{x}{y} + y} \over {2}}\]
+\[y' = {{\frac{x}{y^{2-1}} + y} \over {2}}\]
 \[\]
 \[y \approx {1 \over \sqrt{x}}\]
-\[y' = {-{\frac{x}{y^{-3}} + 3y} \over {2}}\]`
+\[y' = -{{\frac{x}{y^{-2-1}} - 3y} \over {2}}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
