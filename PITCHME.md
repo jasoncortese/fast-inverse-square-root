@@ -158,6 +158,29 @@ function invsqrt(x) {
 <div style="margin-top: 25px; margin-right: 25px;">@img[fragment](0.5.png)
 @snapend
 
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">Newton's method</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. Start with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">In our formula we are using the logarithmic</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[y \approx {\sqrt{x}}\]
+\[y' = {{\frac{x}{y} + y} \over {2}}\]
+\[\]
+\[y \approx {1 \over \sqrt{x}}\]
+\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
+@snapend
+
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
@@ -187,28 +210,6 @@ function invsqrt(x) {
     return fbuf[0];                          // return float
 }
 ```
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">A quick refresher...</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. Start with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">In our formula we are using the logarithmic</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[y \approx {\sqrt{x}}\]
-\[y' = {{\frac{x}{y} + y} \over {2}}\]
-\[\]
-\[y \approx {1 \over \sqrt{x}}\]
-\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
