@@ -174,7 +174,7 @@ function invsqrt(x) {
 
 @snap[midpoint span-60 text-05]
 `\[y \approx {1 \over \sqrt{x}}\]
-\[y' = y - {{y - xy^3} \over {2}})\]`
+\[y' = y - {{xy^3 - y} \over {2}}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
