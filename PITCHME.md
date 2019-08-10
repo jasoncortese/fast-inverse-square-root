@@ -200,7 +200,7 @@ function invsqrt(x) {
 \[K_{(1-p)} = (1-p) (2^{23}) (127 - \sigma)\]
 \[K_{\frac{1}{2}} = {\frac{1}{2}} (2^{23}) (127 - \sigma) = 0x1fbd1df5\]
 \[K_{\frac{1}{3}} = {\frac{2}{3}} (2^{23}) (127 - \sigma) = 0x2a517d3c\]
-\[K_{0} = {\large 1} (2^{23}) (127 - \sigma) = 0x3f7a3bea\]`
+\[K_{0} = {\frac{1}{1}} (2^{23}) (127 - \sigma) = 0x3f7a3bea\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
