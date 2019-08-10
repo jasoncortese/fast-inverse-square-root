@@ -157,20 +157,19 @@ function invsqrt(x) {
 @snap[east span-30 text-05]
 <div style="margin-top: 25px; margin-right: 25px;">@img[fragment](0.5.png)
 @snapend
-
-
+    
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">Newton's method</div>
+#### <div style="padding-left: 20px; color: white;">Newton's method...</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. Start with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
+<div style="margin-top: 100px; text-align: left;">Recall that this is an iterative way of solving for roots of a function. Start with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">In our formula we are using the logarithmic</div>
+<div style="margin-bottom: 100px; text-align: left;">(Fun fact: this method applied to finding square roots was known to the ancient Babylonians.)</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -179,6 +178,24 @@ function invsqrt(x) {
 \[\]
 \[y \approx {1 \over \sqrt{x}}\]
 \[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
+@snapend
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">All the Magic Numbers</div>
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Note that if `p` is minus one-half for the inverse square-root, `1-p` is three-halfs. For the proper square root then, `p` would be one-half and `1-p` one-half as well.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">...</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]
+\[(a / b) * (2 ** 23) * (127 - \sigma)}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
@@ -210,18 +227,4 @@ function invsqrt(x) {
     return fbuf[0];                          // return float
 }
 ```
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">Prosthaphaeresis</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Note that if `p` is minus one-half for the inverse square-root, `1-p` is three-halfs. For the proper square root then, `p` would be one-half and `1-p` one-half as well.</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]`
 @snapend
