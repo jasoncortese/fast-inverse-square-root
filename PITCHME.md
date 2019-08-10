@@ -173,7 +173,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[y = y - {{{\frac{1}{y^2} - x} \over {\frac{-2}{y^3}}}\]
+`\[y = y - {{\frac{1}{y^2} - x} \over {\frac{-2}{y^3}}}\]
 \[y = y ({\small\frac{3}{2}} - {\small\frac{1}{2}} x y^2);\]`
 @snapend
 
