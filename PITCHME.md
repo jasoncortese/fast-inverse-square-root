@@ -174,8 +174,7 @@ function invsqrt(x) {
 
 @snap[midpoint span-60 text-05]
 `\[y \approx {1 \over \sqrt{x}}\]
-\[y' = y - {{\frac{1}{y^2-x}} \over {\frac{-2}{y^3}}}\]
-\[y' = y - {{y^3} \over {x-y^2}} / 2\]`
+\[y' = y - {\small\frac{1}{2} {{y^3} \over {x-y^2}}2\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
