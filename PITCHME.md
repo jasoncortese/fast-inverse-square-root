@@ -173,7 +173,9 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[y \approx {1 \over \sqrt{x}}\]
+`\[y \approx {\sqrt{x}}\]
+\[y' = {{\frac{y}{x} + x} \over {2}}\]
+\[y \approx {1 \over \sqrt{x}}\]
 \[y' = {{3y - xy^3} \over {2}}\]`
 @snapend
 
