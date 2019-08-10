@@ -165,7 +165,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. In the case of the inveerse square root:</div>
+<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. In the case of the inverse square root:</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -173,7 +173,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[y = y ({\small\frac{3}{2}} - {\small\frac{1}{2}(x y^2);\]`
+`\[y = y ({\small\frac{3}{2}} - {\small\frac{1}{2}}(x y^2);\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
