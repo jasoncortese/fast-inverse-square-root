@@ -165,7 +165,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: shifting right approximates the square root, negating approximates the inverse, and the magic number accounts for the prothaphaeretic operation.</div>
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: shifting right approximates the square root, negating approximates the inverse, and the magic number accounts for the change in representation.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
