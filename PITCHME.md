@@ -148,7 +148,7 @@ function invsqrt(x) {
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
-\[{\small\frac{3}{2}} K = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} 2^{23} (127 - \sigma)\]
+\[K_{\frac{3}{2}} = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} (2^{23}) (127 - \sigma)\]
 \[(\sigma = 0.0450465)\]
 \[\]
 \[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
@@ -161,7 +161,7 @@ function invsqrt(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">Newton's method...</div>
+#### <div style="padding-left: 20px; color: white;">Newton's Method</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -187,7 +187,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Note that if `p` is minus one-half for the inverse square-root, the three-halfs comes from `1-p`. Using this, we can generate magic numbers for other power functions.</div>
+<div style="margin-top: 100px; text-align: left;">If minus one-half is `p` for the inverse square-root, three-halfs is `1-p`. Using this we can generate magic numbers for other power functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
