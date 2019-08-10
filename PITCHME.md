@@ -186,7 +186,7 @@ function invsqrt(x) {
 #### <div style="padding-left: 20px; color: white;">All the Magic Numbers</div>
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Note that if `p` is minus one-half for the inverse square-root, `1-p` is three-halfs. For the proper square root then, `p` would be one-half and `1-p` one-half as well.</div>
+<div style="margin-top: 100px; text-align: left;">Note that if `p` is minus one-half for the inverse square-root, the three-halfs comes from `1-p`. Using this, we can generate magic numbers for other power functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -195,7 +195,7 @@ function invsqrt(x) {
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]
-\[(a / b) * (2 ** 23) * (127 - \sigma)}\]`
+\[{\frac{a}{b} K = {\frac{a}{b} * (2 ** 23) * (127 - \sigma)}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
