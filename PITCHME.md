@@ -165,7 +165,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. Start with an approximation, then the next iteration is :</div>
+<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. Start with an approximation, then a better approximation is found by feeding the approximation back into the equation.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -173,8 +173,8 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[y = y - {{\frac{1}{y^2} - x} \over {\frac{-2}{y^3}}}\]
-\[y = y ({\small\frac{3}{2}} - {\small\frac{1}{2}} x y^2);\]`
+`\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
+\[y' = y - {f(y) \over f'(y)}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
