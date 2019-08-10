@@ -165,27 +165,39 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We're going to call this operation, `prosthaphaeresis`, an old-timey term for approximating logarithms before logarithms were invented. </div>
+<div style="margin-top: 100px; text-align: left;">Re-writing our function, removing the newtons method iteration for now, we see how indeed things work.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Choosing an appropriate sigma yields our magic number!</div>
+<div style="margin-bottom: 100px; text-align: left;">We're going to call this operation, `prosthaphaeresis`, an old-timey term for approximating logarithms before logarithms were invented.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]`
 ```
 const buffer = new ArrayBuffer(8); // (x,y)
 const fbuf = new Float32Array(buffer);
 const ibuf = new Uint32Array(buffer);
 
 function invsqrt(x) {
-    fbuf[0] = x;                             // float
-    ibuf[0] >>= 1;                           // shift right as integer
-    ibuf[0] \*= -1;                           // negate as integer
-    ibuf[0] += 0x5F3759DF;                   // add magic number
-    fbuf[0] \*= 1.5 - (x \* fbuf[0] \*\* 2);     // apply newtons method
-    return fbuf[0];                          // return as float
+    fbuf[0] = x;                             // input float
+    ibuf[0] >>= 1;                           // p-etic square root
+    ibuf[0] \*= -1;                           // p-etic inverse
+    ibuf[0] += 0x5F3759DF;                   // p-etic constant
+    return fbuf[0];                          // return float
 }
 ```
+@snapend
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">Prosthaphaeresis</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Note that if `p` is minus one-half for the inverse square-root, `1-p` is three-halfs. For the proper square root then, `p` would be one-half and `1-p` one-half as well.</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]`
 @snapend
