@@ -177,7 +177,7 @@ function invsqrt(x) {
 \[y' = {{\frac{x}{y} + y} \over {2}}\]
 \[\]
 \[y \approx {1 \over \sqrt{x}}\]
-\[y' = {{3y - xy^3} \over {2}}\]`
+\[y' = -{{xy^3 - 3y} \over {2}}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
