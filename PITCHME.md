@@ -161,11 +161,29 @@ function invsqrt(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">A quick refresher...</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. In the case of the inveerse square root:</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Choosing an appropriate sigma yields our magic number!</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[y = y ({\small\frac{3}{2}} - {\small\frac{1}{2}(x y^2);\]`
+@snapend
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;">Prosthaphaeresis</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Re-writing our function, removing the newtons method iteration for now, we see how indeed things work.</div>
+<div style="margin-top: 100px; text-align: left;">Re-writing our function. We remove the newtons method iteration for now. And we set sigma to zero, we see how indeed things work.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -180,9 +198,10 @@ const ibuf = new Uint32Array(buffer);
 
 function invsqrt(x) {
     fbuf[0] = x;                             // input float
-    ibuf[0] >>= 1;                           // p-etic square root
-    ibuf[0] \*= -1;                           // p-etic inverse
-    ibuf[0] += 0x5F3759DF;                   // p-etic constant
+    ibuf[0] >>= 1;                           // p-etic shift-right (square root)
+    ibuf[0] \*= -1;                           // p-etic negate (inverse)
+    ibuf[0] += 0x5F3759DF;                   // p-etic constant (magic number)
+    fbuf[0] \*= 1.5 - (x \* fbuf[0] \*\* 2);     // apply newtons method
     return fbuf[0];                          // return float
 }
 ```
