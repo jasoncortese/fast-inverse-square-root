@@ -161,37 +161,15 @@ function invsqrt(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">A quick refresher...</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. Start with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Choosing an appropriate sigma yields our magic number!</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[y \approx {\sqrt{x}}\]
-\[y' = {{\frac{x}{y} + y} \over {2}}\]
-\[\]
-\[y \approx {1 \over \sqrt{x}}\]
-\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;">Prosthaphaeresis</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Re-writing our function. We remove the newtons method iteration for now. And we set sigma to zero, we see how indeed things work.</div>
+<div style="margin-top: 100px; text-align: left;">We're going to call this operation, `prosthaphaeresis`, an old-timey term for approximating logarithms before logarithms were invented.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're going to call this operation, `prosthaphaeresis`, an old-timey term for approximating logarithms before logarithms were invented.</div>
+<div style="margin-bottom: 100px; text-align: left;">We can now make sense of our original function.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -209,6 +187,28 @@ function invsqrt(x) {
     return fbuf[0];                          // return float
 }
 ```
+@snapend
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">A quick refresher...</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Newton's method is an iterative way of solving for roots of a function. Start with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">In our formula we are using the logarithmic</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[y \approx {\sqrt{x}}\]
+\[y' = {{\frac{x}{y} + y} \over {2}}\]
+\[\]
+\[y \approx {1 \over \sqrt{x}}\]
+\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
