@@ -187,7 +187,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">If minus one-half is `p` for the inverse square-root, three-halfs is `1-p`. Using this we can generate magic numbers for other power functions.</div>
+<div style="margin-top: 100px; text-align: left;">If minus one-half is `p` for the inverse square-root, three-halfs is `1-p`. Using this we can generate magic numbers for other powers: (proper) square root, cube root, `n`th root...</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -197,9 +197,10 @@ function invsqrt(x) {
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]
 \[\]
-\[K_{1-p} = (1-p) (2^{23}) (127 - \sigma)\]
+\[K_{(1-p)} = (1-p) (2^{23}) (127 - \sigma)\]
 \[K_{\frac{1}{2}} = {\frac{1}{2}} (2^{23}) (127 - \sigma) = 0x1fbd1df5\]
-\[K_{\frac{1}{3}} = {\frac{1}{3}} (2^{23}) (127 - \sigma) = 0x2a517d3c\]`
+\[K_{\frac{1}{3}} = {\frac{1}{3}} (2^{23}) (127 - \sigma) = 0x2a517d3c\]
+\[K_{0} = {1} (2^{23}) (127 - \sigma) = 0x3f7a3bea\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
