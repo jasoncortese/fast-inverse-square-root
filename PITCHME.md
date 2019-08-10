@@ -174,7 +174,8 @@ function invsqrt(x) {
 
 @snap[midpoint span-60 text-05]
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
-\[y' = y - {f(y) \over f'(y)}\]`
+\[y' = y - {f(y) \over f'(y)}\]
+\[y' = y - {{\frac{1}{y^2-x}} \over {\frac{-2}{y^3}}}\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
