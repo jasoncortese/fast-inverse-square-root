@@ -139,7 +139,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">How about now? We're looking for a constant K 3/2 of which we can subtract 1/2 of the integer from to approximate the inverse square root of the float.</div>
+<div style="margin-top: 100px; text-align: left;">How about now? We're looking for a constant K, three-halfs of which we can subtract one-half of the integer from to approximate the inverse square root of the float.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
