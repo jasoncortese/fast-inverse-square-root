@@ -195,7 +195,7 @@ function invsqrt(x) {
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]
-\[{\frac{a}{b}} K = {\frac{a}{b}} * (2 ** 23) * (127 - \sigma)\]`
+\[{\frac{a}{b}} K = {\frac{a}{b}} (2^{23}) (127 - \sigma)\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
