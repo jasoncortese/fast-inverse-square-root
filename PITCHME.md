@@ -118,7 +118,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number! <br/>
+<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number!<br/>
 <span style="font-size: 12px;">(Note that we chose a value for σ = 0.0450465 which yielded our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
@@ -127,7 +127,7 @@ float Q_rsqrt( float number )
 \[\]
 \[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
 \[\]
-\[K = 1064975338 = 0x3f7a3bea\]
+\[K = 1064975338\]
 \[\]
 \[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
@@ -143,13 +143,14 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: aliasing a Float as an Integer approximates a logarithmic operation!</div>
+<div style="margin-bottom: 100px; text-align: left;">And our constant K (0.97747675 as a float) is "almost one".</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[(1-p) K = p (2^{23}) (127 - \sigma)\]
 \[\]
+\[K = 0x3f7a3bea\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
@@ -164,7 +165,39 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: shifting right approximates the square root, negating approximates the inverse, and the magic number accounts for the change in representation.</div>
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: shifting right approximates the square root, negating approximates the inverse, and the magic number is a multiple of "almost one".</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;"></div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```
+float Q_rsqrt( float number )
+{
+    float x2 = number \* 0.5F;
+    float y  = number;
+    long i  = \* ( long \* ) &y;                  // evil floating point bit level hacking
+    i  = 0x5f3759df - ( i >> 1 );               // what the fuck? 
+    y  = \* ( float \* ) &i;
+    y  = y \* ( threehalfs - ( x2 \* y \* y ) );   // 1st iteration
+//    y  = y \* ( threehalfs - ( x2 \* y \* y ) ); // 2nd iteration, this can be removed
+
+    return y;
+}
+```
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">Prosthaphaeresis</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: aliasing a Float as an Integer approximates a logarithmic operation!</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
