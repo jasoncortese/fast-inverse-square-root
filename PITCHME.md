@@ -144,7 +144,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Our constant K (0.97747675 as a float) is "almost one".</div>
+<div style="margin-bottom: 100px; text-align: left;">The constant K as a Float is "almost one", slightly less to account for the error in our linear approximation of the logarithm.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -155,7 +155,7 @@ float Q_rsqrt( float number )
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[\]
-\[K = 0x3f7a3bea\]`
+\[k = F_K =  1 - {\frac{\sigma}{2}} = 0.97747675\]`
 @snapend
 
 
