@@ -101,8 +101,6 @@ float Q_rsqrt( float number )
 \[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
 @snapend
 
-<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
-
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
