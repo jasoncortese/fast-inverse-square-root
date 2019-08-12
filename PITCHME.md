@@ -101,9 +101,7 @@ float Q_rsqrt( float number )
 \[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
 @snapend
 
-@snap[east span-30 text-05]
 <div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
-@snapend
 
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
@@ -113,7 +111,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">This resembles our formula for the integer valuethree-halves of a constant K, which we can subtract one-half of the integer from to approximate the inverse square root of the float.</div>
+<div style="margin-top: 100px; text-align: left;">We're lookin for three-halves of a constant K, which we can subtract one-half of the integer from to approximate the inverse square root of the float.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -121,16 +119,10 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[midpoint span-60 text-05]
-```i  = 0x5f3759df - ( i >> 1 );```
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
+`\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[K = L(B - \sigma) = (2^{23}) (127 - \sigma)\]
 \[(\sigma = 0.0450465)\]
 \[K = 1064975338 = 0x3f7a3bea\]
-\[(p = -1/2)\]
-\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
     
@@ -150,6 +142,9 @@ float Q_rsqrt( float number )
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
+\[(p = -1/2)\]
+\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
+\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[\]
