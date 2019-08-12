@@ -119,7 +119,7 @@ float Q_rsqrt( float number )
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">And we've found our magic number!<br/>
-<span style="font-size: 12px;">(Note that we chose a value for σ = 0.0450465 which yielded our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
+<span style="font-size: 12px;">(Note that we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -127,9 +127,9 @@ float Q_rsqrt( float number )
 \[\]
 \[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
 \[\]
-\[K = 1064975338 = 0x3f7a3bea\]
+\[K = 1064975338\]
 \[\]
-\[{\small\frac{3}{2}} C = 1597463007 = 0x5f3759df\]`
+\[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
     
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
@@ -149,8 +149,9 @@ float Q_rsqrt( float number )
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[(1-p) K = p (2^{23}) (127 - \sigma)\]
+\[K = 1064975338 = 0x3f7a3bea\]
+\[\F(K) = 0.97747675F\]
 \[\]
-\[K = 0x3f7a3bea\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
