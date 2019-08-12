@@ -146,16 +146,16 @@ float Q_rsqrt( float number )
 <div style="margin-bottom: 100px; text-align: left;">Our constant K (0.97747675 as a float) is "almost one".</div>
 @snapend
 
-@snap[midpoint span-60 text-05]`
-\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
+@snap[midpoint span-60 text-05]
+`\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[(1-p) K = p (2^{23}) (127 - \sigma)\]
 \[\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[\]
-\[K = 0x3f7a3bea\]
-`@snapend
+\[K = 0x3f7a3bea\]`
+@snapend
 
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
