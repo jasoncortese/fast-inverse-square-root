@@ -45,7 +45,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Recall that dividing a logarithm by 2 equates to taking the square root, and multiplying by negative 1 equates to inverting. For values between 0 and 1, logarithms can be linearly approximated.</div>
+<div style="margin-bottom: 100px; text-align: left;">Recall that dividing a logarithm by 2 equates to taking the square root, and multiplying by negative 1 equates to inverting. For values between 0 and 1, these can be linearly approximated.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -114,7 +114,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">And three-halves of K? You guessed it &mdash; our magic number!</div>
+<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number!</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
