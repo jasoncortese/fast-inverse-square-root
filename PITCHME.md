@@ -143,22 +143,43 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Choosing an appropriate sigma yields our magic number!</div>
+<div style="margin-bottom: 100px; text-align: left;">And three-halves of K is? You guessed it -- our magic number!</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[K = L(B - \sigma) = (2^{23}) (127 - \sigma)\]
 \[(\sigma = 0.0450465)\]
+\[\]
 \[K = 1064975338 = 0x3f7a3bea\]
 \[\]
 \[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
-
-@snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](0.5.png)
-@snapend
     
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">All the Magic Numbers</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">If minus one-half is `p` for the inverse square-root, three-halves is `1-p`. Using this we can generate magic numbers for other powers: square root, cube root, etc...</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">...</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
+\[\]
+\[{\small\frac{3}{2}} K = 0x5f3759df\]
+\[\]
+\[{\small\frac{1}{2}} K = 0x1fbd1df5\]
+\[\]
+\[{\small\frac{1}{3}} K = 0x2a517d3c\]`
+@snapend
+
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
@@ -179,30 +200,6 @@ function invsqrt(x) {
 \[\]
 \[y \approx {1 \over \sqrt{x}}\]
 \[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">All the Magic Numbers</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">If minus one-half is `p` for the inverse square-root, three-halves is `1-p`. Using this we can generate magic numbers for other powers: square root, cube root, `n`th root...</div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">...</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx (1-p) L(B - \sigma) + {p}{\large{I}_x}\]
-\[\]
-\[K_{(1-p)} = (1-p) (2^{23}) (127 - \sigma)\]
-\[K_{\frac{1}{2}} = {\frac{1}{2}} (2^{23}) (127 - \sigma) = 0x1fbd1df5\]
-\[K_{\frac{1}{3}} = {\frac{2}{3}} (2^{23}) (127 - \sigma) = 0x2a517d3c\]
-\[\]
-\[K_{\small{0}} = (2^{23}) (127 - \sigma) = 0x3f7a3bea\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
