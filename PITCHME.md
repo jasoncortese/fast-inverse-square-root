@@ -164,7 +164,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Let's convert this to JavaScript so we play around with it and figure out what is going on...</div>
+<div style="margin-top: 100px; text-align: left;">Let's convert this to JavaScript so we play around with it a bit...</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
