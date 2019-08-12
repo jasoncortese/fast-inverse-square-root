@@ -118,7 +118,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number!</div>
+<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number! (Note, that we chose a value for \sigma = 0.0450465 which yielded this directly, while research has shown \sigma = 0.045033 is more accurate.)</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -138,11 +138,11 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we exchange `p` for one-half and `p-1` for three-halves. We can now generate magic numbers for other powers...</div>
+<div style="margin-top: 100px; text-align: left;">Note that we chose a value for \sigma = 0.0450465 which yielded our magic number. Research has shown \sigma = 0.045033 is more accurate.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">...</div>
+<div style="margin-bottom: 100px; text-align: left;">Generalizing from the inverse square root, we are looking for `p` and `p-1`. We can now generate magic numbers for other powers...</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -152,7 +152,7 @@ float Q_rsqrt( float number )
 \[\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
-\[{\small\frac{1}{3}} K = 0x2a517d3c\]`
+\[{\small\frac{2}{3}} K = 0x2a517d3c\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
