@@ -143,7 +143,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: treating a Float as an Integer approximates a logarithmic operation!</div>
+<div style="margin-bottom: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: aliasing a Float as an Integer approximates a logarithmic operation!</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -164,11 +164,11 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Let's convert this to JavaScript so we play around with it a bit...</div>
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: shifting right approximates the square root, negating approximates the inverse, and the magic number accounts for the change in representation.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"></div>
+<div style="margin-bottom: 100px; text-align: left;">We're going to call this operation "`prosthaphaeresis`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -184,38 +184,6 @@ function invsqrt(x) {
     ibuf[0] += 0x5F3759DF;                   // add magic number
     fbuf[0] \*= 1.5 - (x \* fbuf[0] \*\* 2);     // apply newtons method
     return fbuf[0];                          // return as float
-}
-```
-@snapend
-
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">Prosthaphaeresis</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: shifting right approximates the square root, negating approximates the inverse, and the magic number accounts for the change in representation.</div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're going to call this operation "`prosthaphaeresis`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-```
-const buffer = new ArrayBuffer(8); // (x,y)
-const fbuf = new Float32Array(buffer);
-const ibuf = new Uint32Array(buffer);
-
-function invsqrt(x) {
-    fbuf[0] = x;                             // input float
-    ibuf[0] >>= 1;                           // p-etic shift-right (square root)
-    ibuf[0] \*= -1;                           // p-etic negate (inverse)
-    ibuf[0] += 0x5F3759DF;                   // p-etic constant (magic number)
-    fbuf[0] \*= 1.5 - (x \* fbuf[0] \*\* 2);     // apply newtons method
-    return fbuf[0];                          // return float
 }
 ```
 @snapend
