@@ -95,7 +95,9 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Look familiar yet?</div>
+<div style="margin-bottom: 100px; text-align: left;">Look familiar yet? <br/>
+    `i  = 0x5f3759df - ( i >> 1 );`
+</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -114,7 +116,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We're looking for three-halves of a constant K, which we can subtract one-half of the integer from to approximate the inverse square root of the float.</div>
+<div style="margin-top: 100px; text-align: left;">We're looking for three-halves of a constant K, from which we can subtract one-half of the integer to approximate the inverse square root of the float.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
