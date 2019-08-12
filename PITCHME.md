@@ -100,10 +100,10 @@ float Q_rsqrt( float number )
 
 @snap[midpoint span-60 text-05]
 `\[\log_2 (1 + m_y) + e_y = -{\small\frac{1}{2}} {\log_2 (1 + m_x) + e_x}\]
-\[m_y + e_y + \epsilon \approx -{\small\frac{1}{2}} (m_x + e_x + \epsilon)\]
-\[{\frac{M_y}{L}} + E_y + \epsilon \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \epsilon)\]
-\[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \epsilon) -{\small\frac{1}{2}}(M_x + LE_x)\]
-\[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \epsilon) -{\small\frac{1}{2}}{\large{I}_x}\]`
+\[m_y + e_y + \sigma \approx -{\small\frac{1}{2}} (m_x + e_x + \sigma)\]
+\[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
+\[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]
+\[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
 @snapend
 
 
@@ -114,22 +114,22 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We're looking for three-halves of a constant C, which we can subtract one-half of the integer from to approximate the inverse square root of the float.</div>
+<div style="margin-top: 100px; text-align: left;">We're looking for three-halves of a constant K, which we can subtract one-half of the integer from to approximate the inverse square root of the float.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">And we've found our magic number!<br/>
-<span style="font-size: 12px;">(Note that we chose a value for ε = 0.0450465 which yielded our magic number directly, while research has shown ε = 0.0450333 is more accurate.)</span></div>
+<span style="font-size: 12px;">(Note that we chose a value for σ = 0.0450465 which yielded our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[\]
-\[K = L(B - \epsilon) = (2^{23}) (127 - 0.0450465)\]
+\[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
 \[\]
 \[K = 1064975338 = 0x3f7a3bea\]
 \[\]
-\[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
+\[{\small\frac{3}{2}} C = 1597463007 = 0x5f3759df\]`
 @snapend
     
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
@@ -165,11 +165,11 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: shifting right approximates the square root, negating approximates the inverse, and the magic number is a multiple of "almost one".</div>
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: </div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"></div>
+<div style="margin-bottom: 100px; text-align: left;">Shifting right approximates the square root, negating approximates the inverse, and the magic number is a fractional multiple of "almost one".</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
