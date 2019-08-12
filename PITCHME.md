@@ -118,7 +118,8 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number! <span style="font-size: smaller;">(Note that we chose a value for σ = 0.0450465 which yielded our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
+<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number! <br/>
+<span style="font-size: 12px;">(Note that we chose a value for σ = 0.0450465 which yielded our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
