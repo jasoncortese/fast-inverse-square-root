@@ -150,11 +150,12 @@ float Q_rsqrt( float number )
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[(1-p) K = p (2^{23}) (127 - \sigma)\]
-\[K = 0x3f7a3bea\]
 \[\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
-\[{\small\frac{2}{3}} K = 0x2a517d3c\]`
+\[{\small\frac{2}{3}} K = 0x2a517d3c\]
+\[\]
+\[K = 0x3f7a3bea\]`
 @snapend
 
 
