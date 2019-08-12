@@ -133,7 +133,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we exchange `p` for one-half and `p-1` for three-halves. We can now generate magic numbers for other powers: square root, cube root, etc...</div>
+<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we exchange `p` for one-half and `p-1` for three-halves. We can now generate magic numbers for other powers...</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -143,12 +143,9 @@ float Q_rsqrt( float number )
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[\]
-\[ K = 0x3f7a3bea\]
-\[\]
+\[K = 0x3f7a3bea\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
-\[\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
-\[\]
 \[{\small\frac{1}{3}} K = 0x2a517d3c\]`
 @snapend
 
