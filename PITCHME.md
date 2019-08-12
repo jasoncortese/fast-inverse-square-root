@@ -54,6 +54,10 @@ float Q_rsqrt( float number )
 \[\log_2 y \approx (y - 1) + \sigma\]`
 @snapend
 
+@snap[east span-30 text-05]
+<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
