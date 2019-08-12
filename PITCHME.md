@@ -126,7 +126,7 @@ float Q_rsqrt( float number )
 \[\]
 \[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
 \[\]
-\[K = 1064975338\]
+\[K = 1064975338 = 0x3f7a3bea\]
 \[\]
 \[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
@@ -138,43 +138,20 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can now generate magic numbers for other powers: square-root, cube-root, etc.</div>
+<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can now find magic numbers for other powers: square-root, cube-root, etc.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: treating a Float as an Integer approximates a logarithmic operation!</div>
+<div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[\]
-\[K = 0x3f7a3bea\]
-\[\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
-\[{\small\frac{2}{3}} K = 0x2a517d3c\]`
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">A Quick Refresher...</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Recall that Newton's Method is an iterative way of solving for roots of a function. Starting with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">(Fun fact: this method applied to finding square roots was known to the ancient Babylonians.)</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[y \approx {\sqrt{x}}\]
-\[y' = {{\frac{x}{y} + y} \over {2}}\]
-\[\]
-\[y \approx {1 \over \sqrt{x}}\]
-\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
+\[{\small\frac{2}{3}} K = 0x2a517d3c\]
+\[{\small\frac{5}{4}} K = 0x4f58cae5\]`
 @snapend
 
 
@@ -241,4 +218,26 @@ function invsqrt(x) {
 ```
 @snapend
 
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">Born in Babylonia</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Recall that Newton's Method is an iterative way of solving for roots of a function. Starting with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">(Fun fact: this method applied to finding square roots was known to the ancient Babylonians.)</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[y \approx {\sqrt{x}}\]
+\[y' = {{\frac{x}{y} + y} \over {2}}\]
+\[\]
+\[y \approx {1 \over \sqrt{x}}\]
+\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
+@snapend
 
