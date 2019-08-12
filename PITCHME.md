@@ -150,7 +150,7 @@ function invsqrt(x) {
 `\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[K = L(B - \sigma) = (2^{23}) (127 - \sigma)\]
 \[(\sigma = 0.0450465)\]
-\[K = 1064975338 = 0x3f7a3bea\]`
+\[K = 1064975338 = 0x3f7a3bea\]
 \[\]
 \[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
