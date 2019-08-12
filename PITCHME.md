@@ -48,7 +48,7 @@ float Q_rsqrt( float number )
 
 @snap[midpoint span-60 text-05]
 ```
-const buffer = new ArrayBuffer(8); // (x,y)
+const buffer = new ArrayBuffer(4); // (x)
 const fbuf = new Float32Array(buffer);
 const ibuf = new Uint32Array(buffer);
 
@@ -74,7 +74,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Recall that dividing a logarithm by 2 (or bitwise shifting right) would equate to taking the square root, and multiplying by negative 1 would equate to inverting.</div>
+<div style="margin-bottom: 100px; text-align: left;">Recall that dividing a logarithm by 2 (or bitwise shifting right) equates to taking the square root, and multiplying by negative 1 equates to inverting.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -139,7 +139,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">How about now? We're looking for a constant K which we can subtract one-half of the integer from to approximate the inverse square root of the float.</div>
+<div style="margin-top: 100px; text-align: left;">How about now? We're looking for three-halves of a constant K, which we can subtract one-half of the integer from to approximate the inverse square root of the float.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -147,11 +147,12 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
-\[K_{\frac{3}{2}} = {\small\frac{3}{2}} L(B - \sigma) = {\small\frac{3}{2}} (2^{23}) (127 - \sigma)\]
+`\[{\large{I}_y} \approx K -{\small\frac{1}{2}}{\large{I}_x}\]
+\[K = L(B - \sigma) = (2^{23}) (127 - \sigma)\]
 \[(\sigma = 0.0450465)\]
+\[K = 1064975338 = 0x3f7a3bea\]`
 \[\]
-\[K_{\frac{3}{2}} = 1597463007 = 0x5f3759df\]`
+\[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
 
 @snap[east span-30 text-05]
@@ -165,7 +166,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Recall that this is an iterative way of solving for roots of a function. Start with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
+<div style="margin-top: 100px; text-align: left;">Recall that Newton's Method is an iterative way of solving for roots of a function. Starting with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -187,7 +188,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">If minus one-half is `p` for the inverse square-root, three-halfs is `1-p`. Using this we can generate magic numbers for other powers: (proper) square root, cube root, `n`th root...</div>
+<div style="margin-top: 100px; text-align: left;">If minus one-half is `p` for the inverse square-root, three-halves is `1-p`. Using this we can generate magic numbers for other powers: square root, cube root, `n`th root...</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -201,7 +202,7 @@ function invsqrt(x) {
 \[K_{\frac{1}{2}} = {\frac{1}{2}} (2^{23}) (127 - \sigma) = 0x1fbd1df5\]
 \[K_{\frac{1}{3}} = {\frac{2}{3}} (2^{23}) (127 - \sigma) = 0x2a517d3c\]
 \[\]
-\[K = (2^{23}) (127 - \sigma) = 0x3f7a3bea\]`
+\[K_{\small{0}} = (2^{23}) (127 - \sigma) = 0x3f7a3bea\]`
 @snapend
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
