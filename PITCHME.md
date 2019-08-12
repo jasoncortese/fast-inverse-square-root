@@ -149,9 +149,8 @@ float Q_rsqrt( float number )
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[(1-p) K = p (2^{23}) (127 - \sigma)\]
-\[K = 1064975338 = 0x3f7a3bea\]
-\[\F(K) = 0.97747675F\]
 \[\]
+\[{\small\frac{0}{1}} K = 0x3f7a3bea\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
@@ -166,11 +165,11 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: </div>
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: Shifting right approximates the square root, negating approximates the inverse, and the magic number approximates a vulgar fraction.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Shifting right approximates the square root, negating approximates the inverse, and the magic number is a fractional multiple of "almost one".</div>
+<div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
