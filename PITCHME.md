@@ -96,8 +96,7 @@ float Q_rsqrt( float number )
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">Look familiar yet? <br/>
-    `i  = 0x5f3759df - ( i >> 1 );`
-</div>
+<center>`i  = 0x5f3759df - ( i >> 1 );`</center></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -120,7 +119,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number!<br/>
+<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number! <br/>
 <span style="font-size: 12px;">(Note that we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
