@@ -45,12 +45,13 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Recall that dividing a logarithm by 2 (or bitwise shifting right) equates to taking the square root, and multiplying by negative 1 equates to inverting.</div>
+<div style="margin-bottom: 100px; text-align: left;">Recall that dividing a logarithm by 2 equates to taking the square root, and multiplying by negative 1 equates to inverting. For values between 0 and 1, logarithms can be linearly approximated.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
-\[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]`
+\[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
+\[\log_2 y \approx (y - 1) + \sigma\]`
 @snapend
 
 
@@ -144,6 +145,7 @@ float Q_rsqrt( float number )
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[\]
 \[K = 0x3f7a3bea\]
+\[\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{1}{3}} K = 0x2a517d3c\]`
