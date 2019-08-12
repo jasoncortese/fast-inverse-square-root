@@ -91,7 +91,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Substituting our float representation into the inverse square root equation, we end up with logarithms that, for values between 0 and 1, can be linearly approximated. </div>
+<div style="margin-top: 100px; text-align: left;">Substituting our float representation into the inverse square root equation, we end up with a formula that approximates our integer representation. </div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -147,6 +147,7 @@ float Q_rsqrt( float number )
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
+\[(1-p) K = p (2^{23}) (127 - \sigma)\]
 \[\]
 \[{\small\frac{3}{2}} K = 0x5f3759df\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
