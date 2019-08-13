@@ -45,7 +45,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Using logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Applying Newton's method would further improve upon the results.</div>
+<div style="margin-bottom: 100px; text-align: left;">Using logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Then applying Newton's method would further improve the results.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
