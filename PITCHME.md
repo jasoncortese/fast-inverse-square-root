@@ -385,11 +385,11 @@ function nthrt(n, x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;"></div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for Cosine, Sine, and tangent functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, the increased complexity of the nth root.</div>
+<div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -412,7 +412,7 @@ function tan(x) {
     const sinx = sin(x), cosx = cos(x);
     fltb[0] = cosx;                          // alias cosx
     intb[0] \*= 1;                            // p-etic inverse
-//    intb[0] += 0x00000000;                 // p-etic integer 1
+    intb[0] += 0x00000000;                   // p-etic integer 1
     fltb[0] \*= sinx;                         // times sinx
     return fltb[0];                          // return tanx
 }
@@ -427,11 +427,11 @@ function tan(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for Arc-Cosine, Double-angle Cosine, Cosine Squared.</div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for Arc-Cosine, Double-Angle Cosine, Cosine Squared functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, the increased complexity of the nth root.</div>
+<div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -464,7 +464,55 @@ function cos_sqd(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;"><small>Appendix 1:</small> All the Magic Numbers</div>
+#### <div style="padding-left: 20px; color: white;"><small>Appendix A:</small> Born in Babylona</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Recall that Newton's Method is an iterative way of solving for roots of a function. Starting with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">(Fun fact: this method applied to finding square roots was known to the ancient Babylonians.)</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[y \approx {\sqrt{x}}\]
+\[y' = {{\frac{x}{y} + y} \over {2}}\]
+\[\]
+\[y \approx {1 \over \sqrt{x}}\]
+\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;"><small>Appendix B:</small> Double Trouble</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">64-bit precision...</i></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;"></div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
+\[\]
+\[K = L(B - \sigma) = (2^{52}) (1023 - 0.0450465)\]
+\[\]
+\[K = 4606979606846918000 = 0x3fef478b29944e00\]
+\[\]
+\[{\small\frac{3}{2}} K = 6910469321099104000 = 0x5FE6EB50C7B537A9\]`
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;"><small>Appendix C:</small> All the Magic Numbers</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -499,53 +547,5 @@ const pIntegers = [
     0x02E00000, 0x02E40000, 0x02E80000, 0x02EC0000, 0x02F00000, 0x02F40000, 0x02F80000, 0x02FC0000,
 ];
 ```
-@snapend
-
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Double Trouble</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">64-bit precision...</i></div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"></div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
-\[\]
-\[K = L(B - \sigma) = (2^{52}) (1023 - 0.0450465)\]
-\[\]
-\[K = 4606979606846918000 = 0x3fef478b29944e00\]
-\[\]
-\[{\small\frac{3}{2}} K = 6910469321099104000 = 0x5FE6EB50C7B537A9\]`
-@snapend
-
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">Born in Babylona</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Recall that Newton's Method is an iterative way of solving for roots of a function. Starting with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">(Fun fact: this method applied to finding square roots was known to the ancient Babylonians.)</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[y \approx {\sqrt{x}}\]
-\[y' = {{\frac{x}{y} + y} \over {2}}\]
-\[\]
-\[y \approx {1 \over \sqrt{x}}\]
-\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
 @snapend
 
