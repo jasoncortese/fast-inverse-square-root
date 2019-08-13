@@ -97,7 +97,7 @@ float Q_rsqrt( float number )
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">Look familiar? <br/>
-<center>`i  = 0x5f3759df - ( i >> 1 );`</center></div>
+@snap<center>`i  = 0x5f3759df - ( i >> 1 );`</center></div>@snapend
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -166,7 +166,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: Shifting right approximates the square root, negating approximates the inverse, and the magic number approximates the common fraction three-halves.</div>
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: shifting right approximates the square root, negating approximates the inverse, and the magic number approximates the common fraction three-halves.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
