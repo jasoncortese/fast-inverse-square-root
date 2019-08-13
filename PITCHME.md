@@ -241,7 +241,8 @@ float Q_rsqrt( float number ) {
 const buffer = new ArrayBuffer(4); // (x)
 const fbuf = new Float32Array(buffer);
 const ibuf = new Uint32Array(buffer);
-``````
+```
+```
 function invsqrt(x) {
     fbuf[0] = x;                             // store x
     ibuf[0] >>= 1;                           // p-etic square root
