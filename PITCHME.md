@@ -142,7 +142,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can find other magic numbers for: <br/> square root, cube root, etc.</div>
+<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can find other magic numbers for: <br/> proper square root, cube root, etc.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -232,11 +232,11 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Let's turn this into JavaScript... Create an ArrayBuffer to hold a 32-bit number, and create two views on that buffer: one for the float, and one for the unsigned-int.</i></div>
+<div style="margin-top: 100px; text-align: left;">Let's turn this into JavaScript... We create an ArrayBuffer to hold a 32-bit number, and create two views on that buffer: one as a float, and one as an unsigned integer.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, we stripped out the Newton's method iteration for now, and are using the constant K with sigma equals zero.</div>
+<div style="margin-bottom: 100px; text-align: left;">We are going to use the pure version of K here, with sigma equals zer. And we are going to skip the Newton's method iteration for now.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
