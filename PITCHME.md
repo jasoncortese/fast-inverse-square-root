@@ -168,11 +168,43 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our original function: <i>shifting right approximates the square root, negating approximates the inverse, and our magic number approximates three-halves.</i></div>
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our function: <i>shifting right approximates the square root, negating approximates the inverse, and our magic number approximates three-halves.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">... Apply one iteration of Newton's method, and we have a surprisingly accurate approximation of the inverse square root!</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```
+float Q_rsqrt( float number )
+{
+    float x2 = number \* 0.5F;
+    float y  = number;
+    long i  = \* ( long \* ) &y;                   // alias as an integer
+    i  >>= 1 ;                                     // shift right as an integer
+    i  \*= -1 ;                                     // negate as an integer
+    i  += 0x5f3759df;                              // add the magic number 
+    y  = \* ( float \* ) &i;                       // alias as a float
+    y  = y \* ( threehalfs - ( x2 \* y \* y ) );   // apply newton's method
+    return y;
+}
+```
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">Prosthaphaeresis</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">We're going to call this operation "`prosthaphaeresis`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -196,15 +228,15 @@ float Q_rsqrt( float number )
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Prosthaphaeresis</div>
+#### <div style="padding-left: 20px;">Fun with Floats</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
+<div style="margin-top: 100px; text-align: left;">Let's turn this into JavaScript...</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're going to call this operation "`prosthaphaeresis`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
+<div style="margin-bottom: 100px; text-align: left;">We create an ArrayBuffer with enough space to hold a 32-bit, single-precision number, and create two views on that buffer: one for our float, and one for our int.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -215,7 +247,7 @@ const ibuf = new Uint32Array(buffer);
 
 function invsqrt(x) {
     fbuf[0] = x;                             // store as float
-    ibuf[0] >>= 1;                           // shift right as integer
+    ibuf[0] >>= 1;                           // p-etic shift right (square root)
     ibuf[0] \*= -1;                           // negate as integer
     ibuf[0] += 0x5F3759DF;                   // add magic number
     fbuf[0] \*= 1.5 - (x \* fbuf[0] \*\* 2);     // apply newtons method
@@ -224,11 +256,35 @@ function invsqrt(x) {
 ```
 @snapend
 
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">Double Trouble</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">64-bit precision...</i></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;"></div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
+\[\]
+\[K = L(B - \sigma) = (2^{52}) (1023 - 0.0450465)\]
+\[\]
+\[K = 4606979606846918000 = 0x3fef478b29944e00\]
+\[\]
+\[{\small\frac{3}{2}} K = 6910469321099104000 = 0x5FE6EB50C7B537A9\]`
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">Born in Babylonia</div>
+#### <div style="padding-left: 20px; color: white;">Born in Babylona</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
