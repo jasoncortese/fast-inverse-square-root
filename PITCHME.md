@@ -273,7 +273,7 @@ function invsqrt(x) {
     intb[0] >>= 1;                           // p-etic square root
     intb[0] \*= -1;                           // p-etic inverse
     intb[0] += 0x5f376430;                   // p-etic three-halves
-//    fltb[0] \*= 1.5 - (x \* fltb[0] \*\* 2);     // apply newtons method
+//  fltb[0] \*= 1.5 - (x \* fltb[0] \*\* 2);     // apply newtons method
     return fltb[0];                          // return x
 }
 ```
@@ -409,9 +409,10 @@ function sin(x) {
 }
 
 function tan(x) {
-    let sinx = sin(x), cosx = cos(x);
+    const sinx = sin(x), cosx = cos(x);
     fltb[0] = cosx;                          // alias cosx
     intb[0] \*= 1;                            // p-etic inverse
+//    intb[0] += 0x00000000;                 // p-etic integer 1
     fltb[0] \*= sinx;                         // times sinx
     return fltb[0];                          // return tanx
 }
@@ -422,7 +423,48 @@ function tan(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">All the Magic Numbers</div>
+#### <div style="padding-left: 20px;">More Trig Functions</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">First order approximations for Arc-Cosine, Double-angle Cosine, Cosine Squared.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Note, the increased complexity of the nth root.</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```javascript
+function arc_cos(x) {
+    fltb[0] = 1 - x;                         // alias 1 - x
+    intb[0] += 0x3ff4d2bc;                   // p-etic fraction 4/3
+    intb[0] >>= 1;                           // p-etic square root
+    return 1 - fltb[0];                      // return √(2 - 2x)
+}
+
+function cos_dbl(x) {
+    const cosx = cos(x);
+    fltb[0] = cosx;                          // alias cosx
+    intb[0] <<= 1;                           // p-etic square
+    intb[0] += 0x00800000;                   // p-etic integer 2
+    return fltb[0] - 1;                      // return 2 cos²(x) - 1
+}
+
+function cos_sqd(x) {
+    const cos2x = cos(2 * x);
+    fltb[0] = 1 + cos2x;                     // alias 1 + cos2x
+    intb[0] -= 0x00800000;                   // p-etic integer -2
+    return fltb[0];                          // return ½ (1 + cos(2x))
+}
+```
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;"><small>Appendix 1:</small> All the Magic Numbers</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -430,12 +472,12 @@ function tan(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, we are using the base version of K here, with sigma equals zero.</div>
+<div style="margin-bottom: 100px; text-align: left;">Note, we are using the base version of K here, with sigma equals zero. Individual usage should be tweaked to produce the most accurate results over the range.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 ```
-const peticFractions = [
+const pFractions = [
     [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000],
     [0x7F800000, 0x3F800000, 0x1FC00000, 0x152AAAAB, 0x0FE00000, 0x0CB33333, 0x0A955555, 0x09124925],
     [0x7F800000, 0x7F000000, 0x3F800000, 0x2A555555, 0x1FC00000, 0x19666666, 0x152AAAAB, 0x12249249],
@@ -446,7 +488,7 @@ const peticFractions = [
     [0x7F800000, 0x7F200000, 0x7F100000, 0x7F100000, 0x6F200000, 0x58E66666, 0x4A155555, 0x3F800000],
 ];
 
-const peticIntegers = [
+const pIntegers = [
     0xC0800000, 0x00000000, 0x00800000, 0x00C00000, 0x01000000, 0x01200000, 0x01400000, 0x01600000,
     0x01800000, 0x01900000, 0x01A00000, 0x01B00000, 0x01C00000, 0x01D00000, 0x01E00000, 0x01F00000,
     0x02000000, 0x02080000, 0x02100000, 0x02180000, 0x02200000, 0x02280000, 0x02300000, 0x02380000,
