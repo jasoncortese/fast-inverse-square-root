@@ -141,16 +141,16 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can find other magic numbers fractions for: <br/> square root, cube root, etc.</div>
+<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can find other magic numbers for: <br/> square root, cube root, etc.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Whereas the constant K as a float is "almost one", slightly less to help account for the error in our linear approximation.</div>
+<div style="margin-bottom: 100px; text-align: left;">Where the constant K itself is "almost one", slightly less to help account for the error in our linear approximation.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
-\[(1 - p) K = (1 - p) (2^{23}) (127 - 0.0450465)\]
+\[(1 - p) K = (1 - p) (2^{23}) (127 - /sigma)\]
 \[\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
