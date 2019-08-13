@@ -155,6 +155,7 @@ float Q_rsqrt( float number )
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[\vdots\]
+\[\]
 \[K = 0x3f7a3bea\]`
 @snapend
 
