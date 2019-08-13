@@ -370,11 +370,11 @@ function nthrt(n, x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[{\frac{1}{1-x}} \approx {1} + {x} + {x^2} + {x^3} + \dots\]
-\[{e^{x}} \approx {\frac{1}{0!}} + {\frac{x}{1!}} + {\frac{x^2}{2!}} + {\frac{x^3}{3!}} + \dots\]
-\[{\log{1+x}} \approx {x} - {\frac{x^2}{2}} + {\frac{x^3}{3}} - {\frac{x^4}{4}} + \dots\]
-\[{\sin{1+x}} \approx {x} - {\frac{x^3}{3!}} + {\frac{x^5}{5!}} - {\frac{x^7}{7!}} + \dots\]
-\[{\cos{1+x}} \approx {x} - {1} - {\frac{x^2}{2!}} + {\frac{x^4}{4!}} - {\frac{x^6}{6!}} + \dots\]`
+`\[{e^{x}} \approx {\frac{1}{0!}} + {\frac{x}{1!}} + {\frac{x^2}{2!}} + {\frac{x^3}{3!}} + \dots\]
+\[{\log{(1+x)}} \approx {x} - {\frac{x^2}{2}} + {\frac{x^3}{3}} - {\frac{x^4}{4}} + \dots\]
+\[{\sin{x}} \approx {x} - {\frac{x^3}{3!}} + {\frac{x^5}{5!}} - {\frac{x^7}{7!}} + \dots\]
+\[{\cos{x}} \approx {x} - {1} - {\frac{x^2}{2!}} + {\frac{x^4}{4!}} - {\frac{x^6}{6!}} + \dots\]
+\[{\tan{x}} \approx {x} + {\frac{x^3}{3}} + {\frac{2x^5}{15}} - {\frac{3x^7}{105}} + \dots\]`
 @snapend
 
 
