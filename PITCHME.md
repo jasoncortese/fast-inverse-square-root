@@ -236,7 +236,7 @@ float Q_rsqrt( float number ) {
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
     float y  = number;
-    long i  = \* ( long \* ) &y;                   // alias as nteger
+    long i  = \* ( long \* ) &y;                   // alias as integer
     i  >>= 1 ;                                   // shift right as integer
     i  \*= -1 ;                                   // negate as integer
     i  += 0x5f3759df;                            // add the magic number 
@@ -267,49 +267,13 @@ float Q_rsqrt( float number ) {
 const buffer = new ArrayBuffer(4); // (x)
 const fltb = new Float32Array(buffer);
 const intb = new Uint32Array(buffer);
-```
-```
+
 function invsqrt(x) {
     fltb[0] = x;                             // alias x
     intb[0] >>= 1;                           // p-etic square root
     intb[0] \*= -1;                           // p-etic inverse
     intb[0] += 0x5F40000;                    // p-etic three-halves
-    return fltb[0];                          // return x
-}
-```
-@snapend
-
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Inverse Square Root Newton</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Let's create a separate function for the Newton's method step.</i></div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"></div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-```
-function invsqrt(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] >>= 1;                           // p-etic square root
-    intb[0] \*= -1;                           // p-etic inverse
-    intb[0] += 0x5F40000;                    // p-etic three-halves
-    return fltb[0];                          // return x
-}
-
-function invsqrtN(x, y) {
-    fltb[0] = y;                             // alias y
-    intb[0] <<= 1;                           // p-etic square
-    fltb[0] \*= x;                            // times-x
-    fltb[0] -= 3;                            // minus-three
-    intb[0] -= 0xC07C000;                    // p-etic nine-thirds
+    fltb[0] \*= 1.5 - (x \* fltb[0] \*\* 2);     // apply newtons method
     return fltb[0];                          // return x
 }
 ```
@@ -327,12 +291,20 @@ function invsqrtN(x, y) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"></div>
+<div style="margin-bottom: 100px; text-align: left;">Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 ```
-function invsqrtN(x, y) {
+function sqrt(x) {
+    fltb[0] = x;                             // alias x
+    intb[0] >>= 1;                           // p-etic square root
+    intb[0] \*= -1;                           // p-etic inverse
+    intb[0] += 0x5F40000;                    // p-etic three-halves
+    return fltb[0];                          // return x
+}
+
+function sqrtN(x, y) {
     fltb[0] = y;                             // alias y
     intb[0] <<= 1;                           // p-etic square
     fltb[0] \*= x;                            // times-x
