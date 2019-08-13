@@ -163,7 +163,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Prosthaphaeresis</div>
+#### <div style="padding-left: 20px; color: white;">Prosthaphaeresis</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -210,7 +210,7 @@ float Q_rsqrt( float number ) {
     <td>multiplication</td>
   </tr>
   <tr>
-    <td>denormalized fraction</td>
+    <td>magic number</td>
     <td>linear approximation</td>
   </tr>
 </table>
