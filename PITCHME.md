@@ -259,7 +259,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We are using the pure version of K here, with sigma equals zero. And we stripped out the Newton's method iteration for now.</div>
+<div style="margin-bottom: 100px; text-align: left;">Note, we are using the base version of K here, with sigma equals zero. And we stripped out the Newton's method iteration for now.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -272,7 +272,7 @@ function invsqrt(x) {
     fltb[0] = x;                             // alias x
     intb[0] >>= 1;                           // p-etic square root
     intb[0] \*= -1;                           // p-etic inverse
-    intb[0] += 0x5F40000;                    // p-etic three-halves
+    intb[0] += 0x5f40000;                    // p-etic three-halves
     fltb[0] \*= 1.5 - (x \* fltb[0] \*\* 2);     // apply newtons method
     return fltb[0];                          // return x
 }
@@ -295,21 +295,20 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-```c
+```javascript
 function sqrt(x) {
     fltb[0] = x;                             // alias x
     intb[0] >>= 1;                           // p-etic square root
-    intb[0] \*= -1;                           // p-etic inverse
-    intb[0] += 0x5F40000;                    // p-etic three-halves
+    intb[0] += 0x1fc00000;                   // p-etic times 1/2
     return fltb[0];                          // return x
 }
 
 function sqrtN(x, y) {
     fltb[0] = y;                             // alias y
-    intb[0] <<= 1;                           // p-etic square
-    fltb[0] \*= x;                            // times-x
-    fltb[0] -= 3;                            // minus-three
-    intb[0] -= 0xC07C000;                    // p-etic nine-thirds
+    intb[0] \*= -1;                            // p-etic inverse
+    fltb[0] \*= x;                             // times x
+    fltb[0] += y;                            // plus y
+    intb[0] -= 0x00800000;                   // p-etic divide-by 2
     return fltb[0];                          // return x
 }
 ```
