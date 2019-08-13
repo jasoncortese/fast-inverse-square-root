@@ -169,7 +169,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Shifting right approximates the square root, negating approximates the inverse, and the magic number approximates a vulgar fraction.</div>
+<div style="margin-bottom: 100px; text-align: left;">Shifting right approximates the square root, negating approximates the inverse, and the magic number approximates a common fraction.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -197,7 +197,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: aliasing a Float as an Integer approximates a logarithmic operation!</div>
+<div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
