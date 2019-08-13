@@ -96,7 +96,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Look familiar yet? <br/>
+<div style="margin-bottom: 100px; text-align: left;">Look familiar? <br/>
 <center>`i  = 0x5f3759df - ( i >> 1 );`</center></div>
 @snapend
 
@@ -141,7 +141,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can now find magic numbers for other powers: square root, cube root, etc.</div>
+<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can now find magic numbers for others: square root, cube root, etc.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -154,7 +154,7 @@ float Q_rsqrt( float number )
 \[\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
-\[\]
+\[\vdots\]
 \[K = 0x3f7a3bea\]`
 @snapend
 
