@@ -318,15 +318,15 @@ function sqrtN(x, y) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Cube Root</div>
+#### <div style="padding-left: 20px;">More Roots</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Cube root. Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</i></div>
+<div style="margin-top: 100px; text-align: left;">Cube root, fourth root, and nth root implementations.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
+<div style="margin-bottom: 100px; text-align: left;">Note, the increased complexity of the nth root.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -346,6 +346,69 @@ function frthrt(x) {
 }
 
 function nthrt(n, x) {
+    fltb[0] = x;                             // alias x
+    intb[0] /= n;                            // p-etic nth root
+    intb[0] += (1 - n) \* 0x3f7a42ca;         // p-etic almost one
+    return fltb[0];                          // return x
+}
+```
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;">Taylor Series</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Root functions are not the only methods we can approximate linearly with these prosthaphaeretic operations. </div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Trigonometric functions for instance...</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[{\frac{1}{1-x}} \approx {1} + {x} + {x^2} + {x^3} + \dots\]
+\[{e^{x}} \approx {\frac{1}{0!}} + {\frac{x}{1!}} + {\frac{x^2}{2!}} + {\frac{x^3}{3!}} + \dots\]
+\[{\log{1+x}} \approx {x} - {\frac{x^2}{2}} + {\frac{x^3}{3}} - {\frac{x^4}{4}} + \dots\]
+\[{\sin{1+x}} \approx {x} - {\frac{x^3}{3!}} + {\frac{x^5}{5!}} - {\frac{x^7}{7!}} + \dots\]
+\[{\cos{1+x}} \approx {x} - {1} - {\frac{x^2}{2!}} + {\frac{x^4}{4!}} - {\frac{x^6}{6!}} + \dots\]`
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">Trig Functions</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;"></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Note, the increased complexity of the nth root.</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```javascript
+function cos(x) { //1 - x² / 2
+    fltb[0] = x;                             // alias x
+    intb[0] >>= 2;                           // p-etic fourth root
+    intb[0] += 0x2f9bb218;                   // p-etic fraction 3/4
+    return fltb[0];                          // return x
+}
+
+function sin(x) { //x - ⅙ x³
+    fltb[0] = x;                             // alias x
+    intb[0] /= 3;                            // p-etic cube root
+    intb[0] += 0x2a5181dc;                   // p-etic fraction 2/3
+    return fltb[0];                          // return x
+}
+
+function tan(x) {
     fltb[0] = x;                             // alias x
     intb[0] /= n;                            // p-etic nth root
     intb[0] += (1 - n) \* 0x3f7a42ca;         // p-etic almost one
