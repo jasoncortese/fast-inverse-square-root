@@ -209,12 +209,16 @@ float Q_rsqrt( float number ) {
 @snap[midpoint span-60 text-04]
 <table>
   <tr>
-    <th>Operation</th>
-    <th>Prosthaphaeresis</th>
+    <th>Integer Operation</th>
+    <th>Prosthaphaeretic</th>
   </tr>
   <tr>
     <td>integer alias</td>
     <td>logarithm</td>
+  <tr>
+    <td>float alias</td>
+    <td>exponent</td>
+  </tr>
   </tr>
   <tr>
     <td>shift right</td>
@@ -225,16 +229,16 @@ float Q_rsqrt( float number ) {
     <td>square</td>
   </tr>
   <tr>
-    <td>negation</td>
-    <td>inverse</td>
-  </tr>
-  <tr>
     <td>division</td>
     <td>root extraction</td>
   </tr>
   <tr>
     <td>multiplication</td>
     <td>power function</td>
+  </tr>
+  <tr>
+    <td>negation</td>
+    <td>inverse</td>
   </tr>
   <tr>
     <td>subtraction</td>
@@ -247,10 +251,6 @@ float Q_rsqrt( float number ) {
   <tr>
     <td>denormal fraction</td>
     <td>addition</td>
-  </tr>
-  <tr>
-    <td>float alias</td>
-    <td>exponent</td>
   </tr>
 </table>
 @snapend
