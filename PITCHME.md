@@ -18,8 +18,7 @@
 
 @snap[midpoint span-60 text-05]
 ```c
-float Q_rsqrt( float number )
-{
+float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
     float y  = number;
     long i  = \* ( long \* ) &y;                  // evil floating point bit level hacking
@@ -177,8 +176,7 @@ float Q_rsqrt( float number )
 
 @snap[midpoint span-60 text-05]
 ```c
-float Q_rsqrt( float number )
-{
+float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
     float y  = number;
     long i  = \* ( long \* ) &y;                   // alias as an integer
@@ -204,13 +202,12 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're going to call these operations "`prosthaphaeretic`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
+<div style="margin-bottom: 100px; text-align: left;">We're going to call these integer operations "`prosthaphaeretic`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 ```c
-float Q_rsqrt( float number )
-{
+float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
     float y  = number;
     long i  = \* ( long \* ) &y;                   // store as float
@@ -232,11 +229,11 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Let's turn this into JavaScript... We create an ArrayBuffer to hold a 32-bit number, and create two views on that buffer: one as a float, and one as an unsigned integer.</i></div>
+<div style="margin-top: 100px; text-align: left;">Let's convert this to JavaScript... We create an ArrayBuffer to hold a 32-bit number, and create two views on that buffer: one as a float, and one as an unsigned integer.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We are going to use the pure version of K here, with sigma equals zer. And we are going to skip the Newton's method iteration for now.</div>
+<div style="margin-bottom: 100px; text-align: left;">We are using the pure version of K here, with sigma equals zero. And we stripped out the Newton's method iteration for now.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -244,13 +241,40 @@ float Q_rsqrt( float number )
 const buffer = new ArrayBuffer(4); // (x)
 const fbuf = new Float32Array(buffer);
 const ibuf = new Uint32Array(buffer);
-
+``````
 function invsqrt(x) {
-    fbuf[0] = x;                             // store as float
+    fbuf[0] = x;                             // store x
     ibuf[0] >>= 1;                           // p-etic square root
     ibuf[0] \*= -1;                           // p-etic inverse
     ibuf[0] += 0x5F40000;                    // p-etic three-halves
-    return fbuf[0];                          // return as float
+    return fbuf[0];                          // return x
+}
+```
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">Fun with Floats</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Let's create a separate function for the Newton's method step.</i></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;"></div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```
+function invsqrtN(x, y) {
+    fbuf[0] = x;                             // store x
+    ibuf[0] >>= 1;                           // p-etic square root
+    ibuf[0] \*= -1;                           // p-etic inverse
+    ibuf[0] += 0x5F40000;                    // p-etic three-halves
+    return fbuf[0];                          // return x
 }
 ```
 @snapend
