@@ -141,11 +141,11 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">The constant K as a float is "almost one", slightly less to help account for the error in our linear approximation.</div>
+<div style="margin-top: 100px; text-align: left;">The constant K as a float is "almost one", slightly less to help account for the error in our linear approximation.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can now find magic numbers for others: square root, cube root, etc.</div>
+<div style="margin-bottom: 100px; text-align: left;">Generalizing from the inverse square root, we can now find magic numbers for others: square root, cube root, etc.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
