@@ -263,7 +263,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-```
+```javascript
 const buffer = new ArrayBuffer(4); // (x)
 const fltb = new Float32Array(buffer);
 const intb = new Uint32Array(buffer);
@@ -295,7 +295,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-```
+```c
 function sqrt(x) {
     fltb[0] = x;                             // alias x
     intb[0] >>= 1;                           // p-etic square root
