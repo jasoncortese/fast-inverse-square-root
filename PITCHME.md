@@ -300,7 +300,7 @@ function sqrt(x) {
     fltb[0] = x;                             // alias x
     intb[0] >>= 1;                           // p-etic square root
     intb[0] += 0x1fbd2165;                   // p-etic fraction 1/2
-    return fltb[0];                          // return x
+    return fltb[0];                          // return x'
 }
 
 function sqrtN(x, y) {
@@ -309,7 +309,7 @@ function sqrtN(x, y) {
     fltb[0] \*= x;                            // times x
     fltb[0] += y;                            // plus y
     intb[0] -= 0x00886e54;                   // p-etic integer 2
-    return fltb[0];                          // return x
+    return fltb[0];                          // return x'
 }
 ```
 @snapend
@@ -335,21 +335,21 @@ function cbrt(x) {
     fltb[0] = x;                             // alias x
     intb[0] /= 3;                            // p-etic cube root
     intb[0] += 0x2a5181dc;                   // p-etic fraction 2/3
-    return fltb[0];                          // return x
+    return fltb[0];                          // return x'
 }
 
 function frthrt(x) {
     fltb[0] = x;                             // alias x
     intb[0] >>= 2;                           // p-etic fourth root
     intb[0] += 0x2f9bb218;                   // p-etic fraction 3/4
-    return fltb[0];                          // return x
+    return fltb[0];                          // return x'
 }
 
 function nthrt(n, x) {
     fltb[0] = x;                             // alias x
     intb[0] /= n;                            // p-etic nth root
     intb[0] += (1 - n) \* 0x3f7a42ca;         // p-etic almost one
-    return fltb[0];                          // return x
+    return fltb[0];                          // return x'
 }
 ```
 @snapend
@@ -362,11 +362,11 @@ function nthrt(n, x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Root functions are not the only methods we can approximate linearly with these prosthaphaeretic operations. </div>
+<div style="margin-top: 100px; text-align: left;">Root functions are not the only methods we can approximate linearly with these prosthaphaeretic operations. Any Taylor series expansion should provide </div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Trigonometric functions for instance...</div>
+<div style="margin-bottom: 100px; text-align: left;">Trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -394,25 +394,26 @@ function nthrt(n, x) {
 
 @snap[midpoint span-60 text-05]
 ```javascript
-function cos(x) { //1 - x² / 2
+function cos(x) {
     fltb[0] = x;                             // alias x
-    intb[0] >>= 2;                           // p-etic fourth root
-    intb[0] += 0x2f9bb218;                   // p-etic fraction 3/4
-    return fltb[0];                          // return x
+    intb[0] <<= 1;                           // p-etic square
+    intb[0] -= 0x3ff4d2bc;                   // p-etic fraction 4/3
+    return 1 - fltb[0];                      // return 1 - ½ x²
 }
 
-function sin(x) { //x - ⅙ x³
+function sin(x) {
     fltb[0] = x;                             // alias x
     intb[0] /= 3;                            // p-etic cube root
-    intb[0] += 0x2a5181dc;                   // p-etic fraction 2/3
-    return fltb[0];                          // return x
+    intb[0] -= 0x40f1c87a;                   // p-etic fraction 6/5
+    return x - fltb[0];                      // return x - ⅙ x³
 }
 
 function tan(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] /= n;                            // p-etic nth root
-    intb[0] += (1 - n) \* 0x3f7a42ca;         // p-etic almost one
-    return fltb[0];                          // return x
+    let sinx = sin(x), cosx = cos(x);
+    fltb[0] = cosx;                          // alias cosx
+    intb[0] \*= 1;                            // p-etic inverse
+    fltb[0] \*= sinx;                         // times sinx
+    return fltb[0];                          // return tanx
 }
 ```
 @snapend
