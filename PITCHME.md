@@ -51,7 +51,8 @@ float Q_rsqrt( float number )
 @snap[midpoint span-60 text-05]
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
-\[\log_2 y \approx (y - 1) + \sigma\]
+\[\log_2 y \approx (x - 1) + \sigma\]
+\[y \approx 2^((x - 1) + \sigma)\]
 \[y' \approx -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
 @snapend
 
@@ -172,7 +173,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">... Apply one iteration of Newton's method, and you have a surprisingly accurate approximation of the inverse square root!</div>
+<div style="margin-bottom: 100px; text-align: left;">... Apply one iteration of Newton's method, and we have a surprisingly accurate approximation of the inverse square root!</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -204,7 +205,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're going to call this process "`prosthaphaeresis`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
+<div style="margin-bottom: 100px; text-align: left;">We're going to call this operation "`prosthaphaeresis`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
