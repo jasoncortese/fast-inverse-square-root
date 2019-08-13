@@ -512,7 +512,7 @@ function cos_sqd(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><sub>Appendix C:</sub> All the Magic Numbers</div>
+#### <div style="padding-left: 20px; color: white;"><sub><small>Appendix C:</small></sub> All the Magic Numbers</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
