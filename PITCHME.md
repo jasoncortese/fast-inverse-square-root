@@ -157,6 +157,7 @@ float Q_rsqrt( float number ) {
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[\vdots\]
 \[\]
+\[K = 0x3f7a3bea\]
 \[{\large{F}}_K = 1 - {\frac{\sigma}{2}} = 0.97747675\]`
 @snapend
 
@@ -203,7 +204,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're going to call these integer operations "`prosthaphaeretic`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
+<div style="margin-bottom: 100px; text-align: left;">We're going to call these operations "`prosthaphaeretic`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
 @snapend
 
 @snap[midpoint span-60 text-04]
@@ -243,7 +244,7 @@ float Q_rsqrt( float number ) {
   </tr>
   <tr>
     <td>denormalized fraction</td>
-    <td>aliasing adjustment</td>
+    <td>linear approximation</td>
   </tr>
 </table>
 @snapend
