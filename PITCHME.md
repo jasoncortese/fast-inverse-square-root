@@ -146,7 +146,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Where the constant K itself is "almost one", slightly less to help account for the error in our linear approximation.</div>
+<div style="margin-bottom: 100px; text-align: left;">Note that the constant K as a float is "almost one", slightly less to help account for the error in our linear approximation.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -207,19 +207,56 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-```c
-float Q_rsqrt( float number ) {
-    float x2 = number \* 0.5F;
-    float y  = number;
-    long i  = \* ( long \* ) &y;                   // alias as integer
-    i  >>= 1 ;                                   // p-etic square root
-    i  \*= -1 ;                                   // p-etic inverse
-    i  += 0x5f3759df;                            // p-etic three-halves
-    y  = \* ( float \* ) &i;                       // alias as float
-    y  = y \* ( threehalfs - ( x2 \* y \* y ) );    // apply newton's method
-    return y;
-}
-```
+<table>
+  <tr>
+    <th>Operation</th>
+    <th>Prosthaphaeresis</th>
+  </tr>
+  <tr>
+    <td>integer alias</td>
+    <td>logarithm</td>
+  </tr>
+  <tr>
+    <td>shift right</td>
+    <td>square root</td>
+  </tr>
+  <tr>
+    <td>shift left</td>
+    <td>square</td>
+  </tr>
+  <tr>
+    <td>negation</td>
+    <td>inverse</td>
+  </tr>
+  <tr>
+    <td>division</td>
+    <td>root extraction</td>
+  </tr>
+  <tr>
+    <td>multiplication</td>
+    <td>power function</td>
+  </tr>
+  <tr>
+    <td>subtraction</td>
+    <td>division</td>
+  </tr>
+  <tr>
+    <td>addition</td>
+    <td>multiplication</td>
+  </tr>
+  <tr>
+    <td>addition</td>
+    <td>multiplication</td>
+  </tr>
+  <tr>
+    <td>denormal fraction</td>
+    <td>addition</td>
+  </tr>
+  <tr>
+    <td>float alias</td>
+    <td>exponent</td>
+  </tr>
+</table>
 @snapend
 
 
