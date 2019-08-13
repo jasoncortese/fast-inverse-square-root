@@ -145,7 +145,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Generalizing from the inverse square root, we can now find magic numbers for others: square root, cube root, etc.</div>
+<div style="margin-bottom: 100px; text-align: left;">Generalizing from the inverse square root, we can now find other magic numbers for: square root, cube root, etc.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -170,7 +170,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Shifting right approximates the square root, negating approximates the inverse, and the magic number approximates a common fraction.</div>
+<div style="margin-bottom: 100px; text-align: left;">Shifting right approximates the square root, negating approximates the inverse, and the magic number approximates the common fraction three-halves.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
