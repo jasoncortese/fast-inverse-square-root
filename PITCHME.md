@@ -149,12 +149,12 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
-\[{\small\frac{1}{2}} K = 0x1fbd1df5\]
+`\[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[{\small\frac{3}{4}} K = 0x2f9bacef\]
 \[\vdots\]
 \[\]
+\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
 \[{\large{F}}_K = 1 - {\frac{\sigma}{2}} = 0.97747675\]`
 @snapend
 
