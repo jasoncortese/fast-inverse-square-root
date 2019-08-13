@@ -96,8 +96,8 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Look familiar? <br/></div>
-<center class="fragmemt">`i  = 0x5f3759df - ( i >> 1 );`</center>
+<div style="margin-bottom: 100px; text-align: left;">Look familiar? <br/>
+<center class="fragmemt">`i  = 0x5f3759df - ( i >> 1 );`</center></div>
 @snapend
 
 
