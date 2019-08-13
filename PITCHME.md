@@ -52,7 +52,7 @@ float Q_rsqrt( float number )
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
-\[y \approx 2^((x - 1) + \sigma)\]
+\[y \approx 2^{(x - 1) + \sigma}\]
 \[y' \approx -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
 @snapend
 
@@ -103,7 +103,7 @@ float Q_rsqrt( float number )
 
 @snap[midpoint span-60 text-05]
 `\[\log_2 (1 + m_y) + e_y = -{\small\frac{1}{2}} {\log_2 (1 + m_x) + e_x}\]
-\[m_y + e_y + \sigma \approx -{\small\frac{1}{2}} (m_x + e_x + \sigma)\]
+\[m_y + \sigma + e_y \approx -{\small\frac{1}{2}} (m_x + \sigma + e_x)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
 \[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]
 \[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
