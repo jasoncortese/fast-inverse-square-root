@@ -146,7 +146,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note that the constant K as a float is "almost one", slightly less to help account for the error in our linear approximation.</div>
+<div style="margin-bottom: 100px; text-align: left;">The constant K as a float is "almost one", slightly less to help account for the error in our linear approximation.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -259,7 +259,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"><span style="font-size: 12px;">(Note that we commented out the Newton's method iteration here, and chose a value for σ = 0.0448367 which performs slightly better with that removed.)</span></div>
+<div style="margin-bottom: 100px; text-align: left;"><span style="font-size: 12px;">(Note that we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which performs slightly better with that removed.)</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
