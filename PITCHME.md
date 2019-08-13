@@ -138,7 +138,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">All the Magic Numbers</div>
+#### <div style="padding-left: 20px; color: white;">More Magic Numbers</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -259,7 +259,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, we are using the base version of K here, with sigma equals zero. And we stripped out the Newton's method iteration for now.</div>
+<div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -272,7 +272,7 @@ function invsqrt(x) {
     fltb[0] = x;                             // alias x
     intb[0] >>= 1;                           // p-etic square root
     intb[0] \*= -1;                           // p-etic inverse
-    intb[0] += 0x5f40000;                    // p-etic three-halves
+    intb[0] += 0x5f376430;                   // p-etic three-halves
     fltb[0] \*= 1.5 - (x \* fltb[0] \*\* 2);     // apply newtons method
     return fltb[0];                          // return x
 }
@@ -287,11 +287,11 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Square root.</i></div>
+<div style="margin-top: 100px; text-align: left;">Square root. Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</div>
+<div style="margin-bottom: 100px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -299,19 +299,139 @@ function invsqrt(x) {
 function sqrt(x) {
     fltb[0] = x;                             // alias x
     intb[0] >>= 1;                           // p-etic square root
-    intb[0] += 0x1fc00000;                   // p-etic times 1/2
+    intb[0] += 0x1fbd2165;                   // p-etic fraction 1/2
     return fltb[0];                          // return x
 }
 
 function sqrtN(x, y) {
     fltb[0] = y;                             // alias y
-    intb[0] \*= -1;                            // p-etic inverse
-    fltb[0] \*= x;                             // times x
+    intb[0] \*= -1;                           // p-etic inverse
+    fltb[0] \*= x;                            // times x
     fltb[0] += y;                            // plus y
-    intb[0] -= 0x00800000;                   // p-etic divide-by 2
+    intb[0] -= 0x00886e54;                   // p-etic divisor 2
     return fltb[0];                          // return x
 }
 ```
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">Cube Root</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Cube root. Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</i></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```javascript
+function cbrt(x) {
+        fbuf[0] = x;                        //input             //x
+        ibuf[0] *= _3;                      //p-etic divide     //cube-root
+        ibuf[0] += 0x2A5181DC;              //p-etic plus       //times two-thirds
+        return fbuf[0];                     //output            //.
+}
+
+function cbrtN(x, y) {
+        fbuf[0] = $x;                       //input             //x'
+        ibuf[0] *= -2;                      //p-etic times      //inverse square
+        fbuf[0] *= x;                       //multiply          //times x
+        fbuf[0] -= $x;                      //subtract          //minus x'
+        ibuf[0] -= 0x00CAAAAB;              //p-etic minus      //over three
+        return $x + fbuf[0];       //output            //.
+}
+```
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">Cube Root</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Cube root. Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</i></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```javascript
+function cbrt(x) {
+        fbuf[0] = x;                        //input             //x
+        ibuf[0] *= _3;                      //p-etic divide     //cube-root
+        ibuf[0] += 0x2A5181DC;              //p-etic plus       //times two-thirds
+        return fbuf[0];                     //output            //.
+}
+
+function frthrt(x, y) {
+        fbuf[0] = x;                        //input             //x
+        ibuf[0] >>= 2;                      //shift twice       //fourth root
+        ibuf[0] += 0x2F9BB218;              //p-etic plus       //times three-fourths
+        return fbuf[0];                     //output            //.
+}
+
+function nthrt(x, y) {
+        fbuf[0] = x;                        //input             //x
+        ibuf[0] -= 0x3F7A42CA;              //p-etic minus      //over one-first
+        ibuf[0] /= n;                       //p-etic divide     //nth root
+        ibuf[0] += 0x3F7A42CA;              //p-etic plus       //times one-first
+        return fbuf[0];                     //output            //.
+}
+```
+@snapend
+
+
+}
+```
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">All the Magic Numbers</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Integer values for use during fast multiplication/division with p-etic operations. Fractional values for use during fast power/root extraction with p-etic operations.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Note, we are using the base version of K here, with sigma equals zero.</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```[
+            0xC0800000, 0x00000000, 0x00800000, 0x00C00000, 0x01000000, 0x01200000, 0x01400000, 0x01600000,
+            0x01800000, 0x01900000, 0x01A00000, 0x01B00000, 0x01C00000, 0x01D00000, 0x01E00000, 0x01F00000,
+            0x02000000, 0x02080000, 0x02100000, 0x02180000, 0x02200000, 0x02280000, 0x02300000, 0x02380000,
+            0x02400000, 0x02480000, 0x02500000, 0x02580000, 0x02600000, 0x02680000, 0x02700000, 0x02780000,
+            0x02800000, 0x02840000, 0x02880000, 0x028C0000, 0x02900000, 0x02940000, 0x02980000, 0x029C0000,
+            0x02A00000, 0x02A40000, 0x02A80000, 0x02AC0000, 0x02B00000, 0x02B40000, 0x02B80000, 0x02BC0000,
+            0x02C00000, 0x02C40000, 0x02C80000, 0x02CC0000, 0x02D00000, 0x02D40000, 0x02D80000, 0x02DC0000,
+            0x02E00000, 0x02E40000, 0x02E80000, 0x02EC0000, 0x02F00000, 0x02F40000, 0x02F80000, 0x02FC0000,
+    ];
+    [
+            [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000,],
+            [0x7F800000, 0x3F800000, 0x1FC00000, 0x152AAAAB, 0x0FE00000, 0x0CB33333, 0x0A955555, 0x09124925,],
+            [0x7F800000, 0x7F000000, 0x3F800000, 0x2A555555, 0x1FC00000, 0x19666666, 0x152AAAAB, 0x12249249,],
+            [0x7F800000, 0x7F100000, 0x5F400000, 0x3F800000, 0x2FA00000, 0x2619999A, 0x1FC00000, 0x1B36DB6E,],
+            [0x7F800000, 0x7F100000, 0x7F000000, 0x54AAAAAB, 0x3F800000, 0x32CCCCCD, 0x2A555555, 0x24492492,],
+            [0x7F800000, 0x7F200000, 0x7F100000, 0x69D55555, 0x4F600000, 0x3F800000, 0x34EAAAAB, 0x2D5B6DB7,],
+            [0x7F800000, 0x7F200000, 0x7F100000, 0x7F000000, 0x5F400000, 0x4C333333, 0x3F800000, 0x366DB6DB,],
+            [0x7F800000, 0x7F200000, 0x7F100000, 0x7F100000, 0x6F200000, 0x58E66666, 0x4A155555, 0x3F800000,],
+
+    ];
 @snapend
 
 
