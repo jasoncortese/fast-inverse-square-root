@@ -150,8 +150,8 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx (1-p) K + {p}{\large{I}_x}\]
-\[(1 - p) K = (1 - p) (2^{23}) (127 - \sigma)\]
+`\[{\large{I}_y} \approx (1-n) K + {n}{\large{I}_x}\]
+\[(1 - n) K = (1 - n) (2^{23}) (127 - \sigma)\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[K = 0x3f7a3bea\]
@@ -211,7 +211,7 @@ float Q_rsqrt( float number ) {
   </tr>
   <tr>
     <td>magic number</td>
-    <td>linear approximation</td>
+    <td>denormalized fraction</td>
   </tr>
 </table>
 @snapend
@@ -308,7 +308,7 @@ function sqrtN(x, y) {
     intb[0] \*= -1;                           // p-etic inverse
     fltb[0] \*= x;                            // times x
     fltb[0] += y;                            // plus y
-    intb[0] -= 0x00886e54;                   // p-etic divisor 2
+    intb[0] -= 0x00886e54;                   // p-etic integer 2
     return fltb[0];                          // return x
 }
 ```
@@ -332,65 +332,24 @@ function sqrtN(x, y) {
 @snap[midpoint span-60 text-05]
 ```javascript
 function cbrt(x) {
-        fbuf[0] = x;                        //input             //x
-        ibuf[0] *= _3;                      //p-etic divide     //cube-root
-        ibuf[0] += 0x2A5181DC;              //p-etic plus       //times two-thirds
-        return fbuf[0];                     //output            //.
+    fltb[0] = x;                             // alias x
+    intb[0] /= 3;                            // p-etic cube root
+    intb[0] += 0x2a5181dc;                   // p-etic fraction 2/3
+    return fltb[0];                          // return x
 }
 
-function cbrtN(x, y) {
-        fbuf[0] = $x;                       //input             //x'
-        ibuf[0] *= -2;                      //p-etic times      //inverse square
-        fbuf[0] *= x;                       //multiply          //times x
-        fbuf[0] -= $x;                      //subtract          //minus x'
-        ibuf[0] -= 0x00CAAAAB;              //p-etic minus      //over three
-        return $x + fbuf[0];       //output            //.
-}
-```
-@snapend
-
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Cube Root</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Cube root. Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</i></div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-```javascript
-function cbrt(x) {
-        fbuf[0] = x;                        //input             //x
-        ibuf[0] *= _3;                      //p-etic divide     //cube-root
-        ibuf[0] += 0x2A5181DC;              //p-etic plus       //times two-thirds
-        return fbuf[0];                     //output            //.
+function frthrt(x) {
+    fltb[0] = x;                             // alias x
+    intb[0] >>= 2;                           // p-etic fourth root
+    intb[0] += 0x2f9bb218;                   // p-etic fraction 3/4
+    return fltb[0];                          // return x
 }
 
-function frthrt(x, y) {
-        fbuf[0] = x;                        //input             //x
-        ibuf[0] >>= 2;                      //shift twice       //fourth root
-        ibuf[0] += 0x2F9BB218;              //p-etic plus       //times three-fourths
-        return fbuf[0];                     //output            //.
-}
-
-function nthrt(x, y) {
-        fbuf[0] = x;                        //input             //x
-        ibuf[0] -= 0x3F7A42CA;              //p-etic minus      //over one-first
-        ibuf[0] /= n;                       //p-etic divide     //nth root
-        ibuf[0] += 0x3F7A42CA;              //p-etic plus       //times one-first
-        return fbuf[0];                     //output            //.
-}
-```
-@snapend
-
-
+function nthrt(n, x) {
+    fltb[0] = x;                             // alias x
+    intb[0] /= n;                            // p-etic nth root
+    intb[0] += (1 - n) \* 0x3f7a42ca;         // p-etic almost one
+    return fltb[0];                          // return x
 }
 ```
 @snapend
@@ -411,7 +370,7 @@ function nthrt(x, y) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-```[
+```const peticIntegers = [
             0xC0800000, 0x00000000, 0x00800000, 0x00C00000, 0x01000000, 0x01200000, 0x01400000, 0x01600000,
             0x01800000, 0x01900000, 0x01A00000, 0x01B00000, 0x01C00000, 0x01D00000, 0x01E00000, 0x01F00000,
             0x02000000, 0x02080000, 0x02100000, 0x02180000, 0x02200000, 0x02280000, 0x02300000, 0x02380000,
@@ -421,15 +380,15 @@ function nthrt(x, y) {
             0x02C00000, 0x02C40000, 0x02C80000, 0x02CC0000, 0x02D00000, 0x02D40000, 0x02D80000, 0x02DC0000,
             0x02E00000, 0x02E40000, 0x02E80000, 0x02EC0000, 0x02F00000, 0x02F40000, 0x02F80000, 0x02FC0000,
     ];
-    [
-            [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000,],
-            [0x7F800000, 0x3F800000, 0x1FC00000, 0x152AAAAB, 0x0FE00000, 0x0CB33333, 0x0A955555, 0x09124925,],
-            [0x7F800000, 0x7F000000, 0x3F800000, 0x2A555555, 0x1FC00000, 0x19666666, 0x152AAAAB, 0x12249249,],
-            [0x7F800000, 0x7F100000, 0x5F400000, 0x3F800000, 0x2FA00000, 0x2619999A, 0x1FC00000, 0x1B36DB6E,],
-            [0x7F800000, 0x7F100000, 0x7F000000, 0x54AAAAAB, 0x3F800000, 0x32CCCCCD, 0x2A555555, 0x24492492,],
-            [0x7F800000, 0x7F200000, 0x7F100000, 0x69D55555, 0x4F600000, 0x3F800000, 0x34EAAAAB, 0x2D5B6DB7,],
-            [0x7F800000, 0x7F200000, 0x7F100000, 0x7F000000, 0x5F400000, 0x4C333333, 0x3F800000, 0x366DB6DB,],
-            [0x7F800000, 0x7F200000, 0x7F100000, 0x7F100000, 0x6F200000, 0x58E66666, 0x4A155555, 0x3F800000,],
+    const peticFractions = [
+            [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000],
+            [0x7F800000, 0x3F800000, 0x1FC00000, 0x152AAAAB, 0x0FE00000, 0x0CB33333, 0x0A955555, 0x09124925],
+            [0x7F800000, 0x7F000000, 0x3F800000, 0x2A555555, 0x1FC00000, 0x19666666, 0x152AAAAB, 0x12249249],
+            [0x7F800000, 0x7F100000, 0x5F400000, 0x3F800000, 0x2FA00000, 0x2619999A, 0x1FC00000, 0x1B36DB6E],
+            [0x7F800000, 0x7F100000, 0x7F000000, 0x54AAAAAB, 0x3F800000, 0x32CCCCCD, 0x2A555555, 0x24492492],
+            [0x7F800000, 0x7F200000, 0x7F100000, 0x69D55555, 0x4F600000, 0x3F800000, 0x34EAAAAB, 0x2D5B6DB7],
+            [0x7F800000, 0x7F200000, 0x7F100000, 0x7F000000, 0x5F400000, 0x4C333333, 0x3F800000, 0x366DB6DB],
+            [0x7F800000, 0x7F200000, 0x7F100000, 0x7F100000, 0x6F200000, 0x58E66666, 0x4A155555, 0x3F800000],
 
     ];
 @snapend
