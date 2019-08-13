@@ -270,6 +270,14 @@ function invsqrt(x) {
 
 @snap[midpoint span-60 text-05]
 ```
+function invsqrt(x) {
+    fltb[0] = x;                             // alias x
+    intb[0] >>= 1;                           // p-etic square root
+    intb[0] \*= -1;                           // p-etic inverse
+    intb[0] += 0x5F40000;                    // p-etic three-halves
+    return fltb[0];                          // return x
+}
+
 function invsqrtN(x, y) {
     fltb[0] = y;                             // alias y
     intb[0] <<= 1;                           // p-etic square
