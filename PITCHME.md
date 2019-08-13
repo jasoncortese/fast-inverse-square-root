@@ -206,7 +206,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-bottom: 100px; text-align: left;">We're going to call these integer operations "`prosthaphaeretic`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-60 text-04]
 <table>
   <tr>
     <th>Operation</th>
@@ -239,10 +239,6 @@ float Q_rsqrt( float number ) {
   <tr>
     <td>subtraction</td>
     <td>division</td>
-  </tr>
-  <tr>
-    <td>addition</td>
-    <td>multiplication</td>
   </tr>
   <tr>
     <td>addition</td>
