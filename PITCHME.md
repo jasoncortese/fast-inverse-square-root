@@ -51,7 +51,8 @@ float Q_rsqrt( float number )
 @snap[midpoint span-60 text-05]
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
-\[\log_2 y \approx (y - 1) + \sigma\]`
+\[\log_2 y \approx (y - 1) + \sigma\]
+\[\y' \approx -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
 @snapend
 
 @snap[east span-30 text-05]
@@ -197,7 +198,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
+<div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: <i>Aliasing a float as an integer approximates a logarithmic operation!</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
