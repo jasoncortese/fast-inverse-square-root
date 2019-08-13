@@ -52,7 +52,7 @@ float Q_rsqrt( float number ) {
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
 \[y \approx {\large{2}}^{(x - 1) + \sigma}\]
-\[y' \approx -{ {{x}{y^3} - 3y} \over {2}}\]`
+\[y' \approx -{{{x}{y^3} - 3y} \over {2}}\]`
 @snapend
 
 @snap[east span-30 text-05]
@@ -72,7 +72,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">For 32-bit floating point numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
+<div style="margin-bottom: 100px; text-align: left;">For these 32-bit numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -97,6 +97,9 @@ float Q_rsqrt( float number ) {
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">Look familiar? <br/>
+@snapend
+
+@snap[south span-85 text-05 text-black]
 <center>`i  = 0x5f3759df - ( i >> 1 );`</center></div>
 @snapend
 
