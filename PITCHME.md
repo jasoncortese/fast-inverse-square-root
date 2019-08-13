@@ -371,10 +371,50 @@ function nthrt(n, x) {
 
 @snap[midpoint span-60 text-05]
 `\[{e^{x}} \approx {\frac{1}{0!}} + {\frac{x}{1!}} + {\frac{x^2}{2!}} + {\frac{x^3}{3!}} + \dots\]
-\[{\log{(1+x)}} \approx {x} - {\frac{x^2}{2}} + {\frac{x^3}{3}} - {\frac{x^4}{4}} + \dots\]
+\[{\log_e{(1+x)}} \approx {x} - {\frac{x^2}{2}} + {\frac{x^3}{3}} - {\frac{x^4}{4}} + \dots\]
 \[{\sin{x}} \approx {x} - {\frac{x^3}{3!}} + {\frac{x^5}{5!}} - {\frac{x^7}{7!}} + \dots\]
 \[{\cos{x}} \approx {x} - {1} - {\frac{x^2}{2!}} + {\frac{x^4}{4!}} - {\frac{x^6}{6!}} + \dots\]
 \[{\tan{x}} \approx {x} + {\frac{x^3}{3}} + {\frac{2x^5}{15}} - {\frac{3x^7}{105}} + \dots\]`
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">Exp & Log Functions</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">First order approximations for Squared, Exponent and Logarithm functions.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;"></div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```javascript
+function sqd(x) {
+    fltb[0] = x;                             // alias x
+    intb[0] <<= 1;                           // p-etic square
+    intb[0] -= 0x1fbd2165;                   // p-etic fraction 1/2
+    return 1 + x + fltb[0];                  // return 1 + x + x²
+}
+
+function exp(x) {
+    fltb[0] = x;                             // alias x
+    intb[0] <<= 1;                           // p-etic square
+    intb[0] -= 0x3ff4d2bc;                   // p-etic fraction 4/3
+    return 1 + x + fltb[0];                  // return 1 + x + ½ x²
+}
+
+function log(x) {
+    fltb[0] = x - 1;                         // alias x
+    intb[0] <<= 1;                           // p-etic square
+    intb[0] -= 0x3ff4d2bc;                   // p-etic fraction 4/3
+    return x - fltb[0];                      // return x - ½ x²
+}
+```
 @snapend
 
 
@@ -464,7 +504,7 @@ function cos_sqd(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><small>Appendix A:</small> Born in Babylona</div>
+#### <div style="padding-left: 20px; color: white;"><small>Appendix A:</small> <br/> Born in Babylona</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -472,7 +512,7 @@ function cos_sqd(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">(Fun fact: this method applied to finding square roots was known to the ancient Babylonians.)</div>
+<div style="margin-bottom: 100px; text-align: left;">Fun fact: a version of this method specific to finding square roots was known to the ancient Babylonians.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -487,7 +527,7 @@ function cos_sqd(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><small>Appendix B:</small> Double Trouble</div>
+#### <div style="padding-left: 20px; color: white;"><small>Appendix B:</small> <br/> Double Trouble</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
