@@ -52,7 +52,7 @@ float Q_rsqrt( float number ) {
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
 \[y \approx {\large{2}}^{(x - 1) + \sigma}\]
-\[y' \approx -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
+\[y' \approx -{x}{y^3} - 3y} \over {2}}\]`
 @snapend
 
 @snap[east span-30 text-05]
