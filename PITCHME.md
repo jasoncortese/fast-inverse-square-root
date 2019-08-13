@@ -168,7 +168,7 @@ float Q_rsqrt( float number ) {
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left;">We can now make sense of our function: 
-    <ol><li>shifting right approximates the square root<li>negating approximates the inverse<li>and our magic number approximates three-halves.</ol></div>
+    <span style="font-size: 15px">shifting right approximates the square root, negating approximates the inverse, and our magic number approximates three-halves.</span></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
