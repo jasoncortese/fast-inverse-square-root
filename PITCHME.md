@@ -179,11 +179,11 @@ float Q_rsqrt( float number ) {
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
     float y  = number;
-    long i  = \* ( long \* ) &y;                   // alias as an integer
-    i  >>= 1 ;                                   // shift right as an integer
-    i  \*= -1 ;                                   // negate as an integer
+    long i  = \* ( long \* ) &y;                   // alias as nteger
+    i  >>= 1 ;                                   // shift right as integer
+    i  \*= -1 ;                                   // negate as integer
     i  += 0x5f3759df;                            // add the magic number 
-    y  = \* ( float \* ) &i;                       // alias as a float
+    y  = \* ( float \* ) &i;                       // alias as float
     y  = y \* ( threehalfs - ( x2 \* y \* y ) );    // apply newton's method
     return y;
 }
@@ -210,11 +210,11 @@ float Q_rsqrt( float number ) {
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
     float y  = number;
-    long i  = \* ( long \* ) &y;                   // store as float
+    long i  = \* ( long \* ) &y;                   // alias as integer
     i  >>= 1 ;                                   // p-etic square root
     i  \*= -1 ;                                   // p-etic inverse
     i  += 0x5f3759df;                            // p-etic three-halves
-    y  = \* ( float \* ) &i;                       // return as float
+    y  = \* ( float \* ) &i;                       // alias as float
     y  = y \* ( threehalfs - ( x2 \* y \* y ) );    // apply newton's method
     return y;
 }
@@ -225,11 +225,11 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Fun with Floats</div>
+#### <div style="padding-left: 20px;">Inverse Square Root</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Let's convert this to JavaScript... We create an ArrayBuffer to hold a 32-bit number, and create two views on that buffer: one as a float, and one as an unsigned integer.</i></div>
+<div style="margin-top: 100px; text-align: left;">Let's convert this to JavaScript... We create a global ArrayBuffer to hold a 32-bit number, and two views on that buffer: one as a float, and one as an unsigned integer.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -239,16 +239,16 @@ float Q_rsqrt( float number ) {
 @snap[midpoint span-60 text-05]
 ```
 const buffer = new ArrayBuffer(4); // (x)
-const fbuf = new Float32Array(buffer);
-const ibuf = new Uint32Array(buffer);
+const fltb = new Float32Array(buffer);
+const intb = new Uint32Array(buffer);
 ```
 ```
 function invsqrt(x) {
-    fbuf[0] = x;                             // store x
-    ibuf[0] >>= 1;                           // p-etic square root
-    ibuf[0] \*= -1;                           // p-etic inverse
-    ibuf[0] += 0x5F40000;                    // p-etic three-halves
-    return fbuf[0];                          // return x
+    fltb[0] = x;                             // alias x
+    intb[0] >>= 1;                           // p-etic square root
+    intb[0] \*= -1;                           // p-etic inverse
+    intb[0] += 0x5F40000;                    // p-etic three-halves
+    return fltb[0];                          // return x
 }
 ```
 @snapend
@@ -257,7 +257,7 @@ function invsqrt(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Fun with Floats</div>
+#### <div style="padding-left: 20px;">Inverse Square Root Newton</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -271,14 +271,44 @@ function invsqrt(x) {
 @snap[midpoint span-60 text-05]
 ```
 function invsqrtN(x, y) {
-    fbuf[0] = x;                             // store x
-    ibuf[0] >>= 1;                           // p-etic square root
-    ibuf[0] \*= -1;                           // p-etic inverse
-    ibuf[0] += 0x5F40000;                    // p-etic three-halves
-    return fbuf[0];                          // return x
+    fltb[0] = y;                             // alias y
+    intb[0] <<= 1;                           // p-etic square
+    fltb[0] \*= x;                            // times-x
+    fltb[0] -= 3;                            // minus-three
+    intb[0] -= 0xC07C000;                    // p-etic nine-thirds
+    return fltb[0];                          // return x
 }
 ```
 @snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">Square Root</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Square root.</i></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;"></div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```
+function invsqrtN(x, y) {
+    fltb[0] = y;                             // alias y
+    intb[0] <<= 1;                           // p-etic square
+    fltb[0] \*= x;                            // times-x
+    fltb[0] -= 3;                            // minus-three
+    intb[0] -= 0xC07C000;                    // p-etic nine-thirds
+    return fltb[0];                          // return x
+}
+```
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
