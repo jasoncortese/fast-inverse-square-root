@@ -9,7 +9,7 @@
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method found in the source code of Quake III Arena...</div>
+<div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code to Quake III Arena...</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -51,7 +51,7 @@ float Q_rsqrt( float number ) {
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
-\[y \approx 2^{(x - 1) + \sigma}\]
+\[y \approx {\large{2}}^{(x - 1) + \sigma}\]
 \[y' \approx -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
 @snapend
 
