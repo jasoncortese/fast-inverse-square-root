@@ -13,7 +13,7 @@
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">This was credited to John Carmack who was lead programmer on the Quake software, but can be traced back thru Gary Tarolli of SGI, and ultimately to the mid-80s with Greg Walsh and Cleve Moler working at Ardent Computers.</div>
+<div style="margin-bottom: 100px; text-align: left;">This was credited to John Carmack who was lead programmer on the Quake software, but can be traced back to the mid-80s with Greg Walsh and Cleve Moler working at Ardent Computers.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -224,8 +224,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our function: 
-    <span style="font-size: 15px">shifting right approximates the square root, negating approximates the inverse, and our magic number approximates three-halves.</span></div>
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our function: <i>shifting right for the square root, negating for the inverse, and our magic number is simply three-halves.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
