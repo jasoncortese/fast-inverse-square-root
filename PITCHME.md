@@ -176,17 +176,17 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[midpoint span-60 text-05]
-```
+```c
 float Q_rsqrt( float number )
 {
     float x2 = number \* 0.5F;
     float y  = number;
     long i  = \* ( long \* ) &y;                   // alias as an integer
-    i  >>= 1 ;                                     // shift right as an integer
-    i  \*= -1 ;                                     // negate as an integer
-    i  += 0x5f3759df;                              // add the magic number 
+    i  >>= 1 ;                                   // shift right as an integer
+    i  \*= -1 ;                                   // negate as an integer
+    i  += 0x5f3759df;                            // add the magic number 
     y  = \* ( float \* ) &i;                       // alias as a float
-    y  = y \* ( threehalfs - ( x2 \* y \* y ) );   // apply newton's method
+    y  = y \* ( threehalfs - ( x2 \* y \* y ) );    // apply newton's method
     return y;
 }
 ```
