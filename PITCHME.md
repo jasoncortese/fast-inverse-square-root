@@ -129,7 +129,7 @@ float Q_rsqrt( float number )
 \[\]
 \[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
 \[\]
-\[K = 1064975338\]
+\[K = 1064975338 = 0x3f7a3bea\]\]
 \[\]
 \[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
@@ -155,9 +155,7 @@ float Q_rsqrt( float number )
 \[\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
-\[\vdots\]
-\[\]
-\[K = 0x3f7a3bea\]`
+\[\vdots\]`
 @snapend
 
 
