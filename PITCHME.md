@@ -80,7 +80,7 @@ float Q_rsqrt( float number )
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
 \[\]
-\[{\large{F}} \rightarrow (1+m) 2^e\]
+\[{\large{F}} \rightarrow (m + 1) 2^e\]
 \[\]
 \[{\large{I}} \rightarrow M + L E\]`
 @snapend
@@ -102,7 +102,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[\log_2 (1 + m_y) + e_y = -{\small\frac{1}{2}} {\log_2 (1 + m_x) + e_x}\]
+`\[\log_2 (m_y + 1) + e_y = -{\small\frac{1}{2}} {\log_2 (m_x + 1) + e_x}\]
 \[m_y + \sigma + e_y \approx -{\small\frac{1}{2}} (m_x + \sigma + e_x)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
 \[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]
