@@ -145,7 +145,7 @@ float Q_rsqrt( float number )
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Generalizing from the inverse square root, we can find other magic numbers `1 - p` for: square root `p = 1/2`, cube root `p = 1/3`, etc.</div>
+<div style="margin-bottom: 100px; text-align: left;">Generalizing from the inverse square root, we can find other magic numbers `1-p` for: square root, cube root, etc.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
