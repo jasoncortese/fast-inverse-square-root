@@ -163,38 +163,6 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">What the f*ck?</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our function: 
-    <span style="font-size: 15px">shifting right approximates the square root, negating approximates the inverse, and our magic number approximates three-halves.</span></div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">... Apply one iteration of Newton's method, and we have a surprisingly accurate approximation of the inverse square root!</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-```c
-float Q_rsqrt( float number ) {
-    float x2 = number \* 0.5F;
-    float y  = number;
-    long i  = \* ( long \* ) &y;                   // alias as nteger
-    i  >>= 1 ;                                   // shift right as integer
-    i  \*= -1 ;                                   // negate as integer
-    i  += 0x5f3759df;                            // add the magic number 
-    y  = \* ( float \* ) &i;                       // alias as float
-    y  = y \* ( threehalfs - ( x2 \* y \* y ) );    // apply newton's method
-    return y;
-}
-```
-@snapend
-
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px;">Prosthaphaeresis</div>
 @snapend
 
@@ -246,6 +214,38 @@ float Q_rsqrt( float number ) {
     <td>linear approximation</td>
   </tr>
 </table>
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px;">What the f*ck?</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our function: 
+    <span style="font-size: 15px">shifting right approximates the square root, negating approximates the inverse, and our magic number approximates three-halves.</span></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">... Apply one iteration of Newton's method, and we have a surprisingly accurate approximation of the inverse square root!</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+```c
+float Q_rsqrt( float number ) {
+    float x2 = number \* 0.5F;
+    float y  = number;
+    long i  = \* ( long \* ) &y;                   // alias as nteger
+    i  >>= 1 ;                                   // shift right as integer
+    i  \*= -1 ;                                   // negate as integer
+    i  += 0x5f3759df;                            // add the magic number 
+    y  = \* ( float \* ) &i;                       // alias as float
+    y  = y \* ( threehalfs - ( x2 \* y \* y ) );    // apply newton's method
+    return y;
+}
+```
 @snapend
 
 
