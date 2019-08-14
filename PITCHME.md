@@ -51,7 +51,7 @@ float Q_rsqrt( float number ) {
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
-\[y \approx {\large{2}}^{(x - 1) + \sigma}\]
+\[y \approx {\large{2}}^{\log_2 y}\]
 \[y' \approx -{{3y - {x}{y^3}} \over {2}}\]`
 @snapend
 
