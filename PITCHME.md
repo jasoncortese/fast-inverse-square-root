@@ -332,7 +332,7 @@ function sqrtN(x, y) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-bottom: 100px; text-align: left;">In the nth root approximation we split up the magic number step by first subtracting the length L, then performing the phast root extraction, and finally adding back the bias B.</div>
+<div style="margin-bottom: 100px; text-align: left;">For the nth root we split up the magic number step by first subtracting the length L, then performing the phast root extraction, and finally adding back the length times half the bias.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -353,9 +353,9 @@ function frthrt(x) {
 
 function nthrt(n, x) {
     fltb[0] = x;                             // alias x
-    intb[0] -= 1 << 23;                      // phast length (integer 2)
+    intb[0] -= 1 << 23;                      // phast in (2^m)
     intb[0] /= n;                            // phast nth root
-    intb[0] += 1 << 29;                      // phast bias ((b + 1) / 2 * 2^m)
+    intb[0] += 1 << (23 + 6);                // phast out ((b + 1) / 2 * 2^m)
     return fltb[0];                          // return x'
 }
 ```
@@ -392,7 +392,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for squared, exponent and logarithm functions.</div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for reciprocal, exponent and logarithm functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
@@ -401,11 +401,11 @@ function nthrt(n, x) {
 
 @snap[midpoint span-65 text-05]
 ```javascript
-function sqd(x) {
+function rcpr(x) {
     fltb[0] = x;                             // alias x
-    intb[0] <<= 1;                           // phast square
-    intb[0] -= 0x1fbd2165;                   // phast fraction 1/2
-    return 1 + x + fltb[0];                  // return 1 + x + x²
+    intb[0] \*= -1;                           // phast invert
+    intb[0] -= 0x80000000;                   // phast fraction 1/1
+    return x;                                // return x
 }
 
 function exp(x) {
