@@ -9,11 +9,11 @@
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code to Quake III Arena...</div>
+<div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code in Quake III Arena...</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">This was credited to John Carmack who was lead programmer on the Quake software, but can be traced back to the mid-80s with Greg Walsh and Cleve Moler working at Ardent Computers.</div>
+<div style="margin-bottom: 100px; text-align: left;">This was credited to John Carmack who was lead programmer on the project, but can be traced back to the mid-80s with Greg Walsh and Cleve Moler working at Ardent Computers.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -63,7 +63,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> IEEE-yai-yai</div>
+#### <div style="padding-left: 20px; color: white;"><br/> IEEE</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -146,7 +146,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">The constant K as a float is "almost one", slightly less to help account for the error in our linear approximation.</div>
+<div style="margin-bottom: 100px; text-align: left;">These are fractional multiples of our constant K, which as a float is "almost one" (slightly less to help account for error in our linear approximation).</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
