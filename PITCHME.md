@@ -651,17 +651,19 @@ const phastIntegers = [
 #### <div style="padding-left: 20px; color: white;"><br/>Citations</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
-<a href="http://h14s.p5r.org/2012/09/0x5f3759df.html">Hansen, Christian. “Title of the Article or Individual Page.” Hummus and Magnets, 0x5f3759df, 15 Sept 2012, http://h14s.p5r.org/2012/09/0x5f3759df.html.</a><br />
+@snap[west span-85 text-05 text-black]
+<a href="http://h14s.p5r.org/2012/09/0x5f3759df.html">Hansen, Christian Plesner. “0x5f3759df”, Hummus and Magnets, 5 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df.html</a><br />
 
-<a href="http://www.lomont.org/papers/2003/InvSqrt.pdf">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
+<a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a><br />
 
-<a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
+<a href="http://www.lomont.org/papers/2003/InvSqrt.pdf">Lomont, Chris. “FAST INVERSE SQUARE ROOT”, www.math.purdue.edu/∼ clomont, February 2003. http://www.lomont.org/papers/2003/InvSqrt.pdf</a><br />
 
-<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
+<a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Wikipedia contributors. "Fast inverse square root" Wikipedia, The Free Encyclopedia, (last edited) 13 August 2019. https://en.wikipedia.org/wiki/Fast_inverse_square_root</a><br />
 
-<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
+<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">Wikipedia contributors. "Single-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 10 August 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a><br />
 
-<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
+<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">Wikipedia contributors. "Double-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 11 July 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a><br />
+
+<a href="https://github.com/id-Software/Quake-III-Arena">Quake-III-Arena source code on GitHub: https://github.com/id-Software/Quake-III-Arena</a><br />
 @snapend
 
