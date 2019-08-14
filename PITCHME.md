@@ -271,16 +271,16 @@ float Q_rsqrt( float number ) {
 @snap[midpoint span-65 text-05]
 ```javascript
 const buffer = new ArrayBuffer(4); // (x)
-const fltb = new Float32Array(buffer);
-const intb = new Uint32Array(buffer);
+const f$ = new Float32Array(buffer);
+const i$ = new Uint32Array(buffer);
 
 function invsqrt(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] >>= 1;                           // phast square root
-    intb[0] \*= -1;                           // phast inverse
-    intb[0] += 0x5f376430;                   // phast three-halves
-//  fltb[0] \*= 1.5 - (x \* fltb[0] \*\* 2);     // apply newtons method
-    return fltb[0];                          // return x
+    f$[0] = x;                             // alias x
+    i$[0] >>= 1;                           // phast square root
+    i$[0] \*= -1;                           // phast inverse
+    i$[0] += 0x5f376430;                   // phast three-halves
+//  f$[0] \*= 1.5 - (x \* f$[0] \*\* 2);     // apply newtons method
+    return f$[0];                          // return x
 }
 ```
 @snapend
@@ -303,19 +303,19 @@ function invsqrt(x) {
 @snap[midpoint span-65 text-05]
 ```javascript
 function sqrt(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] >>= 1;                           // phast square root
-    intb[0] += 0x1fbd2165;                   // phast fraction 1/2
-    return fltb[0];                          // return x'
+    f$[0] = x;                             // alias x
+    i$[0] >>= 1;                           // phast square root
+    i$[0] += 0x1fbd2165;                   // phast fraction 1/2
+    return f$[0];                          // return x'
 }
 
 function sqrtN(x, y) {
-    fltb[0] = y;                             // alias y
-    intb[0] \*= -1;                           // phast inverse
-    fltb[0] \*= x;                            // times x
-    fltb[0] += y;                            // plus y
-    intb[0] -= 0x00886e54;                   // phast integer 2
-    return fltb[0];                          // return x'
+    f$[0] = y;                             // alias y
+    i$[0] \*= -1;                           // phast inverse
+    f$[0] \*= x;                            // times x
+    f$[0] += y;                            // plus y
+    i$[0] -= 0x00886e54;                   // phast integer 2
+    return f$[0];                          // return x'
 }
 ```
 @snapend
@@ -338,24 +338,24 @@ function sqrtN(x, y) {
 @snap[midpoint span-65 text-05]
 ```javascript
 function cbrt(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] /= 3;                            // phast cube root
-    intb[0] += 0x2a5181dc;                   // phast fraction 2/3
-    return fltb[0];                          // return x'
+    f$[0] = x;                             // alias x
+    i$[0] /= 3;                            // phast cube root
+    i$[0] += 0x2a5181dc;                   // phast fraction 2/3
+    return f$[0];                          // return x'
 }
 
 function frthrt(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] >>= 2;                           // phast fourth root
-    intb[0] += 0x2f9bb218;                   // phast fraction 3/4
-    return fltb[0];                          // return x'
+    f$[0] = x;                             // alias x
+    i$[0] >>= 2;                           // phast fourth root
+    i$[0] += 0x2f9bb218;                   // phast fraction 3/4
+    return f$[0];                          // return x'
 }
 
 function nthrt(n, x) {
-    fltb[0] = x;                             // alias x
-    intb[0] /= n;                            // phast nth root
-    intb[0] += (n - 1) / n * 0x3f7a3bea;     // phast fraction (1-p)
-    return fltb[0];                          // return x'
+    f$[0] = x;                             // alias x
+    i$[0] /= n;                            // phast nth root
+    i$[0] += (n - 1) / n * 0x3f7a3bea;     // phast fraction (1-p)
+    return f$[0];                          // return x'
 }
 ```
 @snapend
@@ -401,24 +401,24 @@ function nthrt(n, x) {
 @snap[midpoint span-65 text-05]
 ```javascript
 function rcpr(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] \*= -1;                           // phast invert
-    intb[0] -= 0x80000000;                   // phast fraction 1/1
+    f$[0] = x;                             // alias x
+    i$[0] \*= -1;                           // phast invert
+    i$[0] -= 0x80000000;                   // phast fraction 1/1
     return x;                                // return x
 }
 
 function exp(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] <<= 1;                           // phast square
-    intb[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
-    return 1 + x + fltb[0];                  // return 1 + x + ½ x²
+    f$[0] = x;                             // alias x
+    i$[0] <<= 1;                           // phast square
+    i$[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
+    return 1 + x + f$[0];                  // return 1 + x + ½ x²
 }
 
 function log(x) {
-    fltb[0] = x - 1;                         // alias x
-    intb[0] <<= 1;                           // phast square
-    intb[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
-    return x - fltb[0];                      // return x - ½ x²
+    f$[0] = x - 1;                         // alias x
+    i$[0] <<= 1;                           // phast square
+    i$[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
+    return x - f$[0];                      // return x - ½ x²
 }
 ```
 @snapend
@@ -441,26 +441,26 @@ function log(x) {
 @snap[midpoint span-65 text-05]
 ```javascript
 function cos(x) {
-    f[0] = x;                             // alias x
-    i[0] <<= 1;                           // phast square
-    i[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
-    return 1 - f[0];                      // return 1 - ½ x²
+    f$[0] = x;                             // alias x
+    i$[0] <<= 1;                           // phast square
+    i$[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
+    return 1 - f$[0];                      // return 1 - ½ x²
 }
 
 function sin(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] /= 3;                            // phast cube root
-    intb[0] -= 0x40f1c87a;                   // phast fraction 6/5
-    return x - fltb[0];                      // return x - ⅙ x³
+    f$[0] = x;                             // alias x
+    i$[0] /= 3;                            // phast cube root
+    i$[0] -= 0x40f1c87a;                   // phast fraction 6/5
+    return x - f$[0];                      // return x - ⅙ x³
 }
 
 function tan(x) {
     const sinx = sin(x), cosx = cos(x);
-    fltb[0] = cosx;                          // alias cosx
-    intb[0] \*= 1;                            // phast inverse
-    intb[0] += 0x00000000;                   // phast integer 1
-    fltb[0] \*= sinx;                         // times sinx
-    return fltb[0];                          // return tanx
+    f$[0] = cosx;                          // alias cosx
+    i$[0] \*= 1;                            // phast inverse
+    i$[0] += 0x00000000;                   // phast integer 1
+    f$[0] \*= sinx;                         // times sinx
+    return f$[0];                          // return tanx
 }
 ```
 @snapend
@@ -483,25 +483,25 @@ function tan(x) {
 @snap[midpoint span-65 text-05]
 ```javascript
 function arc_cos(x) {
-    fltb[0] = 1 - x;                         // alias 1 - x
-    intb[0] += 0x3ff4d2bc;                   // phast fraction 4/3
-    intb[0] >>= 1;                           // phast square root
-    return 1 - fltb[0];                      // return √(2 - 2x)
+    f$[0] = 1 - x;                         // alias 1 - x
+    i$[0] += 0x3ff4d2bc;                   // phast fraction 4/3
+    i$[0] >>= 1;                           // phast square root
+    return 1 - f$[0];                      // return √(2 - 2x)
 }
 
 function cos_dbl(x) {
     const cosx = cos(x);
-    fltb[0] = cosx;                          // alias cosx
-    intb[0] <<= 1;                           // phast square
-    intb[0] += 0x00800000;                   // phast integer 2
-    return fltb[0] - 1;                      // return 2 cos²(x) - 1
+    f$[0] = cosx;                          // alias cosx
+    i$[0] <<= 1;                           // phast square
+    i$[0] += 0x00800000;                   // phast integer 2
+    return f$[0] - 1;                      // return 2 cos²(x) - 1
 }
 
 function cos_sqd(x) {
     const cos2x = cos(2 * x);
-    fltb[0] = 1 + cos2x;                     // alias 1 + cos2x
-    intb[0] -= 0x00800000;                   // phast integer -2
-    return fltb[0];                          // return ½ (1 + cos(2x))
+    f$[0] = 1 + cos2x;                     // alias 1 + cos2x
+    i$[0] -= 0x00800000;                   // phast integer -2
+    return f$[0];                          // return ½ (1 + cos(2x))
 }
 ```
 @snapend
@@ -524,16 +524,16 @@ function cos_sqd(x) {
 @snap[midpoint span-65 text-05]
 ```javascript
 function cos(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] <<= 1;                           // phast square
-    intb[0] -= 2 << 23;                      // phast divide-by 1 \* 2
-    fltb[1] = fltb[0];                       // alias x'
-    intb[1] <<= 1;                           // phast square
-    intb[1] -= 12 << 23;                     // phast divide-by 3 \* 4
-    fltb[2] = fltb[1];                       // alias x"
-    intb[2] <<= 1;                           // phast square
-    intb[2] -= 30 << 23;                     // phast divide-by 5 \* 6
-    return 1 - fltb[0] + fltb[1] - fltb[2];  // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
+    f$[0] = x;                             // alias x
+    i$[0] <<= 1;                           // phast square
+    i$[0] -= 2 << 23;                      // phast divide-by 1 \* 2
+    f$[1] = f$[0];                       // alias x'
+    i$[1] <<= 1;                           // phast square
+    i$[1] -= 12 << 23;                     // phast divide-by 3 \* 4
+    f$[2] = f$[1];                       // alias x"
+    i$[2] <<= 1;                           // phast square
+    i$[2] -= 30 << 23;                     // phast divide-by 5 \* 6
+    return 1 - f$[0] + f$[1] - f$[2];  // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
 ```
 @snapend
 
