@@ -196,7 +196,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> Prosthaphaeresis</div>
+#### <div style="padding-left: 20px; color: white;"><br/> What the ph*ck?</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -204,7 +204,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're going to call this, "`prosthaphaereis`" &mdash; an old-timey term for logarithmic-like approximations before logarithms were invented &mdash; or "`phast`" for short.</div>
+<div style="margin-bottom: 100px; text-align: left;">We're going to call this, "`prosthaphaeresis`" &mdash; an old-timey term for logarithmic-like approximations before logarithms were invented &mdash; or "`phast`" for short.</div>
 @snapend
 
 @snap[midpoint span-60 text-04]
