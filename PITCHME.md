@@ -9,7 +9,7 @@
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III Arena...</div>
+<div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III...</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -147,7 +147,7 @@ float Q_rsqrt( float number ) {
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">These are fractions of our constant K, which is approximately equal to 1.<br/>
-    <span style="font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, adjusting for and minimizing the error in our linear approximation).</span></div>
+    <span style="font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation).</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -506,6 +506,33 @@ function cos_sqd(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;"><br/>Conclusion...</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">In 3D graphics you do a lot of normalizing vectors, and that involves a lot of inverses and square roots, both of which are expensive operations (back then, quadruply so).</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Applying Newton's method would further improve the results.</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
+\[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
+\[\log_2 y \approx (x - 1) + \sigma\]
+\[y \approx {\large{2}}^{(x - 1) + \sigma}\]
+\[y' \approx -{{{x}{y^3} - 3y} \over {2}}\]`
+@snapend
+
+@snap[east span-30 text-05]
+<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><small>Appendix A:</small> <br/> All the Magic Numbers</div>
 @snapend
 
@@ -615,5 +642,26 @@ const phastIntegers = [
 \[hypot(x, y) \approx \max(x, y) + \sigma \space min(x, y)\]
 \[\]
 \[hypot(x, y) \approx x \space | \space y\]`
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;"><br/>Citations</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+<a href="http://h14s.p5r.org/2012/09/0x5f3759df.html">Hansen, Christian. “Title of the Article or Individual Page.” Hummus and Magnets, 0x5f3759df, 15 Sept 2012, http://h14s.p5r.org/2012/09/0x5f3759df.html.</a><br />
+
+<a href="http://www.lomont.org/papers/2003/InvSqrt.pdf">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
+
+<a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
+
+<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
+
+<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
+
+<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">Author’s Last name, First name. “Title of the Article or Individual Page.” Title of the Website, Name of the Publisher, Date of Publication in Day Month Year format, URL.</a><br />
 @snapend
 
