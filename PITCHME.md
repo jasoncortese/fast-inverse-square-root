@@ -147,7 +147,7 @@ float Q_rsqrt( float number ) {
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">These are fractional multiples of our constant K, which is almost equal to 1.<br/>
-    <span style="font-size: 12px;">(Note, 1 - σ/2 = 0.97747675, slightly less than 1 to help account for error in our linear approximation).</span></div>
+    <span style="font-size: 12px;">(Note, `F_k` = 1 - σ/2 = 0.97747675, slightly less than 1 to help account for error in our linear approximation).</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -155,6 +155,7 @@ float Q_rsqrt( float number ) {
 \[(1 - n) K = (1 - n) (2^{23}) (127 - \sigma)\]
 \[\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
+\[\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[\]
 \[K = 0x3f7a3bea\]`
