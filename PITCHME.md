@@ -224,7 +224,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We can now make sense of our function: <i>shifting right for the square root, negating for the inverse, and our magic number is simply three-halves.</i></div>
+<div style="margin-top: 100px; text-align: left;">We can now make sense of our function: <i>shift right for the square root, negatie for the inverse, and our magic number is simply three-halves.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
