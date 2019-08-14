@@ -602,7 +602,7 @@ const phastIntegers = [
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Germane to the discussion thus far, but without the same rigorous precision, here is a "dog-leg" approximation for the hypotenuse of a triangle using bitwise disjunction.</div>
+<div style="margin-top: 100px; text-align: left;">Germane to the discussion thus far, but without the same rigorous precision, here is a "dog-leg" approximation using bitwise disjunction for the hypotenuse of a triangle.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
