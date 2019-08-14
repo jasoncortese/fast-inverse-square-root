@@ -56,7 +56,8 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[](ln.png)</div>
+<div style="margin-top: 25px;">@img[](ln.png)</div>
+<div style="margin-top: 25px;">@img[](0.5.png)</div>
 @snapend
 
 
@@ -134,7 +135,8 @@ float Q_rsqrt( float number ) {
 \[\]
 \[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
 @snapend
-    
+
+
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
@@ -281,10 +283,6 @@ function invsqrt(x) {
 ```
 @snapend
 
-@snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[](0.5.png)</div>
-@snapend
-
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -318,10 +316,6 @@ function sqrtN(x, y) {
     return fltb[0];                          // return x'
 }
 ```
-@snapend
-
-@snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[](0.51.png)</div>
 @snapend
 
 
@@ -363,10 +357,6 @@ function nthrt(n, x) {
     return fltb[0];                          // return x'
 }
 ```
-@snapend
-
-@snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[](0.333.png)</div>
 @snapend
 
 
@@ -526,13 +516,13 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">Nowadays the native instruction is generally faster than the original algorithm. But what if a floating point format existed that directly accounted for the linear approximation?</div>
 @snapend
 
-@snap[south span-85 text-05 text-black fragment]
+@snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">We'll leave off her with a hypothetical implementation of cosine, performing its own second and third-order iterations. Enjoy.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
 ```javascript
-function phast_cos(x) {
+function future_cos(x) {
     fltb[0] = x;                             // alias x
     intb[0] <<= 1;                           // phast square
     intb[0] -= 2;                            // phast divide-by 1 \* 2
