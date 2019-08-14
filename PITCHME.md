@@ -652,9 +652,9 @@ const phastIntegers = [
 @snapend
 
 @snap[west span-85 text-05 text-black]
-<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df.html" style="color: black; padding-left: 50px;">Hansen, Christian Plesner. “0x5f3759df”, Hummus and Magnets, 5 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df.html</a>
+<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df.html" style="color: black; padding-left: 50px; font-size: 15px;">Hansen, Christian Plesner. “0x5f3759df”, Hummus and Magnets, 5 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df.html</a>
 
-<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html" style="color: black; padding-left: 50px;">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012.<br /> http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a>
+<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html" style="color: black; padding-left: 50px; font-size: 12px;">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012.<br /> http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a>
 
 <p><a href="http://www.lomont.org/papers/2003/InvSqrt.pdf" style="color: black; padding-left: 50px;">Lomont, Chris. “FAST INVERSE SQUARE ROOT”, www.math.purdue.edu/∼ clomont, February 2003.<br /> http://www.lomont.org/papers/2003/InvSqrt.pdf</a>
 
