@@ -169,7 +169,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but the idea: <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
+<div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but this idea: <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
