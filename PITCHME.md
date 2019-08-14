@@ -328,7 +328,7 @@ function sqrtN(x, y) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Here are first order approximations for cube root, fourth root, and nth root functions.</i></div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for cube root, fourth root, and nth root functions.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
@@ -441,10 +441,10 @@ function log(x) {
 @snap[midpoint span-65 text-05]
 ```javascript
 function cos(x) {
-    fltb[0] = x;                             // alias x
-    intb[0] <<= 1;                           // phast square
-    intb[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
-    return 1 - fltb[0];                      // return 1 - ½ x²
+    f[0] = x;                             // alias x
+    i[0] <<= 1;                           // phast square
+    i[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
+    return 1 - f[0];                      // return 1 - ½ x²
 }
 
 function sin(x) {
@@ -523,22 +523,17 @@ function cos_sqd(x) {
 
 @snap[midpoint span-65 text-05]
 ```javascript
-function future_cos(x) {
+function cos(x) {
     fltb[0] = x;                             // alias x
-    intb[0] -= 1 << 23;                      // phast in 2^m
     intb[0] <<= 1;                           // phast square
-    intb[0] -= 2;                            // phast divide-by 1 \* 2
-    fltb[4] = fltb[0];                       // alias x'
-    intb[4] <<= 1;                           // phast square
-    intb[4] -= 12;                           // phast divide-by 3 \* 4
-    fltb[8] = fltb[4];                       // alias x"
-    intb[8] <<= 1;                           // phast square
-    intb[8] -= 30;                           // phast divide-by 5 \* 6
-    intb[8] += 1 << 23;                      // phast out 2^m
-    intb[4] += 1 << 23;                      // phast out 2^m
-    intb[0] += 1 << 23;                      // phast out 2^m
-    return 1 - fltb[0] + fltb[4] - fltb[8];  // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
-    return 1 - fltb[0] + fltb[4] - fltb[8];  // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
+    intb[0] -= 2 << 23;                      // phast divide-by 1 \* 2
+    fltb[1] = fltb[0];                       // alias x'
+    intb[1] <<= 1;                           // phast square
+    intb[1] -= 12 << 23;                     // phast divide-by 3 \* 4
+    fltb[2] = fltb[1];                       // alias x"
+    intb[2] <<= 1;                           // phast square
+    intb[2] -= 30 << 23;                     // phast divide-by 5 \* 6
+    return 1 - fltb[0] + fltb[1] - fltb[2];  // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
 ```
 @snapend
 
