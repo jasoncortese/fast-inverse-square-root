@@ -508,7 +508,7 @@ function cos_sqd(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">P-etic fractional values for use during fast power/root extraction, and p-etic integral values for use during fast multiplication/division.</div>
+<div style="margin-top: 100px; text-align: left;">Fractional values for use during prosthaphaeretic power/root extraction, and integral values for use during prosthaphaeretic multiplication/division.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
