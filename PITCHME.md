@@ -510,7 +510,7 @@ function cos_sqd(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">In 3D graphics you do a lot of normalizing vectors, and that involves a lot of inverses and square roots, both of which are expensive operations (back then, quadruply so).</div>
+<div style="margin-top: 100px; text-align: left;">Alas, processor speed improved .</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -652,18 +652,21 @@ const phastIntegers = [
 @snapend
 
 @snap[west span-85 text-05 text-black]
-<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df.html" style="color: black; padding-left: 50px; font-size: 15px; display: block;">Hansen, Christian Plesner. “0x5f3759df”, Hummus and Magnets, 5 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df.html</a>
+<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df.html" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Hansen, Christian Plesner. “0x5f3759df”, Hummus and Magnets, 5 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df.html</a>
 
-<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html" style="color: black; padding-left: 50px; font-size: 15px; display: block;">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012.<br /> http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a>
+<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012.<br /> http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a>
 
-<p><a href="http://www.lomont.org/papers/2003/InvSqrt.pdf" style="color: black; padding-left: 50px; font-size: 15px; display: block;">Lomont, Chris. “FAST INVERSE SQUARE ROOT”, www.math.purdue.edu/∼ clomont, February 2003.<br /> http://www.lomont.org/papers/2003/InvSqrt.pdf</a>
+<p><a href="http://www.lomont.org/papers/2003/InvSqrt.pdf" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Lomont, Chris. “FAST INVERSE SQUARE ROOT”, Purdue
+University, www.math.purdue.edu/∼ clomont, February 2003.<br /> http://www.lomont.org/papers/2003/InvSqrt.pdf</a>
 
-<p><a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root" style="color: black; padding-left: 50px; font-size: 15px; display: block;">Wikipedia contributors. "Fast inverse square root" Wikipedia, The Free Encyclopedia, (last edited) 13 August 2019. https://en.wikipedia.org/wiki/Fast_inverse_square_root</a>
+<p><a href="https://cs.uwaterloo.ca/~m32rober/rsqrt.pdf" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Robertson, Matthew. “A Brief History of InvSqrt”, University of New Brunswick, 24 April 2012.<br /> https://cs.uwaterloo.ca/~m32rober/rsqrt.pdf</a>
 
-<p><a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format" style="color: black; padding-left: 50px; font-size: 15px; display: block;">Wikipedia contributors. "Single-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 10 August 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>
+<p><a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Wikipedia contributors. "Fast inverse square root" Wikipedia, The Free Encyclopedia, (last edited) 13 August 2019. https://en.wikipedia.org/wiki/Fast_inverse_square_root</a>
 
-<p><a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format" style="color: black; padding-left: 50px; font-size: 15px; display: block;">Wikipedia contributors. "Double-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 11 July 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>
+<p><a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Wikipedia contributors. "Single-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 10 August 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>
 
-<p><a href="https://github.com/id-Software/Quake-III-Arena" style="color: black; padding-left: 50px; font-size: 15px; display: block;">Quake-III-Arena source code on GitHub: https://github.com/id-Software/Quake-III-Arena</a>
+<p><a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Wikipedia contributors. "Double-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 11 July 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>
+
+<p><a href="https://github.com/id-Software/Quake-III-Arena" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Quake-III-Arena source code on GitHub: https://github.com/id-Software/Quake-III-Arena</a>
 @snapend
 
