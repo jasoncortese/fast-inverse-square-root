@@ -146,7 +146,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">These are fractional multiples of our constant K, which as a float is "almost one" (slightly less to help account for error in our linear approximation).</div>
+<div style="margin-bottom: 100px; text-align: left;">These are fractional multiples of our constant K, which as a float is equal to "almost one" (slightly less to help account for error in our linear approximation).</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -154,6 +154,7 @@ float Q_rsqrt( float number ) {
 \[(1 - n) K = (1 - n) (2^{23}) (127 - \sigma)\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
+\[\]
 \[K = 0x3f7a3bea\]
 \[\]
 \[{\large{F}}_K = 1 - {\frac{\sigma}{2}} = 0.97747675\]`
@@ -571,12 +572,12 @@ const pIntegers = [
 #### <div style="padding-left: 20px; color: white;"><small>Appendix D:</small> <br/> Double Trouble</div>
 @snapend
 
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">64-bit precision...</i></div>
+<div style="margin-top: 100px; text-align: left;">Let's take a look at a double-precision floating point number, where s is the sign bit, e are the 8 bits of the exponent E, and m are the 23 significant bits of the mantissa M.</div><br/>
+<span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"></div>
+<div style="margin-bottom: 100px; text-align: left;">For these 32-bit numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
