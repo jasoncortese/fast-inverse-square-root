@@ -5,7 +5,7 @@
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Origins...</div>
+#### <div style="padding-left: 20px;"><br/> Origins...</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -36,7 +36,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">Math is hard, m'kay?</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Math is hard, m'kay?</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -601,7 +601,7 @@ const pIntegers = [
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, the minimum is always the longest leg, while the maximum is always the sum. Yielding the same range of values, but with significant error around dyadic numbers.</div>
+<div style="margin-bottom: 100px; text-align: left;">Note, the minimum is always the longest leg, while the maximum is always the sum. Yielding the same range of values, but with significant error around dyadics.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
