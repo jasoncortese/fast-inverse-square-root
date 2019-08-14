@@ -536,13 +536,13 @@ function future_cos(x) {
     fltb[0] = x;                             // alias x
     intb[0] -= 1 << 23;                      // phast in
     intb[0] <<= 1;                           // phast square
-    intb[0] -= 2;                            // phast times 1 * 2
+    intb[0] -= 2;                            // phast times 1 \* 2
     intb[4] = intb[2];                       // alias x'
     intb[4] <<= 1;                           // phast square
-    intb[4] -= 12;                           // phast times 3 * 4
+    intb[4] -= 12;                           // phast times 3 \* 4
     intb[8] = intb[4];                       // alias x'
     intb[8] <<= 1;                           // phast square
-    intb[8] -= 30;                           // phast times 5 * 6
+    intb[8] -= 30;                           // phast times 5 \* 6
     intb[8] += 1 << 29;                      // phast out
     intb[4] += 1 << 29;                      // phast out
     intb[0] += 1 << 29;                      // phast out
