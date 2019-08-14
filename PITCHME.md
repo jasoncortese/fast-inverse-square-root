@@ -577,7 +577,7 @@ const pIntegers = [
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">For these 62-bit numbers the bias B is 1023, and the length L is 2^52. Using these values, we find the double-precision version of our magic number as well as K.</div>
+<div style="margin-bottom: 100px; text-align: left;">For these 62-bit numbers the bias B is 1023, and the length L is 2^52. Using these values, we find the double-precision version of K as well as our magic number!</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -599,7 +599,7 @@ const pIntegers = [
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Germane to the discussion thus far, but without the same rigor, here is a "dog-leg" approximation for the hypotenuse of a triangle using bitwise disjunction.</div>
+<div style="margin-top: 100px; text-align: left;">Germane to the discussion thus far, but without the same precision, here is a "dog-leg" approximation for the hypotenuse of a triangle using bitwise disjunction.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
