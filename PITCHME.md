@@ -146,17 +146,17 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">These are fractional multiples of our constant K, which as a float is equal to "almost one" (slightly less to help account for error in our linear approximation).</div>
+<div style="margin-bottom: 100px; text-align: left;">These are fractional multiples of our constant K, which as a float is equal to "almost one" (k = 0.97747675, slightly less than 1 to help account for error in our linear approximation).</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-n) K + {n}{\large{I}_x}\]
 \[(1 - n) K = (1 - n) (2^{23}) (127 - \sigma)\]
+\[\]
 \[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[\]
-\[K = 0x3f7a3bea\]
-\[{\large{F}}_K = 1 - {\frac{\sigma}{2}} = 0.97747675\]`
+\[K = 0x3f7a3bea\]`
 @snapend
 
 
