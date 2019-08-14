@@ -605,7 +605,7 @@ const pIntegers = [
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[hypot(x, y) \approx \max(x, y) + \sigma min(x, y)\]
+`\[hypot(x, y) \approx \max(x, y) + \sigma \space min(x, y)\]
 \[\]
 \[hypot(x, y) \approx x \space | \space y\]`
 @snapend
