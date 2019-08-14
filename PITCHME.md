@@ -552,7 +552,7 @@ const phastIntegers = [
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Newton's Method is an iterative way of solving for roots of a function. A second guess is found by feeding a first guess into the reverse equation and averaging the results.</div>
+<div style="margin-top: 100px; text-align: left;">Newton's Method is an iterative way of solving for roots of a function. A better guess is found by feeding an initial guess into the reverse equation and averaging the results.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
