@@ -597,7 +597,7 @@ const pIntegers = [
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Germane to the discussion thus far, but without the same rigor, here is a approximation for the hypotenuse of a triangle using bitwise disjunction.</div>
+<div style="margin-top: 100px; text-align: left;">Germane to the discussion thus far, but without the same rigor, here is a "dog-leg" approximation for the hypotenuse of a triangle using bitwise disjunction.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -605,8 +605,8 @@ const pIntegers = [
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[a = \max(x, y), b = \min(x, y)\]
-\[hypot(x, y) \approx a + \sigma b\]
+`\[hypot(x, y) \approx \max(x, y) + \sigma min(x, y)\]
+\[\]
 \[hypot(x, y) \approx x \space | \space y\]`
 @snapend
 
