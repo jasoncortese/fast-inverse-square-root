@@ -12,10 +12,6 @@
 <div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III...</div>
 @snapend
 
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">This was originally credited to John Carmack who was lead programmer on the project, but can be traced back to Greg Walsh and Cleve Moler working at Ardent Computers.</div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 ```c
 float Q_rsqrt( float number ) {
@@ -32,6 +28,10 @@ float Q_rsqrt( float number ) {
 ```
 @snapend
 
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">This was originally credited to John Carmack who was lead programmer on the project, but can be traced back to Greg Walsh and Cleve Moler working at Ardent Computers.</div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -43,10 +43,6 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">In 3D graphics you do a lot of normalizing vectors, and that involves a lot of inverses and square roots, both of which are expensive operations (back then, quadruply so).</div>
 @snapend
 
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Applying Newton's method would further improve the results.</div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
@@ -54,6 +50,10 @@ float Q_rsqrt( float number ) {
 \[\]
 \[y \approx {{2}}^{(x - 1)} {{2}}^\sigma\]
 \[y' \approx -{{3y - {x}{y^3}} \over {2}}\]`
+@snapend
+
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">Logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Applying Newton's method would further improve the results.</div>
 @snapend
 
 @snap[east span-30 text-05]
@@ -75,10 +75,6 @@ float Q_rsqrt( float number ) {
 <span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">For these 32-bit numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
@@ -86,6 +82,10 @@ float Q_rsqrt( float number ) {
 \[{\large{F}} \rightarrow (m + 1) 2^e\]
 \[\]
 \[{\large{I}} \rightarrow M + L E\]`
+@snapend
+
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">For these 32-bit numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
 @snapend
 
 
@@ -99,18 +99,17 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Substituting our float representation into the inverse square root equation, this reduces to a form that approximates our integer representation. </div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
-<div style="margin-top: -150px; text-align: left;">Look familiar? <br/>
-<center class="fragment">`i  = 0x5f3759df - ( i >> 1 );`</center></div>
-@snapend
-
-
 @snap[midpoint span-60 text-05]
 `\[\log_2 (m_y + 1) + e_y = -{\small\frac{1}{2}} {\log_2 (m_x + 1) + e_x}\]
 \[m_y + \sigma + e_y \approx -{\small\frac{1}{2}} (m_x + \sigma + e_x)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
 \[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]
 \[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-top: -150px; text-align: left;">Look familiar? <br/>
+<center class="fragment">`i  = 0x5f3759df - ( i >> 1 );`</center></div>
 @snapend
 
 
@@ -153,11 +152,6 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Generalizing, we can find other magic numbers for: proper square root, cube root, etc.</div>
 @snapend
 
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">These are fractions of our constant K, which is approximately equal to 1.<br/>
-    <span style="font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation).</span></div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx (1-n) K + {n}{\large{I}_x}\]
 \[(1 - n) K = (1 - n) (2^{23}) (127 - \sigma)\]
@@ -169,6 +163,11 @@ float Q_rsqrt( float number ) {
 \[K = 0x3f7a3bea\]`
 @snapend
 
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">These are fractions of our constant K, which is approximately equal to 1.<br/>
+    <span style="font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation).</span></div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -178,10 +177,6 @@ float Q_rsqrt( float number ) {
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left;">We can now make sense of the original function: <i>shift right for the square root, negate for the inverse, and our magic number is simply three-halves.</i></div>
-@snapend
-
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">... Apply one iteration of Newton's method, and we have a surprisingly accurate approximation for the inverse square root!</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -200,6 +195,10 @@ float Q_rsqrt( float number ) {
 ```
 @snapend
 
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">... Apply one iteration of Newton's method, and we have a surprisingly accurate approximation for the inverse square root!</div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -209,10 +208,6 @@ float Q_rsqrt( float number ) {
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but that: <br/> <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
-@snapend
-
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">We're going to call this, "`prosthaphaeresis`" &mdash; an old-timey term for logarithmic-like approximations before logarithms were invented &mdash; or "`phast`" for short.</div>
 @snapend
 
 @snap[midpoint span-60 text-04]
@@ -257,6 +252,10 @@ float Q_rsqrt( float number ) {
 </table>
 @snapend
 
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">We're going to call this, "`prosthaphaeresis`" &mdash; an old-timey term for logarithmic-like approximations before logarithms were invented &mdash; or "`phast`" for short.</div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -268,13 +267,9 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Now let's do this with JavaScript... We create a global ArrayBuffer to hold a 32-bit number, and two views on that buffer: one as a float, and one as an unsigned integer.</i></div>
 @snapend
 
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 ```javascript
-const buffer = new ArrayBuffer(4); // (x)
+const buffer = new ArrayBuffer(4);
 const f$ = new Float32Array(buffer);
 const i$ = new Uint32Array(buffer);
 
@@ -283,10 +278,14 @@ function invsqrt(x) {
     i$[0] >>= 1;                           // phast square root
     i$[0] \*= -1;                           // phast inverse
     i$[0] += 0x5f376430;                   // phast three-halves
-//  f$[0] \*= 1.5 - (x \* f$[0] \*\* 2);     // apply newtons method
+//    f$[0] \*= 1.5 - (x \* f$[0] \*\* 2);       // apply newtons method
     return f$[0];                          // return x
 }
 ```
+@snapend
+
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
 @snapend
 
 
@@ -298,10 +297,6 @@ function invsqrt(x) {
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left;">Square root. Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</i></div>
-@snapend
-
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -324,6 +319,10 @@ function sqrtN(x, y) {
 ```
 @snapend
 
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -333,10 +332,6 @@ function sqrtN(x, y) {
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left;">First order approximations for cube root, fourth root, and nth root functions.</i></div>
-@snapend
-
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">For the nth root we have the added step of finding the fraction (1-p) from a passed in integer.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -364,6 +359,10 @@ function nthrt(n, x) {
 ```
 @snapend
 
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">For the nth root we have the added step of finding the fraction (1-p) from a passed in integer.</div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -375,16 +374,16 @@ function nthrt(n, x) {
 <div style="margin-top: 100px; text-align: left;">Root functions are not the only ones we can approximate linearly with these prosthaphaeretic operations. Any Taylor series expansion should work well...</div>
 @snapend
 
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Exponential and trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 `\[{e^{x}} \approx {\frac{1}{0!}} + {\frac{x}{1!}} + {\frac{x^2}{2!}} + {\frac{x^3}{3!}} + \dots\]
 \[{\log_e{(1+x)}} \approx {x} - {\frac{x^2}{2}} + {\frac{x^3}{3}} - {\frac{x^4}{4}} + \dots\]
 \[{\sin{x}} \approx {x} - {\frac{x^3}{3!}} + {\frac{x^5}{5!}} - {\frac{x^7}{7!}} + \dots\]
 \[{\cos{x}} \approx {x} - {1} - {\frac{x^2}{2!}} + {\frac{x^4}{4!}} - {\frac{x^6}{6!}} + \dots\]
 \[{\tan{x}} \approx {x} + {\frac{x^3}{3}} + {\frac{2x^5}{15}} - {\frac{3x^7}{105}} + \dots\]`
+@snapend
+
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">Exponential and trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
 @snapend
 
 
@@ -396,10 +395,6 @@ function nthrt(n, x) {
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left;">First order approximations for reciprocal, exponent and logarithm functions.</div>
-@snapend
-
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;"></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -427,6 +422,10 @@ function log(x) {
 ```
 @snapend
 
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;"></div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -436,10 +435,6 @@ function log(x) {
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left;">First order approximations for cosine, sine, and tangent functions.</div>
-@snapend
-
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;"></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -467,6 +462,10 @@ function tan(x) {
     return f$[0];                          // return tanx
 }
 ```
+@snapend
+
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;"></div>
 @snapend
 
 
@@ -521,10 +520,6 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">Nowadays the native instruction is generally faster than the original algorithm. But what if a floating point format existed that directly accounted for the linear approximation?</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
-<div style="margin-top: -150px; text-align: left;">We'll leave off here with a hypothetical implementation of cosine, performing its own second and third-order iterations. Enjoy.</div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 ```javascript
 function cos(x) {
@@ -541,6 +536,10 @@ function cos(x) {
 ```
 @snapend
 
+@snap[south span-85 text-05 text-black]
+<div style="margin-top: -150px; text-align: left;">We'll leave off here with a hypothetical implementation of cosine, performing its own second and third-order iterations. Enjoy.</div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -550,11 +549,6 @@ function cos(x) {
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left;">Fractional values for use during phast power/root extraction, and integral values for use during phast multiplication/division.</div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-top: -150px; text-align: left;">
-    <span style="font-size: 12px;">(Note, here we use σ = 0, and then adjust the magic numbers to produce the most accurate results over the problem domain.)</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -583,6 +577,11 @@ const phastIntegers = [
 ```
 @snapend
 
+@snap[south span-85 text-05 text-black]
+<div style="margin-top: -150px; text-align: left;">
+    <span style="font-size: 12px;">(Note, here we use σ = 0, and then adjust the magic numbers to produce the most accurate results over the problem domain.)</span></div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -594,16 +593,16 @@ const phastIntegers = [
 <div style="margin-top: 100px; text-align: left;">The Newton-Raphson Method is an iterative way of solving for roots of an equation. An approximation is improved by feeding it back into the reverse equation and averaging.</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
-<div style="margin-top: -150px; text-align: left;">Fun fact: a version of this method allowing one to find square roots by hand was known to the ancient Babylonians.</div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 `\[y \approx {\sqrt{x}}\]
 \[y' = {{\frac{x}{y} + y} \over {2}}\]
 \[\]
 \[y \approx {1 \over \sqrt{x}}\]
 \[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-top: -150px; text-align: left;">Fun fact: a version of this method allowing one to find square roots by hand was known to the ancient Babylonians.</div>
 @snapend
 
 
@@ -618,10 +617,6 @@ const phastIntegers = [
 <span style="letter-spacing: -4px;"><span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m</span></span>
 @snapend
 
-@snap[south span-85 text-05 text-black]
-<div style="margin-top: -150px; text-align: left;">For these 64-bit numbers the bias B is 1023, and the length L is 2^52. Using these values, we find the double-precision version of K as well as our magic number!</div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 `\[\]
 \[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
@@ -631,6 +626,10 @@ const phastIntegers = [
 \[K = 4606979606846918168 = 0x3fef478b29944ea8\]
 \[\]
 \[{\small\frac{3}{2}} K = 6910469321099104169 = 0x5fe6eb50c7b537a9\]`
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-top: -150px; text-align: left;">For these 64-bit numbers the bias B is 1023, and the length L is 2^52. Using these values, we find the double-precision version of K as well as our magic number!</div>
 @snapend
 
 
@@ -644,16 +643,16 @@ const phastIntegers = [
 <div style="margin-top: 100px; text-align: left;">Germane to the discussion, but without the same rigorous precision, here is a "dog-leg" approximation using bitwise disjunction for the hypotenuse of a triangle.</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
-<div style="margin-top: -150px; text-align: left;">The minimum is never less than the longest, the maximum is never more than the sum. Yielding the same range, but with significant error around powers of two.</div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 `\[hypot(x, y) = \sqrt{x^2 + y^2}\]
 \[\]
 \[hypot(x, y) \approx \max(x, y) + \sigma \space min(x, y)\]
 \[\]
 \[hypot(x, y) \approx x \space | \space y\]`
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-top: -150px; text-align: left;">The minimum is never less than the longest, the maximum is never more than the sum. Yielding the same range, but with significant error around powers of two.</div>
 @snapend
 
 @snap[east span-30 text-05]
