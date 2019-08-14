@@ -96,7 +96,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Substituting our float representation into the inverse square root equation, this reduces to a formula that approximates our integer representation. </div>
+<div style="margin-top: 100px; text-align: left;">Substituting our float representation into the inverse square root equation, this reduces to a form that approximates our integer representation. </div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -125,7 +125,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-bottom: 100px; text-align: left;">We've found our magic number! <br/>
+<div style="margin-bottom: 100px; text-align: left;">In hexadecimal K = 0x5f3759df! We've found our magic number! <br/>
     <span style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
@@ -134,9 +134,9 @@ float Q_rsqrt( float number ) {
 \[\]
 \[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
 \[\]
-\[K = 1064975338 = 0x3f7a3bea\]
+\[K = 1064975338\]
 \[\]
-\[{\small\frac{3}{2}} K = 1597463007 = 0x5f3759df\]`
+\[{\small\frac{3}{2}} K = 1597463007\]`
 @snapend
 
 
