@@ -16,7 +16,7 @@
 <div style="margin-bottom: 100px; text-align: left;">This was originally credited to John Carmack who was lead programmer on the project, but can be traced back to Greg Walsh drawing inspiration from Cleve Moler while at Ardent Computers.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
@@ -47,7 +47,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-bottom: 100px; text-align: left;">Logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Applying Newton's method would further improve the results.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
@@ -75,7 +75,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-bottom: 100px; text-align: left;">For these 32-bit numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
 \[\]
@@ -101,7 +101,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 `\[\log_2 (m_y + 1) + e_y = -{\small\frac{1}{2}} {\log_2 (m_x + 1) + e_x}\]
 \[m_y + \sigma + e_y \approx -{\small\frac{1}{2}} (m_x + \sigma + e_x)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
@@ -125,7 +125,7 @@ float Q_rsqrt( float number ) {
     <span style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 `\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[\]
 \[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
@@ -150,7 +150,7 @@ float Q_rsqrt( float number ) {
     <span style="font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation).</span></div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 `\[{\large{I}_y} \approx (1-n) K + {n}{\large{I}_x}\]
 \[(1 - n) K = (1 - n) (2^{23}) (127 - \sigma)\]
 \[\]
@@ -172,11 +172,11 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">We can now make sense of the original function: <i>shift right for the square root, negate for the inverse, and our magic number is simply three-halves.</i></div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">... Apply one iteration of Newton's method, and we have a surprisingly accurate approximation for the inverse square root!</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
@@ -207,7 +207,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-bottom: 100px; text-align: left;">We're going to call this, "`prosthaphaeresis`" &mdash; an old-timey term for logarithmic-like approximations before logarithms were invented &mdash; or "`phast`" for short.</div>
 @snapend
 
-@snap[midpoint span-60 text-04]
+@snap[midpoint span-65 text-04]
 <table>
   <tr>
     <th>Integer Operation</th>
@@ -264,7 +264,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-bottom: 100px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```javascript
 const buffer = new ArrayBuffer(4); // (x)
 const fltb = new Float32Array(buffer);
@@ -300,7 +300,7 @@ function invsqrt(x) {
 <div style="margin-bottom: 100px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```javascript
 function sqrt(x) {
     fltb[0] = x;                             // alias x
@@ -339,7 +339,7 @@ function sqrtN(x, y) {
 <div style="margin-bottom: 100px; text-align: left;">In the nth root approximation we split up the magic number step by first subtracting the length L, then performing the phast root extraction, and finally adding back the bias B.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```javascript
 function cbrt(x) {
     fltb[0] = x;                             // alias x
@@ -384,7 +384,7 @@ function nthrt(n, x) {
 <div style="margin-bottom: 100px; text-align: left;">Exponential and trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 `\[{e^{x}} \approx {\frac{1}{0!}} + {\frac{x}{1!}} + {\frac{x^2}{2!}} + {\frac{x^3}{3!}} + \dots\]
 \[{\log_e{(1+x)}} \approx {x} - {\frac{x^2}{2}} + {\frac{x^3}{3}} - {\frac{x^4}{4}} + \dots\]
 \[{\sin{x}} \approx {x} - {\frac{x^3}{3!}} + {\frac{x^5}{5!}} - {\frac{x^7}{7!}} + \dots\]
@@ -407,7 +407,7 @@ function nthrt(n, x) {
 <div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```javascript
 function sqd(x) {
     fltb[0] = x;                             // alias x
@@ -447,7 +447,7 @@ function log(x) {
 <div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```javascript
 function cos(x) {
     fltb[0] = x;                             // alias x
@@ -489,7 +489,7 @@ function tan(x) {
 <div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```javascript
 function arc_cos(x) {
     fltb[0] = 1 - x;                         // alias 1 - x
@@ -523,14 +523,14 @@ function cos_sqd(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Nowadays the reciprocal square root instruction is generally faster than the original algorithm. But what about our cosine implementation? Or what if a floating point format was used that directly accounted for the linear approximation?</div>
+<div style="margin-top: 100px; text-align: left;">Nowadays the reciprocal square root instruction is generally faster than the original algorithm. But if a floating point format was used that directly accounted for the linear approximation?</div>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">We'll leave off her with a hypothetical implementation of cosine, performing its own second and third-order iterations. Enjoy.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```javascript
 function future_cos(x) {
     fltb[0] = x;                             // alias x
@@ -567,7 +567,7 @@ function future_cos(x) {
     <span style="font-size: 12px;">(Note, here we use σ = 0, and then adjust the magic numbers to produce the most accurate results over the problem domain.)</span></div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 ```
 const phastFractions = [
     [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000],
@@ -608,7 +608,7 @@ const phastIntegers = [
 <div style="margin-bottom: 100px; text-align: left;">Fun fact: a version of this method specific to finding square roots was known to the ancient Babylonians.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 `\[y \approx {\sqrt{x}}\]
 \[y' = {{\frac{x}{y} + y} \over {2}}\]
 \[\]
@@ -632,7 +632,7 @@ const phastIntegers = [
 <div style="margin-bottom: 100px; text-align: left;">For these 64-bit numbers the bias B is 1023, and the length L is 2^52. Using these values, we find the double-precision version of K as well as our magic number!</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 `\[\]
 \[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[\]
@@ -658,7 +658,7 @@ const phastIntegers = [
 <div style="margin-bottom: 100px; text-align: left;">The minimum is never less than the longest, the maximum is never more than the sum. Yielding the same range, but with significant error around powers of two.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-65 text-05]
 `\[hypot(x, y) = \sqrt{x^2 + y^2}\]
 \[\]
 \[hypot(x, y) \approx \max(x, y) + \sigma \space min(x, y)\]
