@@ -122,7 +122,7 @@ float Q_rsqrt( float number ) {
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-bottom: 100px; text-align: left;">And we've found our magic number! <br/>
-    <span style="font-size: 12px;">(Note that we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
+    <span style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -146,8 +146,8 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">These are fractional multiples of our constant K, which as a float is equal to "almost one".<br/>
-    <span style="font-size: 12px;">(1 - σ/2 = 0.97747675, slightly less than 1 to help account for error in our linear approximation).</span></div>
+<div style="margin-bottom: 100px; text-align: left;">These are fractional multiples of our constant K, which is almost equal to 1.<br/>
+    <span style="font-size: 12px;">(Note, 1 - σ/2 = 0.97747675, slightly less than 1 to help account for error in our linear approximation).</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -260,7 +260,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"><span style="font-size: 12px;">(Note that we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which performs slightly better with that removed.)</span></div>
+<div style="margin-bottom: 100px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which performs slightly better with that removed.)</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
