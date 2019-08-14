@@ -124,12 +124,6 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">We're looking for three-halves of a constant K, from which we can subtract one-half of the integer to approximate the inverse square root of the float.</div>
 @snapend
 
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">We found our magic number! <br/>
-<center class="fragment">`K = 0x5f3759df`</center>
-    <span style="font-size: 12px;" class="fragment">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
-@snapend
-
 @snap[midpoint span-60 text-05]
 `\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[\]
@@ -141,6 +135,11 @@ float Q_rsqrt( float number ) {
 <span class="fragment">
 `\[{\small\frac{3}{2}} K = 0x5f3759df\]`
 </span>
+@snapend
+
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">We found our magic number! <br/>
+    <span style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
 
