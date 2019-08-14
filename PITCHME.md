@@ -13,7 +13,7 @@
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-bottom: 100px; text-align: left;">This was credited to John Carmack who was lead programmer on the project, but can be traced back to the mid-80s with Greg Walsh and Cleve Moler at Ardent Computers.</div>
+<div style="margin-bottom: 100px; text-align: left;">This was originally credited to John Carmack who was lead programmer on the project, but can be traced back to Greg Walsh drawing inspiration from Cleve Moler while at Ardent Computers.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -281,6 +281,10 @@ function invsqrt(x) {
 ```
 @snapend
 
+@snap[east span-30 text-05]
+<div style="margin-top: 25px; margin-right: 25px;">@img[](0.5.png)</div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -314,6 +318,10 @@ function sqrtN(x, y) {
     return fltb[0];                          // return x'
 }
 ```
+@snapend
+
+@snap[east span-30 text-05]
+<div style="margin-top: 25px; margin-right: 25px;">@img[](0.51.png)</div>
 @snapend
 
 
@@ -355,6 +363,10 @@ function nthrt(n, x) {
     return fltb[0];                          // return x'
 }
 ```
+@snapend
+
+@snap[east span-30 text-05]
+<div style="margin-top: 25px; margin-right: 25px;">@img[](0.333.png)</div>
 @snapend
 
 
@@ -511,25 +523,32 @@ function cos_sqd(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Alas, processor speed improved .</div>
+<div style="margin-top: 100px; text-align: left;">Nowadays the reciprocal square root instruction is generally faster than the original algorithm. But what about our cosine implementation? Or what if a floating point format was used that directly accounted for the linear approximation?</div>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-bottom: 100px; text-align: left;">Logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Applying Newton's method would further improve the results.</div>
+<div style="margin-bottom: 100px; text-align: left;">We'll leave off her with a hypothetical implementation of cosine, performing its own second and third-order iterations. Enjoy.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
-\[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
-\[\log_2 y \approx (x - 1) + \sigma\]
-\[y \approx {\large{2}}^{(x - 1) + \sigma}\]
-\[y' \approx -{{{x}{y^3} - 3y} \over {2}}\]`
-@snapend
-
-@snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[](0.5.png)</div>
-<div style="margin-top: 25px; margin-right: 25px;">@img[](0.51.png)</div>
-<div style="margin-top: 25px; margin-right: 25px;">@img[](0.333.png)</div>
+```javascript
+function future_cos(x) {
+    fltb[0] = x;                             // alias x
+    intb[0] -= 1 << 23;                      // phast in
+    intb[0] <<= 1;                           // phast square
+    intb[0] -= 2;                            // phast times 1 * 2
+    intb[4] = intb[2];                       // alias x'
+    intb[4] <<= 1;                           // phast square
+    intb[4] -= 12;                           // phast times 3 * 4
+    intb[8] = intb[4];                       // alias x'
+    intb[8] <<= 1;                           // phast square
+    intb[8] -= 30;                           // phast times 5 * 6
+    intb[8] += 1 << 29;                      // phast out
+    intb[4] += 1 << 29;                      // phast out
+    intb[0] += 1 << 29;                      // phast out
+    return 1 - fltb[0] + fltb[4] + fltb[6];  // return 1 - ½ x² (1 + ⅓¼ x² (1 - ⅕⅐ x²))
+}
+```
 @snapend
 
 
@@ -582,7 +601,7 @@ const phastIntegers = [
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Newton's Method is an iterative way of solving for roots of an equation. An approximation is improved by feeding it back into the reverse equation and averaging the two.</div>
+<div style="margin-top: 100px; text-align: left;">The Newton-Raphson Method is an iterative way of solving for roots of an equation. An approximation is improved by feeding it back into the reverse equation and averaging the two.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
