@@ -13,7 +13,7 @@
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">This was credited to John Carmack who was lead programmer on the project, but can be traced back to the mid-80s with Greg Walsh and Cleve Moler working at Ardent Computers.</div>
+<div style="margin-bottom: 100px; text-align: left;">This was credited to John Carmack who was lead programmer on the project, but can be traced back to the mid-80s with Greg Walsh and Cleve Moler at Ardent Computers.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
