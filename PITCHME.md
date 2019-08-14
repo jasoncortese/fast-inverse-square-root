@@ -573,7 +573,7 @@ const pIntegers = [
 
 @snap[north span-85 text-05 text-black]
 <div style="margin-top: 100px; text-align: left;">Let's take a look at a double-precision floating point number, where s is the sign bit, e are the 11 bits of the exponent E, and m are the 52 significant bits of the mantissa M.</div><br/>
-<span style="letter-spacing: 50%;"><span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m</span></span>
+<span style="letter-spacing: -4px;"><span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m</span></span>
 @snapend
 
 @snap[south span-85 text-05 text-black]
