@@ -523,7 +523,7 @@ function cos_sqd(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Nowadays the reciprocal square root instruction is generally faster than the original algorithm. But if a floating point format was used that directly accounted for the linear approximation?</div>
+<div style="margin-top: 100px; text-align: left;">Nowadays the native instruction is generally faster than the original algorithm. But what if a floating point format existed that directly accounted for the linear approximation?</div>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
@@ -532,21 +532,17 @@ function cos_sqd(x) {
 
 @snap[midpoint span-65 text-05]
 ```javascript
-function future_cos(x) {
+function phast_cos(x) {
     fltb[0] = x;                             // alias x
-    intb[0] -= 1 << 23;                      // phast in
     intb[0] <<= 1;                           // phast square
-    intb[0] -= 2;                            // phast times 1 \* 2
-    intb[4] = intb[2];                       // alias x'
+    intb[0] -= 2;                            // phast divide-by 1 \* 2
+    fltb[4] = fltb[0];                       // alias x'
     intb[4] <<= 1;                           // phast square
-    intb[4] -= 12;                           // phast times 3 \* 4
-    intb[8] = intb[4];                       // alias x'
+    intb[4] -= 12;                           // phast divide-by 3 \* 4
+    fltb[8] = fltb[4];                       // alias x"
     intb[8] <<= 1;                           // phast square
-    intb[8] -= 30;                           // phast times 5 \* 6
-    intb[8] += 1 << 29;                      // phast out
-    intb[4] += 1 << 29;                      // phast out
-    intb[0] += 1 << 29;                      // phast out
-    return 1 - fltb[0] + fltb[4] + fltb[6];  // return 1 - ½ x² (1 + ⅓¼ x² (1 - ⅕⅐ x²))
+    intb[8] -= 30;                           // phast divide-by 5 \* 6
+    return 1 - fltb[0] + fltb[4] - fltb[8];  // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
 }
 ```
 @snapend
@@ -601,11 +597,11 @@ const phastIntegers = [
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">The Newton-Raphson Method is an iterative way of solving for roots of an equation. An approximation is improved by feeding it back into the reverse equation and averaging the two.</div>
+<div style="margin-top: 100px; text-align: left;">The Newton-Raphson Method is an iterative way of solving for roots of an equation. An approximation is improved by feeding it back into the reverse equation and averaging.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Fun fact: a version of this method specific to finding square roots was known to the ancient Babylonians.</div>
+<div style="margin-bottom: 100px; text-align: left;">Fun fact: a version of this method allowing one to find square roots by hand was known to the ancient Babylonians.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
