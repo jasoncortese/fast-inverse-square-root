@@ -350,7 +350,7 @@ function frthrt(x) {
 function nthrt(n, x) {
     fltb[0] = x;                             // alias x
     intb[0] /= n;                            // phast nth root
-    intb[0] += (1 - n) \* 0x3f7a42ca;         // phast almost-1
+    intb[0] += (1 - n) \* 0x3f7a42ca;         // phast fraction (n-1)/n
     return fltb[0];                          // return x'
 }
 ```
