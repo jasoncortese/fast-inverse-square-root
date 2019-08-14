@@ -603,7 +603,7 @@ const pIntegers = [
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">The minimum is never less than the longest leg, while the maximum is never the more than the sum. Yielding the same range of values, but with significant error around dyadics.</div>
+<div style="margin-bottom: 100px; text-align: left;">The minimum is never less than the longest leg, while the maximum is never more than the sum. Yielding the same range, but with significant error around powers of two.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
