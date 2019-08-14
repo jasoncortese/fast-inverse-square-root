@@ -171,7 +171,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're going to call these operations "`prosthaphaeretic`", an old-timey term for logarithmic-like approximations before logarithms were invented.</div>
+<div style="margin-bottom: 100px; text-align: left;">We're going to call these operations "`prosthaphaeretic`", an old-timey term for logarithmic-like approximations before logarithms were invented -- or "`phast`" for short.</div>
 @snapend
 
 @snap[midpoint span-60 text-04]
@@ -270,9 +270,9 @@ const intb = new Uint32Array(buffer);
 
 function invsqrt(x) {
     fltb[0] = x;                             // alias x
-    intb[0] >>= 1;                           // p-etic square root
-    intb[0] \*= -1;                           // p-etic inverse
-    intb[0] += 0x5f376430;                   // p-etic three-halves
+    intb[0] >>= 1;                           // phast square root
+    intb[0] \*= -1;                           // phast inverse
+    intb[0] += 0x5f376430;                   // phast three-halves
 //  fltb[0] \*= 1.5 - (x \* fltb[0] \*\* 2);     // apply newtons method
     return fltb[0];                          // return x
 }
@@ -298,17 +298,17 @@ function invsqrt(x) {
 ```javascript
 function sqrt(x) {
     fltb[0] = x;                             // alias x
-    intb[0] >>= 1;                           // p-etic square root
-    intb[0] += 0x1fbd2165;                   // p-etic fraction 1/2
+    intb[0] >>= 1;                           // phast square root
+    intb[0] += 0x1fbd2165;                   // phast fraction 1/2
     return fltb[0];                          // return x'
 }
 
 function sqrtN(x, y) {
     fltb[0] = y;                             // alias y
-    intb[0] \*= -1;                           // p-etic inverse
+    intb[0] \*= -1;                           // phast inverse
     fltb[0] \*= x;                            // times x
     fltb[0] += y;                            // plus y
-    intb[0] -= 0x00886e54;                   // p-etic integer 2
+    intb[0] -= 0x00886e54;                   // phast integer 2
     return fltb[0];                          // return x'
 }
 ```
@@ -333,22 +333,22 @@ function sqrtN(x, y) {
 ```javascript
 function cbrt(x) {
     fltb[0] = x;                             // alias x
-    intb[0] /= 3;                            // p-etic cube root
-    intb[0] += 0x2a5181dc;                   // p-etic fraction 2/3
+    intb[0] /= 3;                            // fast cube root
+    intb[0] += 0x2a5181dc;                   // fast fraction 2/3
     return fltb[0];                          // return x'
 }
 
 function frthrt(x) {
     fltb[0] = x;                             // alias x
-    intb[0] >>= 2;                           // p-etic fourth root
-    intb[0] += 0x2f9bb218;                   // p-etic fraction 3/4
+    intb[0] >>= 2;                           // fast fourth root
+    intb[0] += 0x2f9bb218;                   // fast fraction 3/4
     return fltb[0];                          // return x'
 }
 
 function nthrt(n, x) {
     fltb[0] = x;                             // alias x
-    intb[0] /= n;                            // p-etic nth root
-    intb[0] += (1 - n) \* 0x3f7a42ca;         // p-etic almost one
+    intb[0] /= n;                            // fast nth root
+    intb[0] += (1 - n) \* 0x3f7a42ca;         // fast almost-1
     return fltb[0];                          // return x'
 }
 ```
@@ -396,22 +396,22 @@ function nthrt(n, x) {
 ```javascript
 function sqd(x) {
     fltb[0] = x;                             // alias x
-    intb[0] <<= 1;                           // p-etic square
-    intb[0] -= 0x1fbd2165;                   // p-etic fraction 1/2
+    intb[0] <<= 1;                           // phast square
+    intb[0] -= 0x1fbd2165;                   // phast fraction 1/2
     return 1 + x + fltb[0];                  // return 1 + x + x²
 }
 
 function exp(x) {
     fltb[0] = x;                             // alias x
-    intb[0] <<= 1;                           // p-etic square
-    intb[0] -= 0x3ff4d2bc;                   // p-etic fraction 4/3
+    intb[0] <<= 1;                           // phast square
+    intb[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
     return 1 + x + fltb[0];                  // return 1 + x + ½ x²
 }
 
 function log(x) {
     fltb[0] = x - 1;                         // alias x
-    intb[0] <<= 1;                           // p-etic square
-    intb[0] -= 0x3ff4d2bc;                   // p-etic fraction 4/3
+    intb[0] <<= 1;                           // phast square
+    intb[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
     return x - fltb[0];                      // return x - ½ x²
 }
 ```
@@ -436,23 +436,23 @@ function log(x) {
 ```javascript
 function cos(x) {
     fltb[0] = x;                             // alias x
-    intb[0] <<= 1;                           // p-etic square
-    intb[0] -= 0x3ff4d2bc;                   // p-etic fraction 4/3
+    intb[0] <<= 1;                           // phast square
+    intb[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
     return 1 - fltb[0];                      // return 1 - ½ x²
 }
 
 function sin(x) {
     fltb[0] = x;                             // alias x
-    intb[0] /= 3;                            // p-etic cube root
-    intb[0] -= 0x40f1c87a;                   // p-etic fraction 6/5
+    intb[0] /= 3;                            // phast cube root
+    intb[0] -= 0x40f1c87a;                   // phast fraction 6/5
     return x - fltb[0];                      // return x - ⅙ x³
 }
 
 function tan(x) {
     const sinx = sin(x), cosx = cos(x);
     fltb[0] = cosx;                          // alias cosx
-    intb[0] \*= 1;                            // p-etic inverse
-    intb[0] += 0x00000000;                   // p-etic integer 1
+    intb[0] \*= 1;                            // phast inverse
+    intb[0] += 0x00000000;                   // phast integer 1
     fltb[0] \*= sinx;                         // times sinx
     return fltb[0];                          // return tanx
 }
@@ -478,23 +478,23 @@ function tan(x) {
 ```javascript
 function arc_cos(x) {
     fltb[0] = 1 - x;                         // alias 1 - x
-    intb[0] += 0x3ff4d2bc;                   // p-etic fraction 4/3
-    intb[0] >>= 1;                           // p-etic square root
+    intb[0] += 0x3ff4d2bc;                   // phast fraction 4/3
+    intb[0] >>= 1;                           // phast square root
     return 1 - fltb[0];                      // return √(2 - 2x)
 }
 
 function cos_dbl(x) {
     const cosx = cos(x);
     fltb[0] = cosx;                          // alias cosx
-    intb[0] <<= 1;                           // p-etic square
-    intb[0] += 0x00800000;                   // p-etic integer 2
+    intb[0] <<= 1;                           // phast square
+    intb[0] += 0x00800000;                   // phast integer 2
     return fltb[0] - 1;                      // return 2 cos²(x) - 1
 }
 
 function cos_sqd(x) {
     const cos2x = cos(2 * x);
     fltb[0] = 1 + cos2x;                     // alias 1 + cos2x
-    intb[0] -= 0x00800000;                   // p-etic integer -2
+    intb[0] -= 0x00800000;                   // phast integer -2
     return fltb[0];                          // return ½ (1 + cos(2x))
 }
 ```
@@ -508,7 +508,7 @@ function cos_sqd(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Fractional values for use during prosthaphaeretic power/root extraction, and integral values for use during prosthaphaeretic multiplication/division.</div>
+<div style="margin-top: 100px; text-align: left;">Fractional values for use during phast power/root extraction, and integral values for use during phast multiplication/division.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
