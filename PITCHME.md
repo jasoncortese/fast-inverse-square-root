@@ -261,7 +261,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which performs slightly better with that removed.)</span></div>
+<div style="margin-bottom: 100px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
