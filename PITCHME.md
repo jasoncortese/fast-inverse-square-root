@@ -13,7 +13,7 @@
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-bottom: 100px; text-align: left;">This was originally credited to John Carmack who was lead programmer on the project, but can be traced back to Greg Walsh and Cleve Moler while at Ardent Computers.</div>
+<div style="margin-bottom: 100px; text-align: left;">This was originally credited to John Carmack who was lead programmer on the project, but can be traced back to Greg Walsh and Cleve Moler working at Ardent Computers.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -52,7 +52,7 @@ float Q_rsqrt( float number ) {
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
 \[y \approx {\large{2}}^{(x - 1) + \sigma}\]
-\[y' \approx -{{{x}{y^3} - 3y} \over {2}}\]`
+\[y' \approx -{{3y - {x}{y^3}} \over {2}}\]`
 @snapend
 
 @snap[east span-30 text-05]
