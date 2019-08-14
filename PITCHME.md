@@ -362,7 +362,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Root functions are not the only methods we can approximate linearly with these prosthaphaeretic operations. Any Taylor series expansion should provide </div>
+<div style="margin-top: 100px; text-align: left;">Root functions are not the only ones we can approximate linearly with these prosthaphaeretic operations. Any Taylor series expansion should work well...</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -512,7 +512,7 @@ function cos_sqd(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, we are using the base version of K here, with sigma equals zero. Individual usage should be tweaked to produce the most accurate results over the range.</div>
+<div style="margin-bottom: 100px; text-align: left;">We use the base version of K here, with sigma equals zero. Individual usage should be tweaked to produce the most accurate results over the problem domain.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -577,11 +577,12 @@ const pIntegers = [
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">For these 62-bit numbers the bias B is 1023, and the length L is 2^52. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
+<div style="margin-bottom: 100px; text-align: left;">For these 62-bit numbers the bias B is 1023, and the length L is 2^52. Using these, we find our double-precision version of our magic number!</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
+`\[\]
+\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[\]
 \[K = L(B - \sigma) = (2^{52}) (1023 - 0.0450465)\]
 \[\]
