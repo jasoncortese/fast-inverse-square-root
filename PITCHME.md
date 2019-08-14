@@ -63,7 +63,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">IEEE-yai-yai</div>
+#### <div style="padding-left: 20px; color: white;"><br/> IEEE-yai-yai</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -88,7 +88,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">IEEE-yai-yai</div>
+#### <div style="padding-left: 20px; color: white;"><br/> IEEE-yai-yai</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -113,7 +113,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">The Magic Number</div>
+#### <div style="padding-left: 20px; color: white;"><br/> The Magic Number</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -138,7 +138,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">More Magic Numbers</div>
+#### <div style="padding-left: 20px; color: white;"><br/> More Magic Numbers</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -163,7 +163,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">Prosthaphaeresis</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Prosthaphaeresis</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -220,7 +220,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">What the f*ck?</div>
+#### <div style="padding-left: 20px; color: white;"><br/> What the f*ck?</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -251,7 +251,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Inverse Square Root</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Inverse Square Root</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -283,7 +283,7 @@ function invsqrt(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Square Root</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Square Root</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -318,7 +318,7 @@ function sqrtN(x, y) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">More Roots</div>
+#### <div style="padding-left: 20px; color: white;"><br/> More Roots</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -358,7 +358,7 @@ function nthrt(n, x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;">Taylor Series</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Taylor Series</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -381,7 +381,7 @@ function nthrt(n, x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Exponents</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Exponents</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -421,7 +421,7 @@ function log(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Trigometry</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Trigometry</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -463,7 +463,7 @@ function tan(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">More Trig Functions</div>
+#### <div style="padding-left: 20px; color: white;"><br/> More Trig Functions</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
