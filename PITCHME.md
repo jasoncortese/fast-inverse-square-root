@@ -9,7 +9,7 @@
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code in Quake III Arena...</div>
+<div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III Arena...</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
