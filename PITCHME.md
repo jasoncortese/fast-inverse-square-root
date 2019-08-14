@@ -204,7 +204,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We're going to call these operations, "`prosthaphaeretic`" &mdash; an old-timey term for logarithmic-like approximations before logarithms were invented &mdash; or "`phast`" for short.</div>
+<div style="margin-bottom: 100px; text-align: left;">We're going to call this, "`prosthaphaereis`" &mdash; an old-timey term for logarithmic-like approximations before logarithms were invented &mdash; or "`phast`" for short.</div>
 @snapend
 
 @snap[midpoint span-60 text-04]
