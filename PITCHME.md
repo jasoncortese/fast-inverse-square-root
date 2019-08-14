@@ -518,13 +518,14 @@ function cos_sqd(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We'll leave off her with a hypothetical implementation of cosine, performing its own second and third-order iterations. Enjoy.</div>
+<div style="margin-bottom: 100px; text-align: left;">We'll leave off here with a hypothetical implementation of cosine, performing its own second and third-order iterations. Enjoy.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
 ```javascript
 function future_cos(x) {
     fltb[0] = x;                             // alias x
+    intb[0] -= 1 << 23;                      // phast in 2^m
     intb[0] <<= 1;                           // phast square
     intb[0] -= 2;                            // phast divide-by 1 \* 2
     fltb[4] = fltb[0];                       // alias x'
@@ -533,8 +534,11 @@ function future_cos(x) {
     fltb[8] = fltb[4];                       // alias x"
     intb[8] <<= 1;                           // phast square
     intb[8] -= 30;                           // phast divide-by 5 \* 6
+    intb[8] += 1 << 23;                      // phast out 2^m
+    intb[4] += 1 << 23;                      // phast out 2^m
+    intb[0] += 1 << 23;                      // phast out 2^m
     return 1 - fltb[0] + fltb[4] - fltb[8];  // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
-}
+    return 1 - fltb[0] + fltb[4] - fltb[8];  // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
 ```
 @snapend
 
