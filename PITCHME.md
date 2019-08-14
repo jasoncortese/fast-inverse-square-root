@@ -652,18 +652,18 @@ const phastIntegers = [
 @snapend
 
 @snap[west span-85 text-05 text-black]
-<a href="http://h14s.p5r.org/2012/09/0x5f3759df.html" style="color: black; padding-left: 50px;">Hansen, Christian Plesner. “0x5f3759df”, Hummus and Magnets, 5 September 2012.<br /> http://h14s.p5r.org/2012/09/0x5f3759df.html</a><br />
+<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df.html" style="color: black; padding-left: 50px;">Hansen, Christian Plesner. “0x5f3759df”, Hummus and Magnets, 5 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df.html</a>
 
-<a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html" style="color: black; padding-left: 50px;">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012.<br /> http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a><br />
+<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html" style="color: black; padding-left: 50px;">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012.<br /> http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a>
 
-<a href="http://www.lomont.org/papers/2003/InvSqrt.pdf" style="color: black; padding-left: 50px;">Lomont, Chris. “FAST INVERSE SQUARE ROOT”, www.math.purdue.edu/∼ clomont, February 2003.<br /> http://www.lomont.org/papers/2003/InvSqrt.pdf</a><br />
+<p><a href="http://www.lomont.org/papers/2003/InvSqrt.pdf" style="color: black; padding-left: 50px;">Lomont, Chris. “FAST INVERSE SQUARE ROOT”, www.math.purdue.edu/∼ clomont, February 2003.<br /> http://www.lomont.org/papers/2003/InvSqrt.pdf</a>
 
-<a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root" style="color: black; padding-left: 50px;">Wikipedia contributors. "Fast inverse square root" Wikipedia, The Free Encyclopedia, (last edited) 13 August 2019.<br /> https://en.wikipedia.org/wiki/Fast_inverse_square_root</a><br />
+<p><a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root" style="color: black; padding-left: 50px;">Wikipedia contributors. "Fast inverse square root" Wikipedia, The Free Encyclopedia, (last edited) 13 August 2019. https://en.wikipedia.org/wiki/Fast_inverse_square_root</a>
 
-<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format" style="color: black; padding-left: 50px;">Wikipedia contributors. "Single-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 10 August 2019.<br /> https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a><br />
+<p><a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format" style="color: black; padding-left: 50px;">Wikipedia contributors. "Single-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 10 August 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>
 
-<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format" style="color: black; padding-left: 50px;">Wikipedia contributors. "Double-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 11 July 2019.<br /> https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a><br />
+<p><a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format" style="color: black; padding-left: 50px;">Wikipedia contributors. "Double-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 11 July 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>
 
-<a href="https://github.com/id-Software/Quake-III-Arena" style="color: black; padding-left: 50px;">Quake-III-Arena source code on GitHub: https://github.com/id-Software/Quake-III-Arena</a><br />
+<p><a href="https://github.com/id-Software/Quake-III-Arena" style="color: black; padding-left: 50px;">Quake-III-Arena source code on GitHub: https://github.com/id-Software/Quake-III-Arena</a>
 @snapend
 
