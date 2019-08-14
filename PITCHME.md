@@ -514,7 +514,8 @@ function cos_sqd(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">We use the base version of K here, with sigma equals zero. Individual usage should be tweaked to produce the most accurate results over the problem domain.</div>
+<div style="margin-bottom: 100px; text-align: left;">
+    <span style="font-size: 12px;">(Note, we use the base version of K here, with σ = 0, and adjust this value for individual functions to produce the most accurate results over the problem domain.)</span></div>
 @snapend
 
 @snap[midpoint span-60 text-05]
