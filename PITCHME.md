@@ -125,8 +125,8 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">What do we think K looks like in hexadecimal? <br/>
-<center class="fragment">`K = 0x5f3759df` &mdash; We've found our magic number!</center> <br/>
+<div style="margin-bottom: 100px; text-align: left;">What do we think 1597463007 is in hexadecimal? <br/>
+<center class="fragment">`K = 0x5f3759df`</center>
     <span style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
@@ -148,7 +148,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can find other magic numbers for: <br/> proper square root, cube root, etc.</div>
+<div style="margin-top: 100px; text-align: left;">We found our magic number! Generalizing from the inverse square root, we can find other magic numbers for: <br/> proper square root, cube root, etc.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
