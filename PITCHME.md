@@ -146,7 +146,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">These are fractional multiples of our constant K, which is approximately equal to 1.<br/>
+<div style="margin-bottom: 100px; text-align: left;">These are fractions of our constant K, which is approximately equal to 1.<br/>
     <span style="font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, adjusting for and minimizing the error in our linear approximation).</span></div>
 @snapend
 
