@@ -366,7 +366,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
+<div style="margin-bottom: 100px; text-align: left;">Exponential and Trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -381,7 +381,7 @@ function nthrt(n, x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Exp & Log Functions</div>
+#### <div style="padding-left: 20px;">Exponents</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -421,11 +421,11 @@ function log(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px;">Trig Functions</div>
+#### <div style="padding-left: 20px;">Trigometry</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for Cosine, Sine, and tangent functions.</div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for Cosine, Sine, and Tangent functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -504,55 +504,7 @@ function cos_sqd(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><small>Appendix A:</small> <br/> Born in Babylona</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Recall that Newton's Method is an iterative way of solving for roots of a function. Starting with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Fun fact: a version of this method specific to finding square roots was known to the ancient Babylonians.</div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[y \approx {\sqrt{x}}\]
-\[y' = {{\frac{x}{y} + y} \over {2}}\]
-\[\]
-\[y \approx {1 \over \sqrt{x}}\]
-\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
-@snapend
-
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><small>Appendix B:</small> <br/> Double Trouble</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">64-bit precision...</i></div>
-@snapend
-
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;"></div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
-\[\]
-\[K = L(B - \sigma) = (2^{52}) (1023 - 0.0450465)\]
-\[\]
-\[K = 4606979606846918000 = 0x3fef478b29944e00\]
-\[\]
-\[{\small\frac{3}{2}} K = 6910469321099104000 = 0x5FE6EB50C7B537A9\]`
-@snapend
-
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><small>Appendix C:</small> <br/> All the Magic Numbers</div>
+#### <div style="padding-left: 20px; color: white;"><small>Appendix A:</small> <br/> All the Magic Numbers</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -587,5 +539,72 @@ const pIntegers = [
     0x02E00000, 0x02E40000, 0x02E80000, 0x02EC0000, 0x02F00000, 0x02F40000, 0x02F80000, 0x02FC0000,
 ];
 ```
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;"><small>Appendix B:</small> <br/> Born in Babylona</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Recall that Newton's Method is an iterative way of solving for roots of a function. Starting with an approximation, then a better approximation is found by feeding the approximation into the reverse equation and averaging the results.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Fun fact: a version of this method specific to finding square roots was known to the ancient Babylonians.</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[y \approx {\sqrt{x}}\]
+\[y' = {{\frac{x}{y} + y} \over {2}}\]
+\[\]
+\[y \approx {1 \over \sqrt{x}}\]
+\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;"><small>Appendix D:</small> <br/> Double Trouble</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">64-bit precision...</i></div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;"></div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
+\[\]
+\[K = L(B - \sigma) = (2^{52}) (1023 - 0.0450465)\]
+\[\]
+\[K = 4606979606846918000 = 0x3fef478b29944e00\]
+\[\]
+\[{\small\frac{3}{2}} K = 6910469321099104000 = 0x5FE6EB50C7B537A9\]`
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;"><small>Appendix H:</small> <br/> The Hippopotenuse</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">Germane to the discussion thus far, but without the same rigor, here is a pseudo-approximation for the hypotenuse of a triangle as bitwise disjunction.</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-bottom: 100px; text-align: left;">Note, the minimum is always the longest leg, while the maximum is always the sum of both legs. Yielding the same range as the hypotenuse, but with significant error around dyadic values.</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+`\[hypot(x, y) \approx x | y\]`
 @snapend
 
