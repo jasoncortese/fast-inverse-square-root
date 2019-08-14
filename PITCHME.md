@@ -56,8 +56,10 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 25px;">@img[](ln.png)</div>
-<div style="margin-top: 25px;">@img[](0.5.png)</div>
+<div style="margin-top: 100px;">
+    @img[](ln.png)
+    @img[](0.5.png)
+</div>
 @snapend
 
 
