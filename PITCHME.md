@@ -486,7 +486,7 @@ function arc_cos(x) {
     f$[0] = 1 - x;                         // alias 1 - x
     i$[0] += 0x3ff4d2bc;                   // phast fraction 4/3
     i$[0] >>= 1;                           // phast square root
-    return 1 - f$[0];                      // return √(2 - 2x)
+    return f$[0];                          // return √(2 - 2x)
 }
 
 function cos_dbl(x) {
@@ -527,13 +527,13 @@ function cos(x) {
     f$[0] = x;                             // alias x
     i$[0] <<= 1;                           // phast square
     i$[0] -= 2 << 23;                      // phast divide-by 1 \* 2
-    f$[1] = f$[0];                       // alias x'
+    f$[1] = f$[0];                         // alias x'
     i$[1] <<= 1;                           // phast square
     i$[1] -= 12 << 23;                     // phast divide-by 3 \* 4
-    f$[2] = f$[1];                       // alias x"
+    f$[2] = f$[1];                         // alias x"
     i$[2] <<= 1;                           // phast square
     i$[2] -= 30 << 23;                     // phast divide-by 5 \* 6
-    return 1 - f$[0] + f$[1] - f$[2];  // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
+    return 1 - f$[0] + f$[1] - f$[2];      // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
 ```
 @snapend
 
@@ -637,7 +637,7 @@ const phastIntegers = [
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Germane to the discussion thus far, but without the same rigorous precision, here is a "dog-leg" approximation using bitwise disjunction for the hypotenuse of a triangle.</div>
+<div style="margin-top: 100px; text-align: left;">Germane to the discussion, but without the same rigorous precision, here is a "dog-leg" approximation using bitwise disjunction for the hypotenuse of a triangle.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
