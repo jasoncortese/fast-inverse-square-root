@@ -12,7 +12,7 @@
 <div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III...</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">This was credited to John Carmack who was lead programmer on the project, but can be traced back to the mid-80s with Greg Walsh and Cleve Moler at Ardent Computers.</div>
 @snapend
 
@@ -43,7 +43,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">In 3D graphics you do a lot of normalizing vectors, and that involves a lot of inverses and square roots, both of which are expensive operations (back then, quadruply so).</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">Logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Applying Newton's method would further improve the results.</div>
 @snapend
 
@@ -56,7 +56,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
+<div style="margin-top: 25px; margin-right: 25px;">@img[](ln.png)</div>
 @snapend
 
 
@@ -71,7 +71,7 @@ float Q_rsqrt( float number ) {
 <span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">For these 32-bit numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
 @snapend
 
@@ -120,8 +120,8 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">We're looking for three-halves of a constant K, from which we can subtract one-half of the integer to approximate the inverse square root of the float.</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">And we've found our magic number! <br/>
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-bottom: 100px; text-align: left;">We've found our magic number! <br/>
     <span style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
 @snapend
 
@@ -145,7 +145,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Generalizing from the inverse square root, we can find other magic numbers for: <br/> proper square root, cube root, etc.</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">These are fractions of our constant K, which is approximately equal to 1.<br/>
     <span style="font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation).</span></div>
 @snapend
@@ -203,7 +203,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but that: <br/> <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">We're going to call this, "`prosthaphaeresis`" &mdash; an old-timey term for logarithmic-like approximations before logarithms were invented &mdash; or "`phast`" for short.</div>
 @snapend
 
@@ -260,7 +260,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Now let's do this with JavaScript... We create a global ArrayBuffer to hold a 32-bit number, and two views on that buffer: one as a float, and one as an unsigned integer.</i></div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
 @snapend
 
@@ -292,7 +292,7 @@ function invsqrt(x) {
 <div style="margin-top: 100px; text-align: left;">Square root. Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</i></div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
 @snapend
 
@@ -327,8 +327,8 @@ function sqrtN(x, y) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for cube root, fourth root, and nth root functions.</i></div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Note, the increased complexity of the nth root.</div>
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-bottom: 100px; text-align: left;">In the nth root approximation we split up the magic number step by first subtracting the length L, then performing the phast root extraction, and finally adding back the bias B.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -349,8 +349,9 @@ function frthrt(x) {
 
 function nthrt(n, x) {
     fltb[0] = x;                             // alias x
+    intb[0] -= 1 << 23;                      // phast length (integer 2)
     intb[0] /= n;                            // phast nth root
-    intb[0] += (1 - n) \* 0x3f7a42ca;         // phast fraction (n-1)/n
+    intb[0] += 1 << 29;                      // phast bias ((b + 1) / 2 * 2^m)
     return fltb[0];                          // return x'
 }
 ```
@@ -367,7 +368,7 @@ function nthrt(n, x) {
 <div style="margin-top: 100px; text-align: left;">Root functions are not the only ones we can approximate linearly with these prosthaphaeretic operations. Any Taylor series expansion should work well...</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">Exponential and trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
 @snapend
 
@@ -390,7 +391,7 @@ function nthrt(n, x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for squared, exponent and logarithm functions.</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
@@ -430,7 +431,7 @@ function log(x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for cosine, sine, and tangent functions.</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
@@ -472,7 +473,7 @@ function tan(x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for arc-cosine, double-angle cosine, cosine squared functions.</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;"></div>
 @snapend
 
@@ -513,7 +514,7 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">Alas, processor speed improved .</div>
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-bottom: 100px; text-align: left;">Logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Applying Newton's method would further improve the results.</div>
 @snapend
 
@@ -526,7 +527,9 @@ function cos_sqd(x) {
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[fragment](ln.png)</div>
+<div style="margin-top: 25px; margin-right: 25px;">@img[](0.5.png)</div>
+<div style="margin-top: 25px; margin-right: 25px;">@img[](0.51.png)</div>
+<div style="margin-top: 25px; margin-right: 25px;">@img[](0.333.png)</div>
 @snapend
 
 
@@ -644,6 +647,10 @@ const phastIntegers = [
 \[hypot(x, y) \approx x \space | \space y\]`
 @snapend
 
+@snap[east span-30 text-05]
+<div style="margin-top: 25px; margin-right: 25px;">@img[](hippopontenuse.png)</div>
+@snapend
+
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
@@ -654,18 +661,14 @@ const phastIntegers = [
 @snap[west span-85 text-05 text-black]
 <p><a href="http://h14s.p5r.org/2012/09/0x5f3759df.html" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Hansen, Christian Plesner. “0x5f3759df”, Hummus and Magnets, 5 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df.html</a>
 
-<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012.<br /> http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a>
+<p><a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a>
 
 <p><a href="http://www.lomont.org/papers/2003/InvSqrt.pdf" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Lomont, Chris. “FAST INVERSE SQUARE ROOT”, Purdue
-University, www.math.purdue.edu/∼ clomont, February 2003.<br /> http://www.lomont.org/papers/2003/InvSqrt.pdf</a>
+University, www.math.purdue.edu/∼ clomont, February 2003. http://www.lomont.org/papers/2003/InvSqrt.pdf</a>
 
-<p><a href="https://cs.uwaterloo.ca/~m32rober/rsqrt.pdf" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Robertson, Matthew. “A Brief History of InvSqrt”, University of New Brunswick, 24 April 2012.<br /> https://cs.uwaterloo.ca/~m32rober/rsqrt.pdf</a>
+<p><a href="https://cs.uwaterloo.ca/~m32rober/rsqrt.pdf" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Robertson, Matthew. “A Brief History of InvSqrt”, University of New Brunswick, 24 April 2012. https://cs.uwaterloo.ca/~m32rober/rsqrt.pdf</a>
 
 <p><a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Wikipedia contributors. "Fast inverse square root" Wikipedia, The Free Encyclopedia, (last edited) 13 August 2019. https://en.wikipedia.org/wiki/Fast_inverse_square_root</a>
-
-<p><a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Wikipedia contributors. "Single-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 10 August 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>
-
-<p><a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Wikipedia contributors. "Double-precision floating-point format" Wikipedia, The Free Encyclopedia, (last edited) 11 July 2019. https://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>
 
 <p><a href="https://github.com/id-Software/Quake-III-Arena" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Quake-III-Arena source code on GitHub: https://github.com/id-Software/Quake-III-Arena</a>
 @snapend
