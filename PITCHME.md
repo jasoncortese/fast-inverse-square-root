@@ -328,11 +328,11 @@ function sqrtN(x, y) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for cube root, fourth root, and nth root functions.</i></div>
+<div style="margin-top: 100px; text-align: left;">Here are first order approximations for cube root, fourth root, and nth root functions.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-bottom: 100px; text-align: left;">For the nth root we split up the magic number step by first subtracting the length L, then performing the phast root extraction, and finally adding back the length times half the bias.</div>
+<div style="margin-bottom: 100px; text-align: left;">For the nth root we have the added step of finding the fraction (1-p) from a passed in integer.</div>
 @snapend
 
 @snap[midpoint span-65 text-05]
@@ -353,9 +353,8 @@ function frthrt(x) {
 
 function nthrt(n, x) {
     fltb[0] = x;                             // alias x
-    intb[0] -= 1 << 23;                      // phast in (2^m)
     intb[0] /= n;                            // phast nth root
-    intb[0] += 1 << (23 + 6);                // phast out ((b + 1) / 2 * 2^m)
+    intb[0] += (n - 1) / n * 0x3f7a3bea;     // phast fraction (1-p)
     return fltb[0];                          // return x'
 }
 ```
