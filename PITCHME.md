@@ -568,7 +568,7 @@ const pIntegers = [
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><small>Appendix D:</small> <br/> Double Trouble</div>
+#### <div style="padding-left: 20px; color: white;"><small>Appendix D:</small> <br/> Double the Pleasure</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
