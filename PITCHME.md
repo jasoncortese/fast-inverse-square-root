@@ -324,7 +324,7 @@ function sqrtN(x, y) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Cube root, fourth root, and nth root implementations.</i></div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for cube root, fourth root, and nth root functions.</i></div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -335,22 +335,22 @@ function sqrtN(x, y) {
 ```javascript
 function cbrt(x) {
     fltb[0] = x;                             // alias x
-    intb[0] /= 3;                            // fast cube root
-    intb[0] += 0x2a5181dc;                   // fast fraction 2/3
+    intb[0] /= 3;                            // phast cube root
+    intb[0] += 0x2a5181dc;                   // phast fraction 2/3
     return fltb[0];                          // return x'
 }
 
 function frthrt(x) {
     fltb[0] = x;                             // alias x
-    intb[0] >>= 2;                           // fast fourth root
-    intb[0] += 0x2f9bb218;                   // fast fraction 3/4
+    intb[0] >>= 2;                           // phast fourth root
+    intb[0] += 0x2f9bb218;                   // phast fraction 3/4
     return fltb[0];                          // return x'
 }
 
 function nthrt(n, x) {
     fltb[0] = x;                             // alias x
-    intb[0] /= n;                            // fast nth root
-    intb[0] += (1 - n) \* 0x3f7a42ca;         // fast almost-1
+    intb[0] /= n;                            // phast nth root
+    intb[0] += (1 - n) \* 0x3f7a42ca;         // phast almost-1
     return fltb[0];                          // return x'
 }
 ```
@@ -368,7 +368,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">Exponential and Trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
+<div style="margin-bottom: 100px; text-align: left;">Exponential and trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -387,7 +387,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for Squared, Exponent and Logarithm functions.</div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for squared, exponent and logarithm functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -423,11 +423,11 @@ function log(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> Trigometry</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Trigonometry</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for Cosine, Sine, and Tangent functions.</div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for cosine, sine, and tangent functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -469,7 +469,7 @@ function tan(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for Arc-Cosine, Double-Angle Cosine, Cosine Squared functions.</div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for arc-cosine, double-angle cosine, cosine squared functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black]
