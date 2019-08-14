@@ -572,12 +572,12 @@ const pIntegers = [
 #### <div style="padding-left: 20px; color: white;"><small>Appendix D:</small> <br/> Double Trouble</div>
 @snapend
 
-<div style="margin-top: 100px; text-align: left;">Let's take a look at a double-precision floating point number, where s is the sign bit, e are the 8 bits of the exponent E, and m are the 23 significant bits of the mantissa M.</div><br/>
-<span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
+<div style="margin-top: 100px; text-align: left;">Let's take a look at a double-precision floating point number, where s is the sign bit, e are the 11 bits of the exponent E, and m are the 52 significant bits of the mantissa M.</div><br/>
+<span style="color: orange; letter-spacing: 50%;">s</span> <span style="color: green;">e e e e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-bottom: 100px; text-align: left;">For these 32-bit numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
+<div style="margin-bottom: 100px; text-align: left;">For these 62-bit numbers the bias B is 1023, and the length L is 2^52. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
