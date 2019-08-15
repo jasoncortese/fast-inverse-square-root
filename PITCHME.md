@@ -408,7 +408,7 @@ function log(x) {
 function cos(x) {
     f$[0] = x;                             // alias x
     i$[0] <<= 1;                           // phast square
-    i$[0] -= 0x1fbd2165;                   // phast fraction 1/2
+    i$[0] -= 0x40121FB6;                   // phast fraction 1/2
     return 1 - f$[0];                      // return 1 - ½ x²
 }
 
@@ -440,28 +440,30 @@ function tan(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for arc-cosine, double-angle cosine, cosine squared functions.</div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for double-angle cosine, half-angle cosine, cosine squared functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Here we see an integer form of magic number, a result of doing fast multiplication/division here rather than fast power/root extraction.</div>
+<div style="margin-top: -150px; text-align: left;">Here we see an integer form of magic number, a result of doing fast multiplication and division here rather than fast power and root extraction.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 ```javascript
-function arc_cos(x) {
-    f$[0] = 1 - x;                         // alias 1 - x
-    i$[0] += 0x3ff4d2bc;                   // phast fraction 4/3
-    i$[0] >>= 1;                           // phast square root
-    return f$[0];                          // return √(2 - 2x)
-}
-
 function cos_dbl(x) {
     const cosx = cos(x);
     f$[0] = cosx;                          // alias cosx
     i$[0] <<= 1;                           // phast square
     i$[0] += 0x007ef486;                   // phast integer 2
     return f$[0] - 1;                      // return 2 cos²(x) - 1
+}
+
+function cos_hlf(x) {
+    const cosx = sin(1.5707965 + x);
+    f$[0] = 1 + cosx;                      // alias 1 - x
+    i$[0] -= 0x007ef486;                   // phast integer 2
+    i$[0] >>= 1;                           // phast square root
+    i$[0] += 0x1fbd1df5;                   // phast fraction 1/2
+    return f$[0];                          // return ¼ √(1 + cos(x))
 }
 
 function cos_sqd(x) {
@@ -481,11 +483,36 @@ function cos_sqd(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Nowadays the native instruction is generally faster than the original algorithm. But what if a floating point format existed that directly accounted for the linear approximation?</div>
+<div style="margin-top: 100px; text-align: left;">Nowadays the native inverse square root instruction is generally faster than the original algorithm. But there still may be room for other linear approximations...</div>
+@snapend
+
+@snap[midpoint span-60 text-05]
+<div style="margin-top: 50px; margin-right: 25px;">
+@img[](FLOPchart1.png)
+</div>
+@snapend
+
+@snap[south span-85 text-05 text-black]
+<div style="margin-top: -150px; text-align: left;"></div>
+@snapend
+
+
+---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+
+@snap[north-west span-85 text-white]
+#### <div style="padding-left: 20px; color: white;"><br/>One More</div>
+@snapend
+
+@snap[north span-85 text-05 text-black]
+<div style="margin-top: 100px; text-align: left;">We'll leave off here with an implementation of cosine, performing its own second and third-order Newton iterations.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 ```javascript
+const buffer = new ArrayBuffer(12);
+const f$ = new Float32Array(buffer);
+const i$ = new Uint32Array(buffer);
+
 function cos(x) {
     f$[0] = x;                             // alias x
     i$[0] <<= 1;                           // phast square
@@ -501,7 +528,7 @@ function cos(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-top: -150px; text-align: left;">We'll leave off here with a hypothetical implementation of cosine, performing its own second and third-order iterations. Enjoy.</div>
+<div style="margin-top: -150px; text-align: left;">Ciao.</div>
 @snapend
 
 
