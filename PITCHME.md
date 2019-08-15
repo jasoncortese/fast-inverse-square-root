@@ -216,7 +216,6 @@ float Q_rsqrt( float number ) {
     <th>Integer Operation</th>
     <th>Float Operation</th>
   </tr>
-  </tr>
   <tr>
     <td>shift right</td>
     <td>square root</td>
@@ -491,7 +490,6 @@ function cos_sqd(x) {
   <tr>
     <th>Float Operation</th>
     <th>Relative Cost</th>
-  </tr>
   </tr>
   <tr>
     <td>shift</td>
