@@ -580,7 +580,7 @@ function cos(x) {
 @snapend
 
 @snap[midpoint span-75 text-06]
-```
+```javascript
 const phastFractions = [
     [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000],
     [0x7F800000, 0x3F800000, 0x1FC00000, 0x152AAAAB, 0x0FE00000, 0x0CB33333, 0x0A955555, 0x09124925],
@@ -694,7 +694,7 @@ const phastIntegers = [
 #### <div style="padding-left: 20px; color: white;"><br/>Citations</div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+<div class="west span-85 text-05 text-black">
 <p><a href="http://h14s.p5r.org/2012/09/0x5f3759df.html" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Hansen, Christian Plesner. “0x5f3759df”, Hummus and Magnets, 5 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df.html</a>
 
 <p><a href="http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Hansen, Christian Plesner. “0x5f3759df (appendix)”, Hummus and Magnets 18 September 2012. http://h14s.p5r.org/2012/09/0x5f3759df-appendix.html</a>
