@@ -595,10 +595,10 @@ const phastIntegers = [
 
 @snap[midpoint span-60 text-05]
 `\[y \approx {\sqrt{x}}\]
-\[y' = {{\frac{x}{y} + y} \over {2}}\]
+\[y' = {y + {\frac{x}{y}} \over {2}}\]
 \[\]
 \[y \approx {1 \over \sqrt{x}}\]
-\[y' = -{{\frac{x}{y^{-3}} - 3y} \over {2}}\]`
+\[y' = -{3y - {\frac{x}{y^{-3}}} \over {2}}\]`
 @snapend
 
 @snap[south span-85 text-05 text-black]
