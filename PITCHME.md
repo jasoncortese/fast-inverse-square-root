@@ -1,8 +1,8 @@
-## Fast Inverse Square Root Algorithm 
+## Fast Inverse Square Root Algorithm
 #### (or, evil floating point bit level hacking)
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px;"><br/> Origins...</div>
@@ -12,7 +12,7 @@
 <div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III...</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
@@ -33,7 +33,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Math is hard, m'kay?</div>
@@ -43,7 +43,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">In 3D graphics you do a lot of normalizing vectors, and that involves a lot of inverses and square roots, both of which are expensive operations (back then, quadruply so).</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
@@ -53,18 +53,16 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Logarithms would simplify these calculations, and logarithms can linearly approximated. Now let's take a look at...</div>
+<div style="margin-top: -150px; text-align: left;">Logarithms would simplify these calculations, and logarithms can be linearly approximated. Now let's take a look at...</div>
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 50px; margin-right: 25px;">
 @img[](ln.png)
 @img[](0.5.png)
-</div>
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> IEEE</div>
@@ -75,7 +73,7 @@ float Q_rsqrt( float number ) {
 <span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
 \[\]
@@ -89,7 +87,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> IEEE-yai-yai</div>
@@ -99,7 +97,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Substituting our float representation into the inverse square root equation, this reduces to a form that approximates our integer representation. </div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[\log_2 (m_y + 1) + e_y = -{\small\frac{1}{2}} {\log_2 (m_x + 1) + e_x}\]
 \[m_y + \sigma + e_y \approx -{\small\frac{1}{2}} (m_x + \sigma + e_x)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
@@ -113,7 +111,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> The Magic Number</div>
@@ -123,7 +121,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">We're looking for three-halves of a constant K, from which we can subtract one-half of the integer to approximate the inverse square root of the float.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[\]
 \[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
@@ -142,7 +140,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> More Magic Numbers</div>
@@ -152,7 +150,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Generalizing, we can find other magic numbers for: proper square root, cube root, etc.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[{\large{I}_y} \approx (1-n) K + {p}{\large{I}_x}\]
 \[(1 - p) K = (1 - p) (2^{23}) (127 - \sigma)\]
 \[\]
@@ -169,7 +167,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> What the f*ck?</div>
@@ -179,7 +177,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">We can now make sense of the original function: <i>shift right for the square root, negate for the inverse, and our magic number is simply three-halves.</i></div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
@@ -200,7 +198,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> What the ph*ck?</div>
@@ -210,12 +208,11 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but that: <br/> <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
 @snapend
 
-@snap[midpoint span-60 text-04]
+@snap[midpoint span-75 text-05]
 <table>
   <tr>
     <th>Integer Operation</th>
     <th>Float Operation</th>
-  </tr>
   </tr>
   <tr>
     <td>shift right</td>
@@ -257,7 +254,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Inverse Square Root</div>
@@ -267,7 +264,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Now let's turn to JavaScript... </div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 const buffer = new ArrayBuffer(4);
 const f$ = new Float32Array(buffer);
@@ -289,7 +286,7 @@ function invsqrt(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> More Roots</div>
@@ -299,7 +296,7 @@ function invsqrt(x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for square root, cube root, and nth root functions. </div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 function sqrt(x) {
     f$[0] = x;                             // alias x
@@ -330,7 +327,7 @@ function nthrt(n, x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Taylor Series</div>
@@ -340,7 +337,7 @@ function nthrt(n, x) {
 <div style="margin-top: 100px; text-align: left;">Root functions are not the only ones we can approximate in this way. Here are some Taylor series expansions for common functions...</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[{e^{x}} \approx {\frac{1}{0!}} + {\frac{x}{1!}} + {\frac{x^2}{2!}} + {\frac{x^3}{3!}} + \dots\]
 \[{\log_e{(1+x)}} \approx {x} - {\frac{x^2}{2}} + {\frac{x^3}{3}} - {\frac{x^4}{4}} + \dots\]
 \[{\sin{x}} \approx {x} - {\frac{x^3}{3!}} + {\frac{x^5}{5!}} - {\frac{x^7}{7!}} + \dots\]
@@ -353,7 +350,7 @@ function nthrt(n, x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Exponents</div>
@@ -363,7 +360,7 @@ function nthrt(n, x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for reciprocal, exponent and logarithm functions.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 function rcpr(x) {
     f$[0] = x;                             // alias x
@@ -393,7 +390,7 @@ function log(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Trigonometry</div>
@@ -403,7 +400,7 @@ function log(x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for cosine, sine, and tangent functions.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 function cos(x) {
     f$[0] = x;                             // alias x
@@ -433,10 +430,10 @@ function tan(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> More Trig Functions</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Second Semester</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -444,10 +441,10 @@ function tan(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Here we see an integer form of magic number, a result of doing fast multiplication and division here rather than fast power and root extraction.</div>
+<div style="margin-top: -150px; text-align: left;">Here we see an integer form of our magic numbers, a result of doing fast multiplication and division here rather than fast power and root extraction.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 function cos_dbl(x) {
     const cosx = cos(x);                   // find cos(x)
@@ -476,7 +473,7 @@ function cos_sqd(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/>Conclusion...</div>
@@ -486,12 +483,15 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">Nowadays the native inverse square root instruction is generally faster than the original algorithm. But this method could still be applicable for other linear approximations...</div>
 @snapend
 
-@snap[midpoint span-60 text-04]
+@snap[midpoint span-75 text-05]
 <table>
   <tr>
     <th>Float Operation</th>
     <th>Relative Cost</th>
   </tr>
+  <tr>
+    <td>shift</td>
+    <td style="text-align: center;">1</td>
   </tr>
   <tr>
     <td>addition</td>
@@ -533,7 +533,7 @@ function cos_sqd(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/>One More</div>
@@ -543,7 +543,7 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">We'll leave off here with an implementation of cosine, performing its own second and third-order Newton iterations.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 const buffer = new ArrayBuffer(4 * 3);
 const f$ = new Float32Array(buffer);
@@ -569,7 +569,7 @@ function cos(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><small>Appendix A:</small> <br/> All the Magic Numbers</div>
@@ -579,7 +579,7 @@ function cos(x) {
 <div style="margin-top: 100px; text-align: left;">Fractional values for use during phast power/root extraction, and integral values for use during phast multiplication/division.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```
 const phastFractions = [
     [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000],
@@ -611,7 +611,7 @@ const phastIntegers = [
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><small>Appendix B:</small> <br/> Born in Babylona</div>
@@ -621,7 +621,7 @@ const phastIntegers = [
 <div style="margin-top: 100px; text-align: left;">The Newton-Raphson Method is an iterative way of solving for roots of an equation. An approximation is improved by feeding it back into the reverse equation and averaging.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[y \approx {\sqrt{x}}\]
 \[y' = {y + {\frac{x}{y}} \over {2}}\]
 \[\]
@@ -634,7 +634,7 @@ const phastIntegers = [
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><small>Appendix D:</small> <br/> Double the Pleasure</div>
@@ -645,7 +645,7 @@ const phastIntegers = [
 <span style="letter-spacing: -4px;"><span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m</span></span>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[\]
 \[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[\]
@@ -661,7 +661,7 @@ const phastIntegers = [
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><small>Appendix H:</small> <br/> The Hippopotenuse</div>
@@ -671,7 +671,7 @@ const phastIntegers = [
 <div style="margin-top: 100px; text-align: left;">Germane to the discussion, but without the same rigorous precision, here is a "dog-leg" approximation using bitwise disjunction for the hypotenuse of a triangle.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[hypot(x, y) = \sqrt{x^2 + y^2}\]
 \[\]
 \[hypot(x, y) \approx \max(x, y) + \sigma \space min(x, y)\]
@@ -684,11 +684,11 @@ const phastIntegers = [
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[](hippopontenuse.png)</div>
+<div style="margin-top: 25px; margin-right: 25px;">@img[](hippopotenuse.png)</div>
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/>Citations</div>
@@ -708,3 +708,4 @@ University, www.math.purdue.edu/∼ clomont, February 2003. http://www.lomont.or
 
 <p><a href="https://github.com/id-Software/Quake-III-Arena" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Quake-III-Arena source code on GitHub: https://github.com/id-Software/Quake-III-Arena</a>
 @snapend
+
