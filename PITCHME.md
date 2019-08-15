@@ -114,26 +114,24 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> The Magic Number</div>
+#### <div style="padding-left: 20px; color: white;"><br/> IEEE-yai-yai</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We're looking for three-halves of a constant K, from which we can subtract one-half of the integer to approximate the inverse square root of the float.</div>
+<div style="margin-top: 100px; text-align: left;">Substituting our float representation into the inverse square root equation, this reduces to a form that approximates our integer representation. </div>
 @snapend
 
 @snap[midpoint span-75 text-06]
-`\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
-\[\]
-\[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
-\[\]
-\[K = 1064975338\]
-\[\]
-\[{\small\frac{3}{2}} K = 1597463007\]`
+`\[\log_2 (m_y + 1) + e_y = -{\small\frac{1}{2}} {\log_2 (m_x + 1) + e_x}\]
+\[m_y + \sigma + e_y \approx -{\small\frac{1}{2}} (m_x + \sigma + e_x)\]
+\[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
+\[{M_y} + LE_y \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}(M_x + LE_x)\]
+\[{\large{I}_y} \approx {\small\frac{3}{2}} L(B - \sigma) -{\small\frac{1}{2}}{\large{I}_x}\]`
 @snapend
 
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">We found our magic number! <br/>
-    <span style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
+@snap[south span-85 text-05 text-black]
+<div style="margin-top: -150px; text-align: left;">Look familiar? <br/>
+<center class="fragment">`i  = 0x5f3759df - ( i >> 1 );`</center></div>
 @snapend
 
 
