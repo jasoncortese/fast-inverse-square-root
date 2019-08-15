@@ -278,14 +278,13 @@ function invsqrt(x) {
     i$[0] >>= 1;                           // phast square root
     i$[0] \*= -1;                           // phast inverse
     i$[0] += 0x5f376430;                   // phast three-halves
-//    f$[0] \*= 1.5 - (x \* f$[0] \*\* 2);       // apply newtons method
+    f$[0] \*= 1.5 - (x \* f$[0] \*\* 2);       // apply newtons method
     return f$[0];                          // return x
 }
 ```
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
 @snapend
 
 
@@ -320,7 +319,7 @@ function sqrtN(x, y) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Note, the different form of magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
+<div style="margin-top: -150px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
 @snapend
 
 
