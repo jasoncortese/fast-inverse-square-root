@@ -136,7 +136,7 @@ float Q_rsqrt( float number ) {
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">We found our magic number!</div>
-<div style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</div>
+<div style="margin-top: -150px; text-align: left; font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</div>
 @snapend
 
 
@@ -162,8 +162,8 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">These are fractions of our constant K, which as a float is approximately equal to 1.<br/>
-    <span style="font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation).</span></div>
+<div style="margin-top: -150px; text-align: left;">These are fractions of our constant K, which as a float is approximately equal to 1.</div>
+<div style="margin-top: -150px; text-align: left; font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation.)</div>
 @snapend
 
 
@@ -282,7 +282,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">We create a global ArrayBuffer to hold a 32-bit number, and two views on that buffer: one as a float, and one as an unsigned integer.</div
+<div style="margin-top: -150px; text-align: left;">We create a global ArrayBuffer to hold a 32-bit number, and two views on that buffer: one as a float, and one as an unsigned integer.</div>
 @snapend
 
 
@@ -323,7 +323,7 @@ function nthrt(n, x) {
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;"> For the nth root we have the added step of finding the fractional multiplier.<br/>
-<span style="font-size: 12px;">(Note, we skipped the Newton iterations here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
+<div style="margin-top: -150px; text-align: left; font-size: 12px;">(Note, we skipped the Newton iterations here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</div>
 @snapend
 
 
