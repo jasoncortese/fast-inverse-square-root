@@ -349,7 +349,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Exponential and trigonometric functions in particular are worth looking at due to their prominence in video compression.</div>
+<div style="margin-top: -150px; text-align: left;">Exponential and trigonometric functions in particular are worth looking at, as expensive operations used frequently in video compression.</div>
 @snapend
 
 
