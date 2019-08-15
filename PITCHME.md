@@ -450,16 +450,16 @@ function tan(x) {
 @snap[midpoint span-60 text-05]
 ```javascript
 function cos_dbl(x) {
-    const cosx = cos(x);
-    f$[0] = cosx;                          // alias cosx
+    const cosx = cos(x);                   // find cos(x)
+    f$[0] = cosx;                          // alias cos(x)
     i$[0] <<= 1;                           // phast square
     i$[0] += 0x007ef486;                   // phast integer 2
     return f$[0] - 1;                      // return 2 cos²(x) - 1
 }
 
 function cos_hlf(x) {
-    const cosx = sin(1.5707965 + x);
-    f$[0] = 1 + cosx;                      // alias 1 - x
+    const cosx = cos(x);                   // find cos(x)
+    f$[0] = 1 + cosx;                      // alias 1 + cos(x)
     i$[0] -= 0x007ef486;                   // phast integer 2
     i$[0] >>= 1;                           // phast square root
     i$[0] += 0x1fbd1df5;                   // phast fraction 1/2
@@ -467,7 +467,7 @@ function cos_hlf(x) {
 }
 
 function cos_sqd(x) {
-    const cos2x = cos(2 * x);
+    const cos2x = cos(2 * x);              // find cos(2x)
     f$[0] = 1 + cos2x;                     // alias 1 + cos2x
     i$[0] -= 0x007ef486;                   // phast integer -2
     return f$[0];                          // return ½ (1 + cos(2x))
