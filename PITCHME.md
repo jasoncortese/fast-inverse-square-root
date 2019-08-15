@@ -43,12 +43,14 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">In 3D graphics you do a lot of normalizing vectors, and that involves a lot of inverses and square roots, both of which are expensive operations (back then, quadruply so).</div>
 @snapend
 
+<div class="midpoint span-75 text-06">
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
 \[\]
 \[y \approx {{2}}^{(x - 1)} {{2}}^\sigma\]
 \[y' \approx -{{3y - {x}{y^3}} \over {2}}\]`
+</div>
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">Logarithms would simplify these calculations, and logarithms can be linearly approximated. Now let's take a look at...</div>
