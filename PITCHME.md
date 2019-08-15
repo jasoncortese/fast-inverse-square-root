@@ -487,9 +487,45 @@ function cos_sqd(x) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-<div style="margin-top: 50px; margin-right: 25px;">
-@img[](FLOPchart1.png)
-</div>
+<table>
+  <tr>
+    <th>Float Operation</th>
+    <th>Cost in Cycles</th>
+  </tr>
+  </tr>
+  <tr>
+    <td>addition</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>subtraction</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>multiplication</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>division</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>square root</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>sin/td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>cos</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>tangent</td>
+    <td>19</td>
+  </tr>
+</table>
 @snapend
 
 @snap[south span-85 text-05 text-black]
@@ -509,7 +545,7 @@ function cos_sqd(x) {
 
 @snap[midpoint span-60 text-05]
 ```javascript
-const buffer = new ArrayBuffer(12);
+const buffer = new ArrayBuffer(4 * 3);
 const f$ = new Float32Array(buffer);
 const i$ = new Uint32Array(buffer);
 
@@ -524,6 +560,7 @@ function cos(x) {
     i$[2] <<= 1;                           // phast square
     i$[2] -= 30 << 23;                     // phast divide-by 5 \* 6
     return 1 - f$[0] + f$[1] - f$[2];      // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
+}
 ```
 @snapend
 
