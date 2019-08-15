@@ -209,7 +209,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-75 text-05]
-<table>
+`<table>
   <tr>
     <th>Integer Operation</th>
     <th>Float Operation</th>
@@ -246,7 +246,7 @@ float Q_rsqrt( float number ) {
     <td>magic number</td>
     <td>denormalized fraction</td>
   </tr>
-</table>
+</table>`
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
