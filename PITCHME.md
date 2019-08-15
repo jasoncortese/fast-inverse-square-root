@@ -1,5 +1,4 @@
-
-## Fast Inverse Square Root Algorithm
+## Fast Inverse Square Root Algorithm 
 #### (or, evil floating point bit level hacking)
 
 
@@ -44,7 +43,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">In 3D graphics you do a lot of normalizing vectors, and that involves a lot of inverses and square roots, both of which are expensive operations (back then, quadruply so).</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
@@ -76,7 +75,7 @@ float Q_rsqrt( float number ) {
 <span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
 \[\]
@@ -100,7 +99,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Substituting our float representation into the inverse square root equation, this reduces to a form that approximates our integer representation. </div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[\log_2 (m_y + 1) + e_y = -{\small\frac{1}{2}} {\log_2 (m_x + 1) + e_x}\]
 \[m_y + \sigma + e_y \approx -{\small\frac{1}{2}} (m_x + \sigma + e_x)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
@@ -124,7 +123,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">We're looking for three-halves of a constant K, from which we can subtract one-half of the integer to approximate the inverse square root of the float.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[\]
 \[K = L(B - \sigma) = (2^{23}) (127 - 0.0450465)\]
@@ -153,7 +152,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Generalizing, we can find other magic numbers for: proper square root, cube root, etc.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[{\large{I}_y} \approx (1-n) K + {p}{\large{I}_x}\]
 \[(1 - p) K = (1 - p) (2^{23}) (127 - \sigma)\]
 \[\]
@@ -180,7 +179,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">We can now make sense of the original function: <i>shift right for the square root, negate for the inverse, and our magic number is simply three-halves.</i></div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
@@ -268,7 +267,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Now let's turn to JavaScript... </div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 const buffer = new ArrayBuffer(4);
 const f$ = new Float32Array(buffer);
@@ -300,7 +299,7 @@ function invsqrt(x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for square root, cube root, and nth root functions. </div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 function sqrt(x) {
     f$[0] = x;                             // alias x
@@ -341,7 +340,7 @@ function nthrt(n, x) {
 <div style="margin-top: 100px; text-align: left;">Root functions are not the only ones we can approximate in this way. Here are some Taylor series expansions for common functions...</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[{e^{x}} \approx {\frac{1}{0!}} + {\frac{x}{1!}} + {\frac{x^2}{2!}} + {\frac{x^3}{3!}} + \dots\]
 \[{\log_e{(1+x)}} \approx {x} - {\frac{x^2}{2}} + {\frac{x^3}{3}} - {\frac{x^4}{4}} + \dots\]
 \[{\sin{x}} \approx {x} - {\frac{x^3}{3!}} + {\frac{x^5}{5!}} - {\frac{x^7}{7!}} + \dots\]
@@ -364,7 +363,7 @@ function nthrt(n, x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for reciprocal, exponent and logarithm functions.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 function rcpr(x) {
     f$[0] = x;                             // alias x
@@ -404,7 +403,7 @@ function log(x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for cosine, sine, and tangent functions.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 function cos(x) {
     f$[0] = x;                             // alias x
@@ -448,7 +447,7 @@ function tan(x) {
 <div style="margin-top: -150px; text-align: left;">Here we see an integer form of our magic numbers, a result of doing fast multiplication and division here rather than fast power and root extraction.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 function cos_dbl(x) {
     const cosx = cos(x);                   // find cos(x)
@@ -548,7 +547,7 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">We'll leave off here with an implementation of cosine, performing its own second and third-order Newton iterations.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```javascript
 const buffer = new ArrayBuffer(4 * 3);
 const f$ = new Float32Array(buffer);
@@ -584,7 +583,7 @@ function cos(x) {
 <div style="margin-top: 100px; text-align: left;">Fractional values for use during phast power/root extraction, and integral values for use during phast multiplication/division.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 ```
 const phastFractions = [
     [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000],
@@ -626,7 +625,7 @@ const phastIntegers = [
 <div style="margin-top: 100px; text-align: left;">The Newton-Raphson Method is an iterative way of solving for roots of an equation. An approximation is improved by feeding it back into the reverse equation and averaging.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[y \approx {\sqrt{x}}\]
 \[y' = {y + {\frac{x}{y}} \over {2}}\]
 \[\]
@@ -650,7 +649,7 @@ const phastIntegers = [
 <span style="letter-spacing: -4px;"><span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m</span></span>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[\]
 \[{\large{I}_y} \approx {\small\frac{3}{2}} K -{\small\frac{1}{2}}{\large{I}_x}\]
 \[\]
@@ -676,7 +675,7 @@ const phastIntegers = [
 <div style="margin-top: 100px; text-align: left;">Germane to the discussion, but without the same rigorous precision, here is a "dog-leg" approximation using bitwise disjunction for the hypotenuse of a triangle.</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-75 text-06]
 `\[hypot(x, y) = \sqrt{x^2 + y^2}\]
 \[\]
 \[hypot(x, y) \approx \max(x, y) + \sigma \space min(x, y)\]
