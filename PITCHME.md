@@ -210,7 +210,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but that: <br/> <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
 @snapend
 
-@snap[midpoint span-60 text-04]
+@snap[midpoint span-75 text-05]
 <table>
   <tr>
     <th>Integer Operation</th>
@@ -486,7 +486,7 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">Nowadays the native inverse square root instruction is generally faster than the original algorithm. But this method could still be applicable for other linear approximations...</div>
 @snapend
 
-@snap[midpoint span-60 text-04]
+@snap[midpoint span-75 text-05]
 <table>
   <tr>
     <th>Float Operation</th>
@@ -688,7 +688,7 @@ const phastIntegers = [
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[](hippopontenuse.png)</div>
+<div style="margin-top: 25px; margin-right: 25px;">@img[](hippopotenuse.png)</div>
 @snapend
 
 
