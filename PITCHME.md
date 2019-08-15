@@ -1,31 +1,6 @@
 ## Fast Inverse Square Root Algorithm
 #### (or, evil floating point bit level hacking)
 
-<canvas data-chart="line">
-<!--
-{
- "data": {
-  "labels": ["January"," February"," March"," April"," May"," June"," July"],
-  "datasets": [
-   {
-    "data":[65,59,80,81,56,55,40],
-    "label":"Sample Data X",
-    "backgroundColor":"rgba(20,220,220,.8)"
-   },
-   {
-    "data":[28,48,40,19,86,27,90],
-    "label":"Sample Data Y",
-    "backgroundColor":"rgba(120,220,0,.8)"
-   }
-  ]
- },
- "options": { "responsive": "true" }
-}
--->
-</canvas>
-
-
-
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
@@ -69,12 +44,12 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-75 text-06]
-`\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
+\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
 \[\]
 \[y \approx {{2}}^{(x - 1)} {{2}}^\sigma\]
-\[y' \approx -{{3y - {x}{y^3}} \over {2}}\]`
+\[y' \approx -{{3y - {x}{y^3}} \over {2}}\]
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
@@ -99,12 +74,12 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-75 text-06]
-`\[m = {\frac{M}{L}}\]
-\[e = E - B\]
-\[\]
-\[{\large{F}} \rightarrow (m + 1) 2^e\]
-\[\]
-\[{\large{I}} \rightarrow M + L E\]`
+\[m = {\frac{M}{L}}
+e = E - B
+
+{\large{F}} \rightarrow (m + 1) 2^e
+
+{\large{I}} \rightarrow M + L E\]
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
@@ -195,7 +170,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> What the F***?</div>
+#### <div style="padding-left: 20px; color: white;"><br/> What the F?</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -226,7 +201,7 @@ float Q_rsqrt( float number ) {
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> What the Ph***?</div>
+#### <div style="padding-left: 20px; color: white;"><br/> What the Ph?</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -234,7 +209,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-75 text-05]
-`<table>
+<table>
   <tr>
     <th>Integer Operation</th>
     <th>Float Operation</th>
@@ -271,7 +246,7 @@ float Q_rsqrt( float number ) {
     <td>magic number</td>
     <td>denormalized fraction</td>
   </tr>
-</table>`
+</table>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
