@@ -44,12 +44,12 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
+\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
 \[\]
 \[y \approx {{2}}^{(x - 1)} {{2}}^\sigma\]
-\[y' \approx -{{3y - {x}{y^3}} \over {2}}\]`
+\[y' \approx -{{3y - {x}{y^3}} \over {2}}\]
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
