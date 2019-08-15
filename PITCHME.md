@@ -440,7 +440,7 @@ function tan(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for double-angle cosine, half-angle cosine, cosine squared functions.</div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for double-angle, half-angle, and squared cosine functions.</div>
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
@@ -528,8 +528,8 @@ function cos_sqd(x) {
 </table>
 @snapend
 
-@snap[south span-85 text-05 text-black]
-<div style="margin-top: -150px; text-align: left;"></div>
+@snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">Whether its practical or not we will leave as an exercise for the reader.</div>
 @snapend
 
 
