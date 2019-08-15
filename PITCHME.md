@@ -552,13 +552,13 @@ const i$ = new Uint32Array(buffer);
 function cos(x) {
     f$[0] = x;                             // alias x
     i$[0] <<= 1;                           // phast square
-    i$[0] -= 2 << 23;                      // phast divide-by 2
+    i$[0] -= 2 << 23;                      // phast divide-by 1 times 2
     f$[1] = f$[0];                         // alias x'
     i$[1] <<= 1;                           // phast square
-    i$[1] -= 12 << 23;                     // phast divide-by 3 \* 4
+    i$[1] -= 12 << 23;                     // phast divide-by 3 times 4
     f$[2] = f$[1];                         // alias x"
     i$[2] <<= 1;                           // phast square
-    i$[2] -= 30 << 23;                     // phast divide-by 5 \* 6
+    i$[2] -= 30 << 23;                     // phast divide-by 5 times 6
     return 1 - f$[0] + f$[1] - f$[2];      // return 1 - ½ x² (1 - ⅓¼ x² (1 - ⅕⅙ x²))
 }
 ```
