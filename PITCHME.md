@@ -486,7 +486,7 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">Nowadays the native inverse square root instruction is generally faster than the original algorithm. But this method could still be applicable for other linear approximations...</div>
 @snapend
 
-@snap[midpoint span-60 text-05]
+@snap[midpoint span-60 text-04]
 <table>
   <tr>
     <th>Float Operation</th>
