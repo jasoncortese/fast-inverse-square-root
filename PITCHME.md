@@ -264,7 +264,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Now let's do this with JavaScript... We create a global ArrayBuffer to hold a 32-bit number, and two views on that buffer: one as a float, and one as an unsigned integer.</i></div>
+<div style="margin-top: 100px; text-align: left;">Now let's turn to JavaScript... </div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -285,17 +285,18 @@ function invsqrt(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
+<div style="margin-top: -150px; text-align: left;">We create a global ArrayBuffer to hold a 32-bit number, and two views on that buffer: one as a float, and one as an unsigned integer.</div
 @snapend
 
 
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> Square Root</div>
+#### <div style="padding-left: 20px; color: white;"><br/> More Roots</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Square root. Here, instead of an iteration of Newton's method, we've created a secondary function to which we pass the original number and the first-order approximation.</i></div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for square root, cube root, fourth root, and nth root. </div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -307,34 +308,6 @@ function sqrt(x) {
     return f$[0];                          // return x'
 }
 
-function sqrtN(x, y) {
-    f$[0] = y;                             // alias y
-    i$[0] \*= -1;                           // phast inverse
-    f$[0] \*= x;                            // times x
-    f$[0] += y;                            // plus y
-    i$[0] -= 0x00886e54;                   // phast integer 2
-    return f$[0];                          // return x'
-}
-```
-@snapend
-
-@snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;"><span style="font-size: 12px;">(Note, we commented out the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
-@snapend
-
-
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
-
-@snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> More Roots</div>
-@snapend
-
-@snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for cube root, fourth root, and nth root functions.</i></div>
-@snapend
-
-@snap[midpoint span-60 text-05]
-```javascript
 function cbrt(x) {
     f$[0] = x;                             // alias x
     i$[0] /= 3;                            // phast cube root
@@ -359,7 +332,8 @@ function nthrt(n, x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">For the nth root we have the added step of finding the fractional multiplier.</div>
+<div style="margin-top: -150px; text-align: left;"> For the nth root we have the added step of finding the fractional multiplier.<br/>
+<span style="font-size: 12px;">(Note, we skipped the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
 @snapend
 
 
