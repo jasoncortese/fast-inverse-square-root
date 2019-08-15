@@ -2,7 +2,7 @@
 #### (or, evil floating point bit level hacking)
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px;"><br/> Origins...</div>
@@ -57,14 +57,12 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[east span-30 text-05]
-<div style="margin-top: 50px; margin-right: 25px;">
 @img[](ln.png)
 @img[](0.5.png)
-</div>
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> IEEE</div>
@@ -89,7 +87,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> IEEE-yai-yai</div>
@@ -113,7 +111,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> The Magic Number</div>
@@ -142,7 +140,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> More Magic Numbers</div>
@@ -169,7 +167,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> What the f*ck?</div>
@@ -200,7 +198,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> What the ph*ck?</div>
@@ -257,7 +255,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Inverse Square Root</div>
@@ -289,7 +287,7 @@ function invsqrt(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> More Roots</div>
@@ -330,7 +328,7 @@ function nthrt(n, x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Taylor Series</div>
@@ -353,7 +351,7 @@ function nthrt(n, x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Exponents</div>
@@ -393,7 +391,7 @@ function log(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Trigonometry</div>
@@ -433,7 +431,7 @@ function tan(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Second Semester</div>
@@ -476,7 +474,7 @@ function cos_sqd(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/>Conclusion...</div>
@@ -537,7 +535,7 @@ function cos_sqd(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/>One More</div>
@@ -573,7 +571,7 @@ function cos(x) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><small>Appendix A:</small> <br/> All the Magic Numbers</div>
@@ -615,7 +613,7 @@ const phastIntegers = [
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><small>Appendix B:</small> <br/> Born in Babylona</div>
@@ -638,7 +636,7 @@ const phastIntegers = [
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><small>Appendix D:</small> <br/> Double the Pleasure</div>
@@ -665,7 +663,7 @@ const phastIntegers = [
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><small>Appendix H:</small> <br/> The Hippopotenuse</div>
@@ -692,7 +690,7 @@ const phastIntegers = [
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 70%, white 30%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/>Citations</div>
