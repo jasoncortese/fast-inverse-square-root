@@ -514,11 +514,11 @@ function cos_sqd(x) {
     <td>6</td>
   </tr>
   <tr>
-    <td>sin/td>
+    <td>sine</td>
     <td>15</td>
   </tr>
   <tr>
-    <td>cos</td>
+    <td>cosine</td>
     <td>15</td>
   </tr>
   <tr>
