@@ -33,7 +33,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 60%, white 40%)
+---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
 @snap[north-west span-85 text-white]
 #### <div style="padding-left: 20px; color: white;"><br/> Math is hard, m'kay?</div>
