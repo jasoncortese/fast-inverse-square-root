@@ -16,7 +16,7 @@ section: {font-size: .1vw;}
 <div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III...</div>
 @snapend
 
-@snap[midpoint span-60]
+@snap[midpoint span-75]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
