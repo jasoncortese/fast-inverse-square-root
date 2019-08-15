@@ -13,7 +13,7 @@
 <div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III...</div>
 @snapend
 
-@snap[midpoint span-80 text-06]
+@snap[midpoint span-75 text-06]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
