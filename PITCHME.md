@@ -1,6 +1,3 @@
-<style>
-section: {font-size: .1vw;}
-</style>
 
 ## Fast Inverse Square Root Algorithm
 #### (or, evil floating point bit level hacking)
@@ -16,7 +13,7 @@ section: {font-size: .1vw;}
 <div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III...</div>
 @snapend
 
-@snap[midpoint span-75]
+@snap[midpoint span-60 text-05]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
@@ -79,7 +76,7 @@ float Q_rsqrt( float number ) {
 <span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
-@snap[midpoint span-60 text-06]
+@snap[midpoint span-60 text-05]
 `\[m = {\frac{M}{L}}\]
 \[e = E - B\]
 \[\]
@@ -103,7 +100,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Substituting our float representation into the inverse square root equation, this reduces to a form that approximates our integer representation. </div>
 @snapend
 
-@snap[midpoint span-60 text-07]
+@snap[midpoint span-60 text-05]
 `\[\log_2 (m_y + 1) + e_y = -{\small\frac{1}{2}} {\log_2 (m_x + 1) + e_x}\]
 \[m_y + \sigma + e_y \approx -{\small\frac{1}{2}} (m_x + \sigma + e_x)\]
 \[{\frac{M_y}{L}} + E_y + \sigma \approx -{\small\frac{1}{2}} ({\frac{M_x}{L}} + E_x + \sigma)\]
