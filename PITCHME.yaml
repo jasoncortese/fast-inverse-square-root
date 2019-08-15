@@ -47,4 +47,4 @@ description : "(or, evil floating point bit level hacking)"
 #thumbnail : https://gitpitch.com/gpimg/tutorial-thumb.png
 
 # mathjax
-mathjax : TeX-MML-AM_HTMLorMML-full
+mathjax : TeX-AMS_SVG
