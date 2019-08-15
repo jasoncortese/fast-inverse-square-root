@@ -12,7 +12,7 @@
 <div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III...</div>
 @snapend
 
-@snap[west span-85 text-05 text-black]
+@snap[midpoint span-75 text-06]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
@@ -177,7 +177,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">We can now make sense of the original function: <i>shift right for the square root, negate for the inverse, and our magic number is simply three-halves.</i></div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+@snap[midpoint span-75 text-06]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
@@ -191,7 +191,7 @@ float Q_rsqrt( float number ) {
     return y;
 }
 ```
-</div>
+@snapend
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">... Apply one iteration of Newton's method, and we have a surprisingly accurate approximation for the inverse square root!</div>
@@ -264,7 +264,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">Now let's turn to JavaScript... </div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+@snap[midpoint span-75 text-06]
 ```javascript
 const buffer = new ArrayBuffer(4);
 const f$ = new Float32Array(buffer);
@@ -279,7 +279,7 @@ function invsqrt(x) {
     return f$[0];                          // return x
 }
 ```
-</div>
+@snapend
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">We create a global ArrayBuffer to hold a 32-bit number, and two views on that buffer: one as a float, and one as an unsigned integer.</div>
@@ -296,7 +296,7 @@ function invsqrt(x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for square root, cube root, and nth root functions. </div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+@snap[midpoint span-75 text-06]
 ```javascript
 function sqrt(x) {
     f$[0] = x;                             // alias x
@@ -319,7 +319,7 @@ function nthrt(n, x) {
     return f$[0];                          // return x'
 }
 ```
-</div>
+@snapend
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;"> For the nth root we have the added step of finding the fractional multiplier.<br/>
@@ -360,7 +360,7 @@ function nthrt(n, x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for reciprocal, exponent and logarithm functions.</div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+@snap[midpoint span-75 text-06]
 ```javascript
 function rcpr(x) {
     f$[0] = x;                             // alias x
@@ -383,7 +383,7 @@ function log(x) {
     return x - f$[0];                      // return x - ½ x²
 }
 ```
-</div>
+@snapend
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;"></div>
@@ -400,7 +400,7 @@ function log(x) {
 <div style="margin-top: 100px; text-align: left;">First order approximations for cosine, sine, and tangent functions.</div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+@snap[midpoint span-75 text-06]
 ```javascript
 function cos(x) {
     f$[0] = x;                             // alias x
@@ -423,7 +423,7 @@ function tan(x) {
     return x - f$[0];                      // return x - ⅓ x³
 }
 ```
-</div>
+@snapend
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;"></div>
@@ -444,7 +444,7 @@ function tan(x) {
 <div style="margin-top: -150px; text-align: left;">Here we see an integer form of our magic numbers, a result of doing fast multiplication and division here rather than fast power and root extraction.</div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+@snap[midpoint span-75 text-06]
 ```javascript
 function cos_dbl(x) {
     const cosx = cos(x);                   // find cos(x)
@@ -470,7 +470,7 @@ function cos_sqd(x) {
     return f$[0];                          // return ½ (1 + cos(2x))
 }
 ```
-</div>
+@snapend
 
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
@@ -543,7 +543,7 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">We'll leave off here with an implementation of cosine, performing its own second and third-order Newton iterations.</div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+@snap[midpoint span-75 text-06]
 ```javascript
 const buffer = new ArrayBuffer(4 * 3);
 const f$ = new Float32Array(buffer);
@@ -562,7 +562,7 @@ function cos(x) {
     return 1 - f$[0] + f$[1] - f$[2];      // return 1 - ½ x²(1 - ⅓¼ x²(1 - ⅕⅙ x²))
 }
 ```
-</div>
+@snapend
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">Ciao.</div>
@@ -579,7 +579,7 @@ function cos(x) {
 <div style="margin-top: 100px; text-align: left;">Fractional values for use during phast power/root extraction, and integral values for use during phast multiplication/division.</div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+@snap[midpoint span-75 text-06]
 ```
 const phastFractions = [
     [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000],
@@ -603,7 +603,7 @@ const phastIntegers = [
     0x02E00000, 0x02E40000, 0x02E80000, 0x02EC0000, 0x02F00000, 0x02F40000, 0x02F80000, 0x02FC0000,
 ];
 ```
-</div>
+@snapend
 
 @snap[south span-85 text-05 text-black]
 <div style="margin-top: -150px; text-align: left;">
