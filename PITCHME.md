@@ -12,7 +12,7 @@
 <div style="margin-top: 100px; text-align: left;">Around the turn of the century on a Usenet public forum, someone posted this method pulled from the depths of the source code for Quake III...</div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+@snap[west span-85 text-05 text-black]
 ```c
 float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
@@ -26,7 +26,7 @@ float Q_rsqrt( float number ) {
     return y;
 }
 ```
-</div>
+@snapend
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">This was originally credited to John Carmack who was lead programmer on the project, but can be traced back to Greg Walsh and Cleve Moler working at Ardent Computers.</div>
