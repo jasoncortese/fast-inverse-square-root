@@ -131,8 +131,8 @@ float Q_rsqrt( float number ) {
 \[K = 1064975338\]
 \[\]
 \[{\small\frac{3}{2}} K = 1597463007\]`
-<div style="margin-left: 20px;" class="fragment">
-`\[\space \space \space \space = 0x5f3759df\]`
+<div style="margin-left: 10px;" class="fragment">
+`\[= 0x5f3759df\]`
 </div>
 @snapend
 
