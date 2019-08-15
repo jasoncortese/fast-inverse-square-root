@@ -495,35 +495,35 @@ function cos_sqd(x) {
   </tr>
   <tr>
     <td>addition</td>
-    <td>1</td>
+    <td style="text-align: center;">1</td>
   </tr>
   <tr>
     <td>subtraction</td>
-    <td>1</td>
+    <td style="text-align: center;">1</td>
   </tr>
   <tr>
     <td>multiplication</td>
-    <td>1</td>
+    <td style="text-align: center;">1</td>
   </tr>
   <tr>
     <td>division</td>
-    <td>4</td>
+    <td style="text-align: center;">4</td>
   </tr>
   <tr>
     <td>square root</td>
-    <td>6</td>
+    <td style="text-align: center;">6</td>
   </tr>
   <tr>
     <td>sine</td>
-    <td>15</td>
+    <td style="text-align: center;">15</td>
   </tr>
   <tr>
     <td>cosine</td>
-    <td>15</td>
+    <td style="text-align: center;">15</td>
   </tr>
   <tr>
     <td>tangent</td>
-    <td>19</td>
+    <td style="text-align: center;">19</td>
   </tr>
 </table>
 @snapend
