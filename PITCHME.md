@@ -1,4 +1,6 @@
-## Fast Inverse Square Root Algorithm 
+<main style="font-size: .1vw;">
+
+## Fast Inverse Square Root Algorithm
 #### (or, evil floating point bit level hacking)
 
 
@@ -436,7 +438,7 @@ function tan(x) {
 ---?color=linear-gradient(90deg, #5384AD 70%, white 30%)
 
 @snap[north-west span-85 text-white]
-#### <div style="padding-left: 20px; color: white;"><br/> More Trig Functions</div>
+#### <div style="padding-left: 20px; color: white;"><br/> Second Semester</div>
 @snapend
 
 @snap[north span-85 text-05 text-black]
@@ -444,7 +446,7 @@ function tan(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Here we see an integer form of magic number, a result of doing fast multiplication and division here rather than fast power and root extraction.</div>
+<div style="margin-top: -150px; text-align: left;">Here we see an integer form of our magic numbers, a result of doing fast multiplication and division here rather than fast power and root extraction.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -492,6 +494,10 @@ function cos_sqd(x) {
     <th>Float Operation</th>
     <th>Relative Cost</th>
   </tr>
+  </tr>
+  <tr>
+    <td>shift</td>
+    <td style="text-align: center;">1</td>
   </tr>
   <tr>
     <td>addition</td>
@@ -709,3 +715,4 @@ University, www.math.purdue.edu/∼ clomont, February 2003. http://www.lomont.or
 <p><a href="https://github.com/id-Software/Quake-III-Arena" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Quake-III-Arena source code on GitHub: https://github.com/id-Software/Quake-III-Arena</a>
 @snapend
 
+</main>
