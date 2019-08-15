@@ -135,7 +135,7 @@ float Q_rsqrt( float number ) {
 `\[= 0x5f3759df\]`
 </div>
 @snapend
-
+ 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">We found our magic number! <br/>
     <span style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
