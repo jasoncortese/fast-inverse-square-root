@@ -1,6 +1,31 @@
 ## Fast Inverse Square Root Algorithm
 #### (or, evil floating point bit level hacking)
 
+<canvas data-chart="line">
+<!--
+{
+ "data": {
+  "labels": ["January"," February"," March"," April"," May"," June"," July"],
+  "datasets": [
+   {
+    "data":[65,59,80,81,56,55,40],
+    "label":"Sample Data X",
+    "backgroundColor":"rgba(20,220,220,.8)"
+   },
+   {
+    "data":[28,48,40,19,86,27,90],
+    "label":"Sample Data Y",
+    "backgroundColor":"rgba(120,220,0,.8)"
+   }
+  ]
+ },
+ "options": { "responsive": "true" }
+}
+-->
+</canvas>
+
+
+
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
