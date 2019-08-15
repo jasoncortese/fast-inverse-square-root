@@ -483,14 +483,14 @@ function cos_sqd(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Nowadays the native inverse square root instruction is generally faster than the original algorithm. But there still may be room for other linear approximations...</div>
+<div style="margin-top: 100px; text-align: left;">Nowadays the native inverse square root instruction is generally faster than the original algorithm. But this method could still be applicable for other linear approximations...</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
 <table>
   <tr>
     <th>Float Operation</th>
-    <th>Cost in Cycles</th>
+    <th>Relative Cost</th>
   </tr>
   </tr>
   <tr>
@@ -503,7 +503,7 @@ function cos_sqd(x) {
   </tr>
   <tr>
     <td>multiplication</td>
-    <td>2</td>
+    <td>1</td>
   </tr>
   <tr>
     <td>division</td>
