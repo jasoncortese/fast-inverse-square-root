@@ -135,7 +135,7 @@ float Q_rsqrt( float number ) {
 `\[= 0x5f3759df\]`
 </div>
 @snapend
- 
+
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">We found our magic number! <br/>
     <span style="font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</span></div>
@@ -156,7 +156,7 @@ float Q_rsqrt( float number ) {
 `\[{\large{I}_y} \approx (1-n) K + {p}{\large{I}_x}\]
 \[(1 - p) K = (1 - p) (2^{23}) (127 - \sigma)\]
 \[\]
-\[\fragment{\small\frac{1}{2}} K = 0x1fbd1df5\]
+\[{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[\]
@@ -164,7 +164,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">These are fractions of our constant K, which is approximately equal to 1.<br/>
+<div style="margin-top: -150px; text-align: left;">These are fractions of our constant K, which as a float is approximately equal to 1.<br/>
     <span style="font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation).</span></div>
 @snapend
 
