@@ -53,7 +53,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Logarithms would simplify the calculations, which for values between 0 and 1 can be linearly approximated. Applying Newton's method would further improve the results.</div>
+<div style="margin-top: -150px; text-align: left;">If we could use ogarithms it would simplify the calculations, which for values between 0 and 1 can be linearly approximated. So let's take a look at...</div>
 @snapend
 
 @snap[east span-30 text-05]
@@ -71,7 +71,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Let's take a look at a single-precision floating point number, where s is the sign bit, e are the 8 bits of the exponent E, and m are the 23 significant bits of the mantissa M.</div><br/>
+<div style="margin-top: 100px; text-align: left;">A single-precision floating point number, where s is the sign bit, e are the 8 bits of the exponent E, and m are the 23 significant bits of the mantissa M.</div><br/>
 <span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
 @snapend
 
@@ -85,7 +85,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">For these 32-bit numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between the floating point number and the integer interpretation.</div>
+<div style="margin-top: -150px; text-align: left;">For these 32-bit numbers the bias B is 127, and the length L is 2^23. Given these, it is easy to convert between a floating point number and its integer interpretation.</div>
 @snapend
 
 
@@ -564,7 +564,7 @@ function cos(x) {
 ```
 @snapend
 
-@snap[south span-85 text-05 text-black]
+@snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">Ciao.</div>
 @snapend
 
