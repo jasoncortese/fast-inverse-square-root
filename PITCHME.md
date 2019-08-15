@@ -1,4 +1,6 @@
-<main style="font-size: .1vw;">
+<style>
+section: {font-size: .1vw;}
+</style>
 
 ## Fast Inverse Square Root Algorithm
 #### (or, evil floating point bit level hacking)
@@ -715,4 +717,3 @@ University, www.math.purdue.edu/∼ clomont, February 2003. http://www.lomont.or
 <p><a href="https://github.com/id-Software/Quake-III-Arena" style="color: black; padding-left: 50px; font-size: 15px; display: block;" target="_blank">Quake-III-Arena source code on GitHub: https://github.com/id-Software/Quake-III-Arena</a>
 @snapend
 
-</main>
