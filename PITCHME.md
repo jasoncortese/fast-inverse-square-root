@@ -208,7 +208,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: 100px; text-align: left;">It turns out the most interesting thing here isn't the magic number itself, but that: <br/> <i>aliasing a float as an integer approximates a logarithmic operation!</i></div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+<div class="midpoint span-75 text-05">
 <table>
   <tr>
     <th>Integer Operation</th>
@@ -322,7 +322,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;"> For the nth root we have the added step of finding the fractional multiplier.<br/>
+<div style="margin-top: -150px; text-align: left;"> For the nth root we have the added step of finding the fractional multiplier.</div>
 <div style="text-align: left; font-size: 12px;">(Note, we skipped the Newton iterations here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</div>
 @snapend
 
@@ -483,7 +483,7 @@ function cos_sqd(x) {
 <div style="margin-top: 100px; text-align: left;">Nowadays the native inverse square root instruction is generally faster than the original algorithm. But this method could still be applicable for other linear approximations...</div>
 @snapend
 
-<div class="midpoint span-75 text-06">
+<div class="midpoint span-75 text-05">
 <table>
   <tr>
     <th>Float Operation</th>
@@ -606,8 +606,8 @@ const phastIntegers = [
 @snapend
 
 @snap[south span-85 text-05 text-black]
-<div style="margin-top: -150px; text-align: left;">
-    <span style="font-size: 12px;">(Note, here we use σ = 0, and then adjust the magic numbers to produce the most accurate results over the problem domain.)</span></div>
+<div style="margin-top: -150px; text-align: left;"></div>
+<div style="text-align: left; font-size: 12px;">(Note, here we use σ = 0, and then adjust the magic numbers to produce the most accurate results over the problem domain.)</div>
 @snapend
 
 
