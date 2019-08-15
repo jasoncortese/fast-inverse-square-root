@@ -53,7 +53,7 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">If we could use ogarithms it would simplify the calculations, which for values between 0 and 1 can be linearly approximated. So let's take a look at...</div>
+<div style="margin-top: -150px; text-align: left;">Logarithms would simplify these calculations, and logarithms can linearly approximated. Now let's take a look at...</div>
 @snapend
 
 @snap[east span-30 text-05]
