@@ -540,7 +540,7 @@ function cos_sqd(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">We'll leave off here with an implementation of cosine, performing its own second and third-order Newton iterations.</div>
+<div style="margin-top: 100px; text-align: left;">We'll leave off here with an implementation of cosine, performing its own second and third-order Newton iterations with only 9 operations.</div>
 @snapend
 
 @snap[midpoint span-75 text-06]
@@ -552,13 +552,13 @@ const i$ = new Uint32Array(buffer);
 function cos(x) {
     f$[0] = x;                             // alias x
     i$[0] <<= 1;                           // phast square
-    i$[0] -= 2 << 23;                      // phast divide-by 1 x 2
+    i$[0] -= 0x40121fb6;                   // phast divide-by 1 x 2
     f$[1] = f$[0];                         // alias x'
     i$[1] <<= 1;                           // phast square
-    i$[1] -= 12 << 23;                     // phast divide-by 3 x 4
+    i$[1] -= 0x40f1c87a;                   // phast divide-by 3 x 4
     f$[2] = f$[1];                         // alias x"
     i$[2] <<= 1;                           // phast square
-    i$[2] -= 30 << 23;                     // phast divide-by 5 x 6
+    i$[2] -= 0x4102cf7b;                   // phast divide-by 5 x 6
     return 1 - f$[0] + f$[1] - f$[2];      // return 1 - ½ x²(1 - ⅓¼ x²(1 - ⅕⅙ x²))
 }
 ```
@@ -576,31 +576,31 @@ function cos(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Fractional values for use during phast power/root extraction, and integral values for use during phast multiplication/division.</div>
+<div style="margin-top: 100px; text-align: left;">Fractional values for use during phast power & root extraction, and integral values for use during phast multiplication & division.</div>
 @snapend
 
-@snap[midpoint span-75 text-06]
+@snap[midpoint span-75 text-05]
 ```javascript
 const phastFractions = [
-    [0x7FF00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000],
-    [0x7F800000, 0x3F800000, 0x1FC00000, 0x152AAAAB, 0x0FE00000, 0x0CB33333, 0x0A955555, 0x09124925],
-    [0x7F800000, 0x7F000000, 0x3F800000, 0x2A555555, 0x1FC00000, 0x19666666, 0x152AAAAB, 0x12249249],
-    [0x7F800000, 0x7F100000, 0x5F400000, 0x3F800000, 0x2FA00000, 0x2619999A, 0x1FC00000, 0x1B36DB6E],
-    [0x7F800000, 0x7F100000, 0x7F000000, 0x54AAAAAB, 0x3F800000, 0x32CCCCCD, 0x2A555555, 0x24492492],
-    [0x7F800000, 0x7F200000, 0x7F100000, 0x69D55555, 0x4F600000, 0x3F800000, 0x34EAAAAB, 0x2D5B6DB7],
-    [0x7F800000, 0x7F200000, 0x7F100000, 0x7F000000, 0x5F400000, 0x4C333333, 0x3F800000, 0x366DB6DB],
-    [0x7F800000, 0x7F200000, 0x7F100000, 0x7F100000, 0x6F200000, 0x58E66666, 0x4A155555, 0x3F800000],
+    [0x7ff00000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000],
+    [0x7f800000, 0x3f800000, 0x1fc00000, 0x152aaaab, 0x0fe00000, 0x0cb33333, 0x0a955555, 0x09124925],
+    [0x7f800000, 0x7f000000, 0x3f800000, 0x2a555555, 0x1fc00000, 0x19666666, 0x152aaaab, 0x12249249],
+    [0x7f800000, 0x7f100000, 0x5f400000, 0x3f800000, 0x2fa00000, 0x2619999a, 0x1fc00000, 0x1b36db6e],
+    [0x7f800000, 0x7f100000, 0x7f000000, 0x54aaaaab, 0x3f800000, 0x32cccccd, 0x2a555555, 0x24492492],
+    [0x7f800000, 0x7f200000, 0x7f100000, 0x69d55555, 0x4f600000, 0x3f800000, 0x34eaaaab, 0x2d5b6db7],
+    [0x7f800000, 0x7f200000, 0x7f100000, 0x7f000000, 0x5f400000, 0x4c333333, 0x3f800000, 0x366db6db],
+    [0x7f800000, 0x7f200000, 0x7f100000, 0x7f100000, 0x6f200000, 0x58e66666, 0x4a155555, 0x3f800000],
 ];
 
 const phastIntegers = [
-    0xC0800000, 0x00000000, 0x00800000, 0x00C00000, 0x01000000, 0x01200000, 0x01400000, 0x01600000,
-    0x01800000, 0x01900000, 0x01A00000, 0x01B00000, 0x01C00000, 0x01D00000, 0x01E00000, 0x01F00000,
-    0x02000000, 0x02080000, 0x02100000, 0x02180000, 0x02200000, 0x02280000, 0x02300000, 0x02380000,
-    0x02400000, 0x02480000, 0x02500000, 0x02580000, 0x02600000, 0x02680000, 0x02700000, 0x02780000,
-    0x02800000, 0x02840000, 0x02880000, 0x028C0000, 0x02900000, 0x02940000, 0x02980000, 0x029C0000,
-    0x02A00000, 0x02A40000, 0x02A80000, 0x02AC0000, 0x02B00000, 0x02B40000, 0x02B80000, 0x02BC0000,
-    0x02C00000, 0x02C40000, 0x02C80000, 0x02CC0000, 0x02D00000, 0x02D40000, 0x02D80000, 0x02DC0000,
-    0x02E00000, 0x02E40000, 0x02E80000, 0x02EC0000, 0x02F00000, 0x02F40000, 0x02F80000, 0x02FC0000,
+     0xc0800000, 0x00000000, 0x00800000, 0x00c00000, 0x01000000, 0x01200000, 0x01400000, 0x01600000,
+     0x01800000, 0x01900000, 0x01a00000, 0x01b00000, 0x01c00000, 0x01d00000, 0x01e00000, 0x01f00000,
+     0x02000000, 0x02080000, 0x02100000, 0x02180000, 0x02200000, 0x02280000, 0x02300000, 0x02380000,
+     0x02400000, 0x02480000, 0x02500000, 0x02580000, 0x02600000, 0x02680000, 0x02700000, 0x02780000,
+     0x02800000, 0x02840000, 0x02880000, 0x028c0000, 0x02900000, 0x02940000, 0x02980000, 0x029c0000,
+     0x02a00000, 0x02a40000, 0x02a80000, 0x02ac0000, 0x02b00000, 0x02b40000, 0x02b80000, 0x02bc0000,
+     0x02c00000, 0x02c40000, 0x02c80000, 0x02cc0000, 0x02d00000, 0x02d40000, 0x02d80000, 0x02dc0000,
+     0x02e00000, 0x02e40000, 0x02e80000, 0x02ec0000, 0x02f00000, 0x02f40000, 0x02f80000, 0x02fc0000,
 ];
 ```
 @snapend
@@ -683,7 +683,7 @@ const phastIntegers = [
 <div style="margin-top: -150px; text-align: left;">The minimum is never less than the longest, the maximum is never more than the sum. Yielding the same range, but with significant error around powers of two.</div>
 @snapend
 
-@snap[east span-25]
+@snap[east span-20]
 @img[](hippopotenuse.jpg)
 @snapend
 
