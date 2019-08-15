@@ -15,13 +15,13 @@
 @snap[midpoint span-75 text-06]
 ```c
 float Q_rsqrt( float number ) {
-    float x2 = number \* 0.5F;
+    float x2 = number * 0.5F;
     float y  = number;
-    long i  = \* ( long \* ) &y;                  // evil floating point bit level hacking
+    long i  = * ( long * ) &y;                  // evil floating point bit level hacking
     i  = 0x5f3759df - ( i >> 1 );               // what the fuck?
-    y  = \* ( float \* ) &i;
-    y  = y \* ( threehalfs - ( x2 \* y \* y ) );   // 1st iteration
-//    y  = y \* ( threehalfs - ( x2 \* y \* y ) ); // 2nd iteration, this can be removed
+    y  = * ( float * ) &i;
+    y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
+//    y  = y * ( threehalfs - ( x2 * y * y ) ); // 2nd iteration, this can be removed
 
     return y;
 }
@@ -180,14 +180,14 @@ float Q_rsqrt( float number ) {
 @snap[midpoint span-75 text-06]
 ```c
 float Q_rsqrt( float number ) {
-    float x2 = number \* 0.5F;
+    float x2 = number * 0.5F;
     float y  = number;
-    long i  = \* ( long \* ) &y;                   // alias as integer
+    long i  = * ( long * ) &y;                   // alias as integer
     i  >>= 1 ;                                   // shift right as integer
-    i  \*= -1 ;                                   // negate as integer
+    i  *= -1 ;                                   // negate as integer
     i  += 0x5f3759df;                            // add the magic number
-    y  = \* ( float \* ) &i;                       // alias as float
-    y  = y \* ( threehalfs - ( x2 \* y \* y ) );    // apply newton's method
+    y  = * ( float * ) &i;                       // alias as float
+    y  = y * ( threehalfs - ( x2 * y * y ) );    // apply newton's method
     return y;
 }
 ```
@@ -273,9 +273,9 @@ const i$ = new Uint32Array(buffer);
 function invsqrt(x) {
     f$[0] = x;                             // alias x
     i$[0] >>= 1;                           // phast square root
-    i$[0] \*= -1;                           // phast inverse
+    i$[0] *= -1;                           // phast inverse
     i$[0] += 0x5f376430;                   // phast three-halves
-    f$[0] \*= 1.5 - (x \* f$[0] \*\* 2);       // apply newtons method
+    f$[0] *= 1.5 - (x * f$[0] ** 2);       // apply newtons method
     return f$[0];                          // return x
 }
 ```
@@ -364,9 +364,9 @@ function nthrt(n, x) {
 ```javascript
 function rcpr(x) {
     f$[0] = x;                             // alias x
-    i$[0] \*= -1;                           // phast invert
+    i$[0] *= -1;                           // phast invert
     i$[0] -= 0x80000000;                   // phast fraction 1/1
-    return x;                                // return x
+    return x;                              // return x
 }
 
 function exp(x) {
@@ -418,7 +418,7 @@ function sin(x) {
 
 function tan(x) {
     f$[0] = x;                             // alias x
-    i$[0] \*= 3;                            // phast cube root
+    i$[0] *= 3;                            // phast cube root
     i$[0] -= 0x1528c0ee;                   // phast fraction 1/3
     return x - f$[0];                      // return x - ⅓ x³
 }
