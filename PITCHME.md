@@ -69,8 +69,8 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">A single-precision floating point number, where s is the sign bit, e are the 8 bits of the exponent E, and m are the 23 significant bits of the mantissa M.</div><br/>
-<span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span>
+<div style="margin-top: 100px; text-align: left;">A single-precision floating point number, where s is the sign bit, e are the 8 bits of the exponent E, and m are the 23 significant bits of the mantissa M.</div>
+<div><span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m</span></div>
 @snapend
 
 @snap[midpoint span-75 text-06]
@@ -136,7 +136,7 @@ float Q_rsqrt( float number ) {
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">We found our magic number!</div>
-<div style="margin-top: -150px; text-align: left; font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</div>
+<div style="text-align: left; font-size: 12px;">(Note, we chose a value for σ = 0.0450465 which yields our magic number directly, while research has shown σ = 0.0450333 is more accurate.)</div>
 @snapend
 
 
@@ -163,7 +163,7 @@ float Q_rsqrt( float number ) {
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;">These are fractions of our constant K, which as a float is approximately equal to 1.</div>
-<div style="margin-top: -150px; text-align: left; font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation.)</div>
+<div style="text-align: left; font-size: 12px;">(Note, the float value of K = 1 - σ/2 = 0.97747675, slightly less than 1 to minimize the error in our linear approximation.)</div>
 @snapend
 
 
@@ -323,7 +323,7 @@ function nthrt(n, x) {
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;"> For the nth root we have the added step of finding the fractional multiplier.<br/>
-<div style="margin-top: -150px; text-align: left; font-size: 12px;">(Note, we skipped the Newton iterations here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</div>
+<div style="text-align: left; font-size: 12px;">(Note, we skipped the Newton iterations here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</div>
 @snapend
 
 
@@ -641,8 +641,8 @@ const phastIntegers = [
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Let's take a look at a double-precision floating point number, where s is the sign bit, e are the 11 bits of the exponent E, and m are the 52 significant bits of the mantissa M.</div><br/>
-<span style="letter-spacing: -4px;"><span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m</span></span>
+<div style="margin-top: 100px; text-align: left;">Let's take a look at a double-precision floating point number, where s is the sign bit, e are the 11 bits of the exponent E, and m are the 52 significant bits of the mantissa M.</div>
+<div style="letter-spacing: -4px;"><span style="color: orange;">s</span> <span style="color: green;">e e e e e e e e e e e</span> <span style="color: red;">m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m m</span></div>
 @snapend
 
 @snap[midpoint span-75 text-06]
