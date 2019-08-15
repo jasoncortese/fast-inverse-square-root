@@ -349,7 +349,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Exponential and trigonometric functions in particular are worth looking at, as expensive operations used frequently in video compression.</div>
+<div style="margin-top: -150px; text-align: left;">Exponential and trigonometric functions in particular are worth looking at, as they are expensive operations used frequently in video compression.</div>
 @snapend
 
 
@@ -408,24 +408,22 @@ function log(x) {
 function cos(x) {
     f$[0] = x;                             // alias x
     i$[0] <<= 1;                           // phast square
-    i$[0] -= 0x3ff4d2bc;                   // phast fraction 4/3
+    i$[0] -= 0x1fbd2165;                   // phast fraction 1/2
     return 1 - f$[0];                      // return 1 - ½ x²
 }
 
 function sin(x) {
     f$[0] = x;                             // alias x
     i$[0] /= 3;                            // phast cube root
-    i$[0] -= 0x40f1c87a;                   // phast fraction 6/5
+    i$[0] -= 0x0a946077;                   // phast fraction 1/6
     return x - f$[0];                      // return x - ⅙ x³
 }
 
 function tan(x) {
-    const sinx = sin(x), cosx = cos(x);
-    f$[0] = cosx;                          // alias cosx
-    i$[0] \*= 1;                            // phast inverse
-    i$[0] += 0x00000000;                   // phast integer 1
-    f$[0] \*= sinx;                         // times sinx
-    return f$[0];                          // return tanx
+    f$[0] = x;                             // alias x
+    i$[0] \*= 3;                            // phast cube root
+    i$[0] -= 0x1528c0ee;                   // phast fraction 1/3
+    return x - f$[0];                      // return x - ⅓ x³
 }
 ```
 @snapend
@@ -446,7 +444,7 @@ function tan(x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;"></div>
+<div style="margin-top: -150px; text-align: left;">Here we see an integer form of magic number, a result of doing fast multiplication/division here rather than fast power/root extraction.</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -462,14 +460,14 @@ function cos_dbl(x) {
     const cosx = cos(x);
     f$[0] = cosx;                          // alias cosx
     i$[0] <<= 1;                           // phast square
-    i$[0] += 0x00800000;                   // phast integer 2
+    i$[0] += 0x007ef486;                   // phast integer 2
     return f$[0] - 1;                      // return 2 cos²(x) - 1
 }
 
 function cos_sqd(x) {
     const cos2x = cos(2 * x);
     f$[0] = 1 + cos2x;                     // alias 1 + cos2x
-    i$[0] -= 0x00800000;                   // phast integer -2
+    i$[0] -= 0x007ef486;                   // phast integer -2
     return f$[0];                          // return ½ (1 + cos(2x))
 }
 ```
