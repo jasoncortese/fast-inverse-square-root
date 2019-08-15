@@ -296,7 +296,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for square root, cube root, and nth root. </div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for square root, cube root, and nth root functions. </div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -326,7 +326,7 @@ function nthrt(n, x) {
 
 @snap[south span-85 text-05 text-black fragment]
 <div style="margin-top: -150px; text-align: left;"> For the nth root we have the added step of finding the fractional multiplier.<br/>
-<span style="font-size: 12px;">(Note, we skipped the Newton iteration here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
+<span style="font-size: 12px;">(Note, we skipped the Newton iterations here, and chose a value for σ = 0.0448367 which improves accuracy with that step removed.)</span></div>
 @snapend
 
 
@@ -337,7 +337,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">Root functions are not the only ones we can approximate linearly with these prosthaphaeretic operations. Any Taylor series expansion should work well...</div>
+<div style="margin-top: 100px; text-align: left;">Root functions are not the only ones we can approximate in this way. Here are some Taylor series expansions for common functions...</div>
 @snapend
 
 @snap[midpoint span-60 text-05]
