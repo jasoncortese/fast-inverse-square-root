@@ -320,7 +320,7 @@ function sqrtN(x, y) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">Note, the different magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
+<div style="margin-top: -150px; text-align: left;">Note, the different form of magic number we use in the second-order method, a result of doing fast division here rather than fast root extraction.</div>
 @snapend
 
 
@@ -360,7 +360,7 @@ function nthrt(n, x) {
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
-<div style="margin-top: -150px; text-align: left;">For the nth root we have the added step of finding the fraction (1-p) from a passed in integer.</div>
+<div style="margin-top: -150px; text-align: left;">For the nth root we have the added step of finding the fractional multiplier.</div>
 @snapend
 
 
