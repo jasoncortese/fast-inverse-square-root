@@ -18,7 +18,7 @@ float Q_rsqrt( float number ) {
     float x2 = number \* 0.5F;
     float y  = number;
     long i  = \* ( long \* ) &y;                  // evil floating point bit level hacking
-    i  = 0x5f3759df - ( i >> 1 );               // what the fuck? 
+    i  = 0x5f3759df - ( i >> 1 );               // what the fuck?
     y  = \* ( float \* ) &i;
     y  = y \* ( threehalfs - ( x2 \* y \* y ) );   // 1st iteration
 //    y  = y \* ( threehalfs - ( x2 \* y \* y ) ); // 2nd iteration, this can be removed
@@ -187,7 +187,7 @@ float Q_rsqrt( float number ) {
     long i  = \* ( long \* ) &y;                   // alias as integer
     i  >>= 1 ;                                   // shift right as integer
     i  \*= -1 ;                                   // negate as integer
-    i  += 0x5f3759df;                            // add the magic number 
+    i  += 0x5f3759df;                            // add the magic number
     y  = \* ( float \* ) &i;                       // alias as float
     y  = y \* ( threehalfs - ( x2 \* y \* y ) );    // apply newton's method
     return y;
@@ -296,7 +296,7 @@ function invsqrt(x) {
 @snapend
 
 @snap[north span-85 text-05 text-black]
-<div style="margin-top: 100px; text-align: left;">First order approximations for square root, cube root, fourth root, and nth root. </div>
+<div style="margin-top: 100px; text-align: left;">First order approximations for square root, cube root, and nth root. </div>
 @snapend
 
 @snap[midpoint span-60 text-05]
@@ -312,13 +312,6 @@ function cbrt(x) {
     f$[0] = x;                             // alias x
     i$[0] /= 3;                            // phast cube root
     i$[0] += 0x2a5181dc;                   // phast fraction 2/3
-    return f$[0];                          // return x'
-}
-
-function frthrt(x) {
-    f$[0] = x;                             // alias x
-    i$[0] >>= 2;                           // phast fourth root
-    i$[0] += 0x2f9bb218;                   // phast fraction 3/4
     return f$[0];                          // return x'
 }
 
