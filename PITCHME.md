@@ -56,7 +56,7 @@ float Q_rsqrt( float number ) {
 <div style="margin-top: -150px; text-align: left;">Logarithms would simplify these calculations, and logarithms can be linearly approximated. Now let's take a look at...</div>
 @snapend
 
-@snap[east span-30 text-05]
+@snap[east span-30]
 @img[](ln.png)
 @img[](0.5.png)
 @snapend
@@ -683,8 +683,8 @@ const phastIntegers = [
 <div style="margin-top: -150px; text-align: left;">The minimum is never less than the longest, the maximum is never more than the sum. Yielding the same range, but with significant error around powers of two.</div>
 @snapend
 
-@snap[east span-30 text-05]
-<div style="margin-top: 25px; margin-right: 25px;">@img[](hippopotenuse.png)</div>
+@snap[east span-30]
+@img[](hippopotenuse.jpg)
 @snapend
 
 
