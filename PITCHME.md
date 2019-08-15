@@ -6,10 +6,12 @@
 
 ##### The Cauchy-Schwarz Inequality
 
+@snap[midpoint span-75 text-06]
 `\[
 \left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
  \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
 \]`
+@snapend
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
@@ -53,12 +55,12 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-75 text-06]
-\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
+`\[y = {1 \over \sqrt{x}} = x^{-\frac{1}{2}}\]
 \[\log_2 y = -{\small\frac{1}{2}} {\log_2 x}\]
 \[\log_2 y \approx (x - 1) + \sigma\]
 \[\]
 \[y \approx {{2}}^{(x - 1)} {{2}}^\sigma\]
-\[y' \approx -{{3y - {x}{y^3}} \over {2}}\]
+\[y' \approx -{{3y - {x}{y^3}} \over {2}}\]`
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
@@ -83,12 +85,12 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-75 text-06]
-\[m = {\frac{M}{L}}
-e = E - B
-
-{\large{F}} \rightarrow (m + 1) 2^e
-
-{\large{I}} \rightarrow M + L E\]
+`\[m = {\frac{M}{L}}\]
+\[e = E - B\]
+\[\]
+\[{\large{F}} \rightarrow (m + 1) 2^e\]
+\[\]
+\[{\large{I}} \rightarrow M + L E\]`
 @snapend
 
 @snap[south span-85 text-05 text-black fragment]
