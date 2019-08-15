@@ -131,7 +131,7 @@ float Q_rsqrt( float number ) {
 \[K = 1064975338\]
 \[\]
 \[{\small\frac{3}{2}} K = 1597463007\]`
-<div style="margin-left: 10px;" class="fragment">
+<div style="margin-left: 40px;" class="fragment">
 `\[= 0x5f3759df\]`
 </div>
 @snapend
@@ -153,10 +153,10 @@ float Q_rsqrt( float number ) {
 @snapend
 
 @snap[midpoint span-60 text-05]
-`\[{\large{I}_y} \approx (1-n) K + {n}{\large{I}_x}\]
-\[(1 - n) K = (1 - n) (2^{23}) (127 - \sigma)\]
+`\[{\large{I}_y} \approx (1-n) K + {p}{\large{I}_x}\]
+\[(1 - p) K = (1 - p) (2^{23}) (127 - \sigma)\]
 \[\]
-\[{\small\frac{1}{2}} K = 0x1fbd1df5\]
+\[\fragment{\small\frac{1}{2}} K = 0x1fbd1df5\]
 \[\]
 \[{\small\frac{2}{3}} K = 0x2a517d3c\]
 \[\]
